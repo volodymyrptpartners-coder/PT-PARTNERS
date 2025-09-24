@@ -223,7 +223,6 @@ body {
 
 .contact-icon {
     font-size: 1.8rem;
-    color: #2a9d8f;
     margin-right: 16px;
     flex-shrink: 0;
 }
@@ -372,4 +371,5 @@ body {
 
 .more-top-margin {
     margin-top: 20px;
+
 }
