@@ -1,0 +1,19 @@
+{
+  "site_top_panel": {
+    "brand": "PT&PARTNERS",
+    "current": "uk",
+    "languages": [
+        {
+          "code": "ua",
+          "href": "ukraine-consul.html",
+          "flag": "ua-flag.svg"
+        },
+        {
+          "code": "ru",
+          "href": "ukraine-consul-ru.html",
+          "flag": "ru-flag.svg"
+        }
+      ]
+  }
+}
+

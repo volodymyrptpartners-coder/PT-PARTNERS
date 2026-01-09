@@ -1,0 +1,8 @@
+python_environment/
+secret.sh
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/.coverage
+

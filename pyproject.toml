@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "generator"
+version = "0.1.0"
+description = "Simple site generator."
+authors = ["Ihor <ihor.prots.lviv@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.8.10"
+pytest = ">=8.0,<8.4"
+ruff = "^0.14.5"
+mypy = ">=1.5.1"
+coverage = "7"
+parameterized = "^0.9.0"
+jsonschema = "4.2.0"
+jinja2 = "^3.1.6"
+types-jsonschema = "4.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+src = ["gen_quiz"]
+exclude = ["python_environment", "tests"]
+line-length = 150
+target-version = "py38"
+
+
+[tool.mypy]
+files = "generator/"
+show_error_codes = true
+show_column_numbers = true
+strict = true
+exclude = "tests/"
+
+
+
+[tool.coverage.run]
+source = ["generator"]
+omit = [
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+omit = [
+    "*/tests/*",
+    "*/__init__.py",
+]
+show_missing = true
+
