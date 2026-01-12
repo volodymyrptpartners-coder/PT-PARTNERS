@@ -1,0 +1,16 @@
+{
+  "block_name": "contacts_block",
+  "content": {
+    "items": [
+      {
+        "value": "test",
+        "copy": "test",
+        "action": {
+          "href": "#",
+          "label": "Click"
+        }
+      }
+    ]
+  }
+}
+

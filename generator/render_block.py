@@ -2,14 +2,13 @@
 
 import json
 import sys
-from typing import Any
+from typing import Any, Dict
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 
 def die(message: str) -> None:
     print(f"ERROR: {message}", file=sys.stderr)
-    assert False
     sys.exit(1)
 
 
@@ -31,7 +30,8 @@ def load_json(path: Path) -> Any:
     return data
 
 
-def render_block(block_name: str, realization_name: str) -> str:
+def render_block(block_name: str, realization_name: str ) -> str:
+
     blocks_root = Path("blocks")
     block_dir = blocks_root / str(block_name)
     template_path = block_dir / "base.j2"
@@ -51,17 +51,17 @@ def render_block(block_name: str, realization_name: str) -> str:
 
     realization_data = load_json(realization_path)
 
-    inline_block = ""
+    inline_block = {}
     if "inline_block" in realization_data:
-        inline = realization_data["inline_block"]
+        for inline in realization_data["inline_block"]:
 
-        if not isinstance(inline, dict):
-            die(f"inline_block must be an object in {realization_path}")
-
-        if "block_name" not in inline or "realization_name" not in inline:
-            die(f"inline_block must contain block_name and realization_name in {realization_path}")
-
-        inline_block = render_block(block_name=inline["block_name"], realization_name=inline["realization_name"])
+            if not isinstance(inline, dict):
+                die(f"inline_block must be an object in {realization_path}")
+    
+            if "block_name" not in inline or "realization_name" not in inline:
+                die(f"inline_block must contain block_name and realization_name in {realization_path}")
+    
+            inline_block[inline["block_name"]] = render_block(block_name=inline["block_name"], realization_name=inline["realization_name"])
 
     env = Environment(
         loader=FileSystemLoader("./"),

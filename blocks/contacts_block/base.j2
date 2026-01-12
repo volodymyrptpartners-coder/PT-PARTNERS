@@ -1,0 +1,13 @@
+<section class="contacts_block-section">
+    <div class="contacts_block-grid">
+    {%- for item in content["content"]["items"] %}
+        <div class="contacts_block-card" data-copy="{{ item["copy"] }}">
+            <div class="contacts_block-info">
+                <span class="contacts_block-text">{{ item["value"] }}</span>
+                <a href="{{ item["action"]["href"] }}" class="contacts_block-link" target="_blank" rel="noopener noreferrer">{{ item["action"]["label"] }}</a>
+            </div>
+        <span class="contacts_block-checkmark">✓</span>
+        </div>
+    {%- endfor %}
+    </div>
+</section>

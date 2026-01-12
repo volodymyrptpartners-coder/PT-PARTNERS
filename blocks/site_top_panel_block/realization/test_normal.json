@@ -1,5 +1,6 @@
 {
-  "site_top_panel": {
+  "block_name": "site_top_panel_block",
+  "content": {
     "brand": "PT&PARTNERS",
     "current": "uk",
     "languages": [

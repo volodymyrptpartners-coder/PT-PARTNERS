@@ -1,0 +1,15 @@
+{
+  "block_name": "contact_fab_block",
+  "content": {
+    "items": [
+      {
+        "href": "https://t.me/VolodymyrPtPartners",
+        "label": "Telegram"
+      },
+      {
+        "href": "tel:+48884930030",
+        "label": "Phone"
+      }
+    ]
+  }
+}

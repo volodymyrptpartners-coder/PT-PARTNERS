@@ -1,0 +1,15 @@
+<div class="hero_block-main">
+    <h1 class="hero_block-lead">{{ content['content']["title"] }}</h1>
+    <p class="hero_block-explanation">{{ content['content']["description"] }}</p>
+    <div class="hero_block-features">
+        <div class="hero_block-container">
+            {%- for item in content['content']["features"] %}
+            <div class="hero_block-item">
+                <span class="hero_block-check">{{ item["icon"] }}</span>
+                <span>{{ item["text"] }}</span>
+            </div>
+            {%- endfor %}
+            <a href="{{ content['content']["cta"]["href"] }}" class="hero_block-btn">{{ content['content']["cta"]["text"] }}</a>
+        </div>
+    </div>
+</div>

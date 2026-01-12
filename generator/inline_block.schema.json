@@ -1,20 +1,27 @@
 {
   "$id": "inline_block.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "required": ["block_name", "realization_name"],
-  "additionalProperties": false,
+  "type": "array",
+  "minItems": 1,
+  "description": "List of inline blocks to be rendered sequentially",
 
-  "properties": {
-    "block_name": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Name of nested block"
-    },
-    "realization_name": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Realization name of nested block"
+  "items": {
+    "type": "object",
+    "required": ["block_name", "realization_name"],
+    "additionalProperties": false,
+
+    "properties": {
+      "block_name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Name of block directory inside /blocks"
+      },
+
+      "realization_name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "JSON realization file name without extension"
+      }
     }
   }
 }

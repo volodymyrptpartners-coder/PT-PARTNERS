@@ -1,0 +1,18 @@
+{
+  "block_name": "accordion_container",
+  "content": {
+    "items": [
+      {
+        "id": "consular",
+        "title": "Що таке консульський облік?"
+      }
+    ]
+  },
+  "inline_block": [
+    {
+      "block_name": "site_txt_block",
+      "realization_name": "ua"
+    }
+  ]
+}
+

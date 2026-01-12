@@ -1,0 +1,31 @@
+<div class="site_top_panel_block-main">
+    <div class="site_top_panel_block-header">
+        <div class="site_top_panel_block-container">
+            <img src="sources/logo_vector.svg" alt="{{ content['content']['brand'] }}" class="site_top_panel_block-logo">
+            <span class="site_top_panel_block-ltext">{{ content['content']['brand']  }}</span>
+        </div>
+        <div class="site_top_panel_block-switch">
+            <button class="site_top_panel_block-lbtn" type="button">
+            {%- for lang in content['content']['languages'] %}
+              {%- if lang.code == content['content']['current'] %}
+                <span class="site_top_panel_block-ficon">
+                  <img src="sources/{{ lang.flag }}" alt="{{ lang.code | upper }}" width="24" height="16">
+                </span>
+              {%- endif %}
+            {%- endfor %}
+                <span class="site_top_panel_block-chevron">&#9662;</span>
+            </button>
+            <ul class="site_top_panel_block-lmenu">
+            {%- for lang in content['content']['languages'] %}
+              <li>
+                <a href="{{ lang.href }}"> 
+                    <span class="site_top_panel_block-ficon">
+                        <img src="sources/{{ lang.flag }}" alt="{{ lang.code | upper }}" width="24" height="16">
+                    </span>
+                </a>
+              </li>
+            {%- endfor %}
+             </ul>
+        </div>
+    </div>
+</div>

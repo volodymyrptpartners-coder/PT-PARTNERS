@@ -165,7 +165,7 @@ def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> boo
                 print("\nExample:\t", file=sys.stderr, end="")
                 print(f'"{key}": "<{expected}>"', file=sys.stderr)
         else:
-            print(f"Validator type  {err.validator}", file=sys.stderr)
+            print(f"\nValidator type  {err.validator!r}", file=sys.stderr)
             print("Fix this value according to the expected format.", file=sys.stderr)
 
         return False

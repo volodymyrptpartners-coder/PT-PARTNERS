@@ -1,0 +1,76 @@
+{
+  "$id": "site_txt_block.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["block_name", "content"],
+  "additionalProperties": false,
+
+  "properties": {
+    "block_name": {
+      "type": "string",
+      "const": "site_txt_block"
+    },
+
+    "content": {
+      "type": "object",
+      "required": ["sections"],
+      "additionalProperties": false,
+
+      "properties": {
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+
+              "paragraphs": {
+                "type": "array",
+                "minItems": 1,
+
+                "items": {
+                  "type": "object",
+                  "required": ["text"],
+                  "additionalProperties": false,
+
+                  "properties": {
+                    "strong": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              },
+
+              "list": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+
+            "anyOf": [
+              { "required": ["paragraphs"] },
+              { "required": ["list"] }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+

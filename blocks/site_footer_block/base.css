@@ -1,0 +1,22 @@
+:root {
+
+  /* --- site_footer_block layout --- */
+  --site_footer_block-background: #ffffff;
+  --site_footer_block-text-align: center;
+  --site_footer_block-padding: 20px;
+  --site_footer_block-font-size: 14px;
+
+  /* --- site_footer_block border --- */
+  --site_footer_block-border-top: 1px solid #dddddd;
+}
+
+/* ===== footer ===== */
+.site_footer_block-main {
+  background: var(--site_footer_block-background);
+  text-align: var(--site_footer_block-text-align);
+  padding: var(--site_footer_block-padding);
+  font-size: var(--site_footer_block-font-size);
+  border-top: var(--site_footer_block-border-top);
+}
+
+

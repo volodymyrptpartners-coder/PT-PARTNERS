@@ -1,0 +1,9 @@
+{
+  "block_name": "template_consular_container",
+  "content": {
+    "lang": "uk"
+  },
+  "inline_block": [
+    { "block_name": "core_header_block", "realization_name": "test_minimal" }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "lang": "ua"
+  },
+  "blocks": {
+    "contacts_block": {
+      "realization": {
+        "block_name": "contacts_block",
+        "content": {
+          "items": [
+            {
+              "value": "volodymyrptpartners@gmail.com",
+              "copy": "volodymyrptpartners@gmail.com",
+              "action": {
+                "href": "mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт,",
+                "label": "Написати листа"
+              }
+            },
+            {
+              "value": "+48 884 930 030",
+              "copy": "tel:+48884930030",
+              "action": {
+                "href": "tel:+48884930030",
+                "label": "Зателефонувати"
+              }
+            },
+            {
+              "value": "@VolodymyrPtPartners",
+              "copy": "@VolodymyrPtPartners",
+              "action": {
+                "href": "https://t.me/VolodymyrPtPartners",
+                "label": "Відкрити в Telegram"
+              }
+            },
+            {
+              "value": "PT&PARTNERS",
+              "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+              "action": {
+                "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+                "label": "Відкрити в Google Maps"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "site_top_panel_block": {
+      "realization": {
+        "block_name": "site_top_panel_block",
+        "content": {
+          "brand": "PT&PARTNERS",
+          "current": "uk",
+          "languages": [
+            {
+              "code": "ua",
+              "href": "ukraine-consul.html",
+              "flag": "ua-flag.svg"
+            },
+            {
+              "code": "ru",
+              "href": "ukraine-consul-ru.html",
+              "flag": "ru-flag.svg"
+            }
+          ]
+        }
+      }
+    },
+    "accordion_container": {
+      "realization": {
+        "block_name": "accordion_container",
+        "content": {
+          "items": [
+            {
+              "id": "consular",
+              "title": "Що таке консульський облік?"
+            }
+          ]
+        },
+        "inline_block": [
+          {
+            "block_name": "site_txt_block",
+            "realization_name": "ua"
+          }
+        ]
+      }
+    },
+    "core_header_block": {
+      "realization": {
+        "block_name": "core_header_block",
+        "content": {
+          "lang": "uk",
+          "title": "Консульський облік",
+          "viewport": "width=device-width, initial-scale=1",
+          "description": "Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.",
+          "og": {
+            "title": "Консульський облік у Польщі – допомога українцям",
+            "description": "Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.",
+            "image": "https://pt-partners.org/sources/logo.jpg",
+            "url": "https://pt-partners.org/ukraine-consul.html",
+            "type": "website",
+            "locale": "uk_UA"
+          },
+          "twitter": {
+            "card": "summary_large_image",
+            "title": "Консульський облік у Польщі – допомога українцям",
+            "description": "Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.",
+            "image": "https://pt-partners.org/sources/logo.jpg"
+          },
+          "stylesheets": [
+            "styles.css"
+          ],
+          "icons": {
+            "favicon": [
+              {
+                "type": "image/svg+xml",
+                "href": "sources/logo_vector.svg"
+              },
+              {
+                "type": "image/png",
+                "sizes": "32x32",
+                "href": "sources/logo_32x32.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "48x48",
+                "href": "sources/logo_48x48.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "64x64",
+                "href": "sources/logo_64x64.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "128x128",
+                "href": "sources/logo_128x128.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "256x256",
+                "href": "sources/logo_256x256.png"
+              }
+            ],
+            "apple_touch": [
+              {
+                "sizes": "57x57",
+                "href": "sources/logo_57x57.png"
+              },
+              {
+                "sizes": "60x60",
+                "href": "sources/logo_60x60.png"
+              },
+              {
+                "sizes": "72x72",
+                "href": "sources/logo_72x72.png"
+              },
+              {
+                "sizes": "76x76",
+                "href": "sources/logo_76x76.png"
+              },
+              {
+                "sizes": "114x114",
+                "href": "sources/logo_114x114.png"
+              },
+              {
+                "sizes": "120x120",
+                "href": "sources/logo_120x120.png"
+              },
+              {
+                "sizes": "144x144",
+                "href": "sources/logo_144x144.png"
+              },
+              {
+                "sizes": "152x152",
+                "href": "sources/logo_152x152.png"
+              },
+              {
+                "sizes": "180x180",
+                "href": "sources/logo_180x180.png"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "site_txt_block": {
+      "realization": {
+        "block_name": "site_txt_block",
+        "content": {
+          "sections": [
+            {
+              "paragraphs": [
+                {
+                  "strong": "Консульський облік",
+                  "text": " — офіційна реєстрація громадянина України у посольстві або консульстві України за кордоном."
+                }
+              ]
+            },
+            {
+              "title": "Тимчасовий",
+              "paragraphs": [
+                {
+                  "text": "Для тих, хто живе за кордоном на навчанні, роботі чи має карту побиту."
+                }
+              ]
+            },
+            {
+              "title": "Постійний",
+              "paragraphs": [
+                {
+                  "text": "Для тих, хто офіційно виїхав з України на ПМЖ."
+                }
+              ]
+            },
+            {
+              "title": "Для чого потрібен консульський облік?",
+              "list": [
+                "Оформлення паспортів (дорослим і дітям)",
+                "Реєстрація народження, шлюбу, смерті",
+                "Оформлення довіреностей та нотаріальних заяв",
+                "Отримання довідок та витягів",
+                "Перебування на військовому обліку для чоловіків за кордоном",
+                "Можливість користуватися автомобілем без розмитнення протягом 60 діб"
+              ]
+            },
+            {
+              "title": "Чому це важливо?",
+              "paragraphs": [
+                {
+                  "text": "Без обліку більшість консульських послуг недоступні."
+                },
+                {
+                  "text": "Підтвердження легального перебування за кордоном."
+                },
+                {
+                  "text": "Спрощує юридичні та сімейні питання без поїздок в Україну."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "contact_fab_block": {
+      "realization": {
+        "block_name": "contact_fab_block",
+        "content": {
+          "items": [
+            {
+              "href": "https://t.me/VolodymyrPtPartners",
+              "label": "Telegram"
+            },
+            {
+              "href": "tel:+48884930030",
+              "label": "Phone"
+            }
+          ]
+        }
+      }
+    },
+    "site_footer_block": {
+      "realization": {
+        "block_name": "site_footer_block",
+        "content": {
+          "text": "PT&PARTNERS. Усі права захищено."
+        }
+      }
+    },
+    "hero_block": {
+      "realization": {
+        "block_name": "hero_block",
+        "content": {
+          "title": "Консульський облік у Польщі",
+          "description": "Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.",
+          "features": [
+            {
+              "icon": "✓",
+              "text": "Швидке оформлення"
+            },
+            {
+              "icon": "✓",
+              "text": "Перевірка документів"
+            },
+            {
+              "icon": "⏱",
+              "text": "Терміни виконання: до 10 днів."
+            },
+            {
+              "icon": "✓",
+              "text": "Оплата лише після результату — ви платите тільки тоді, коли облік оформлено."
+            },
+            {
+              "icon": "✓",
+              "text": "Вартість послуги: 380 zł"
+            }
+          ],
+          "cta": {
+            "text": "Замовити",
+            "href": "#contacts"
+          }
+        }
+      }
+    },
+    "template_consular_container": {
+      "realization": {
+        "block_name": "template_consular_container",
+        "content": {
+          "lang": "uk"
+        },
+        "inline_block": [
+          {
+            "block_name": "core_header_block",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "site_top_panel_block",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "hero_block",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "hero2_block",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "accordion_container",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "contacts_block",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "contact_fab_block",
+            "realization_name": "ua"
+          },
+          {
+            "block_name": "site_footer_block",
+            "realization_name": "ua"
+          }
+        ]
+      }
+    },
+    "hero2_block": {
+      "realization": {
+        "block_name": "hero2_block",
+        "content": {
+          "title": "Наші послуги",
+          "items": [
+            {
+              "icon": "★",
+              "text": "Консультація з вибору типу обліку"
+            },
+            {
+              "icon": "★",
+              "text": "Перевірка та підготовка документів"
+            },
+            {
+              "icon": "★",
+              "text": "Подача документів"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

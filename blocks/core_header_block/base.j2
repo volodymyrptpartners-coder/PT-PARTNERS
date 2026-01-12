@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<title>{{ content["content"]["title"] }}</title>
+{%- if content["content"].get("viewport") %}
+<meta name="viewport" content="{{ content["content"]["viewport"] }}">
+{%- endif %}
+{%- if content["content"].get("description") %}
+<meta name="description" content="{{ content["content"]["description"] }}">
+{%- endif %}
+{%- if content["content"].get("og") %}
+  {%- for key, value in content["content"]["og"].items() %}
+<meta property="og:{{ key }}" content="{{ value }}">
+  {%- endfor %}
+{%- endif %}
+{%- if content["content"].get("twitter") %}
+  {%- for key, value in content["content"]["twitter"].items() %}
+<meta name="twitter:{{ key }}" content="{{ value }}">
+  {%- endfor %}
+{%- endif %}
+{%- if content["content"].get("stylesheets") %}
+  {%- for css in content["content"]["stylesheets"] %}
+<link rel="stylesheet" href="{{ css }}">
+  {%- endfor %}
+{%- endif %}
+{%- if content["content"].get("icons") %}
+  {%- for icon in content["content"]["icons"].get("favicon", []) %}
+<link rel="icon"
+          {%- if icon.get("type") %} type="{{ icon["type"] }}"{% endif -%}
+          {%- if icon.get("sizes") %} sizes="{{ icon["sizes"] }}"{% endif -%}
+          href="{{ icon["href"] }}">
+  {%- endfor %}
+  {%- for icon in content["content"]["icons"].get("apple_touch", []) %}
+<link rel="apple-touch-icon" sizes="{{ icon["sizes"] }}" href="{{ icon["href"] }}">
+  {%- endfor %}
+{%- endif %}

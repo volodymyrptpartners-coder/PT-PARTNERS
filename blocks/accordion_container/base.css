@@ -1,0 +1,139 @@
+:root {
+  /* accordion_container – section */
+  --accordion_container-section-margin: 40px auto;
+  --accordion_container-section-border: 1px solid #e0e0e0;
+  --accordion_container-section-border-radius: 12px;
+  --accordion_container-section-overflow: hidden;
+  --accordion_container-section-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  /* accordion_container – button */
+  --accordion_container-button-width: 100%;
+  --accordion_container-button-background: #2a9d8f;
+  --accordion_container-button-color: #ffffff;
+  --accordion_container-button-font-size: 1.2rem;
+  --accordion_container-button-padding: 18px 24px;
+  --accordion_container-button-border: none;
+  --accordion_container-button-text-align: left;
+  --accordion_container-button-cursor: pointer;
+  --accordion_container-button-display: flex;
+  --accordion_container-button-justify-content: space-between;
+  --accordion_container-button-align-items: center;
+
+  /* accordion_container – icon */
+  --accordion_container-icon-font-size: 1.5rem;
+  --accordion_container-icon-transition: transform 0.3s;
+
+  /* accordion_container – content */
+  --accordion_container-content-display-closed: none;
+  --accordion_container-content-display-open: block;
+  --accordion_container-content-padding: 20px 24px;
+  --accordion_container-content-line-height: 1.6;
+  --accordion_container-content-text-align-open: justify;
+
+  /* accordion_container – typography inside content */
+  --accordion_container-heading-margin-top: 1.4em;
+  --accordion_container-heading-margin-bottom: 0.6em;
+  --accordion_container-heading-font-size: 1.2rem;
+  --accordion_container-heading-color: #2a9d8f;
+  --accordion_container-heading-font-weight: 600;
+
+  --accordion_container-paragraph-margin-bottom: 1em;
+
+  --accordion_container-list-margin: 0.6em 0 1.2em 1.5em;
+  --accordion_container-list-item-padding-left: 1.4em;
+  --accordion_container-list-item-margin-bottom: 0.5em;
+  --accordion_container-list-bullet-color: #2a9d8f;
+
+  --accordion_container-strong-color: #264653;
+}
+
+/* ===== container ===== */
+
+.accordion_container-section {
+  margin: var(--accordion_container-section-margin);
+  border: var(--accordion_container-section-border);
+  border-radius: var(--accordion_container-section-border-radius);
+  overflow: var(--accordion_container-section-overflow);
+  box-shadow: var(--accordion_container-section-box-shadow);
+}
+
+/* ===== header button ===== */
+
+.accordion_container-button {
+  width: var(--accordion_container-button-width);
+  background: var(--accordion_container-button-background);
+  color: var(--accordion_container-button-color);
+  font-size: var(--accordion_container-button-font-size);
+  padding: var(--accordion_container-button-padding);
+  border: var(--accordion_container-button-border);
+  text-align: var(--accordion_container-button-text-align);
+  cursor: var(--accordion_container-button-cursor);
+  display: var(--accordion_container-button-display);
+  justify-content: var(--accordion_container-button-justify-content);
+  align-items: var(--accordion_container-button-align-items);
+}
+
+/* ===== icon ===== */
+
+.accordion_container-icon {
+  font-size: var(--accordion_container-icon-font-size);
+  transition: var(--accordion_container-icon-transition);
+}
+
+/* ===== content ===== */
+
+.accordion_container-content {
+  display: var(--accordion_container-content-display-closed);
+  padding: var(--accordion_container-content-padding);
+  line-height: var(--accordion_container-content-line-height);
+}
+
+/* ===== open state ===== */
+
+.accordion_container-section.open .accordion_container-content {
+  display: var(--accordion_container-content-display-open);
+  text-align: var(--accordion_container-content-text-align-open);
+}
+
+.accordion_container-section.open .accordion_container-icon {
+  transform: rotate(45deg);
+}
+
+/* ===== typography inside content ===== */
+
+.accordion_container-content h3 {
+  margin-top: var(--accordion_container-heading-margin-top);
+  margin-bottom: var(--accordion_container-heading-margin-bottom);
+  font-size: var(--accordion_container-heading-font-size);
+  color: var(--accordion_container-heading-color);
+  font-weight: var(--accordion_container-heading-font-weight);
+}
+
+.accordion_container-content p {
+  margin-bottom: var(--accordion_container-paragraph-margin-bottom);
+}
+
+.accordion_container-content ul {
+  margin: var(--accordion_container-list-margin);
+  list-style: none;
+  padding-left: 0;
+}
+
+.accordion_container-content ul li {
+  position: relative;
+  padding-left: var(--accordion_container-list-item-padding-left);
+  margin-bottom: var(--accordion_container-list-item-margin-bottom);
+}
+
+.accordion_container-content ul li::before {
+  content: '•';
+  color: var(--accordion_container-list-bullet-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.accordion_container-content strong {
+  color: var(--accordion_container-strong-color);
+}
+

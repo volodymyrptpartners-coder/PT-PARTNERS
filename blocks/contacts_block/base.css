@@ -1,0 +1,140 @@
+:root {
+
+  /* --- contacts_block section --- */
+  --contacts_block-section-margin: 60px auto;
+  --contacts_block-section-padding: 0 20px;
+  --contacts_block-section-text-align: center;
+
+  /* --- contacts_block grid --- */
+  --contacts_block-grid-display: grid;
+  --contacts_block-grid-gap: 20px;
+
+  /* --- contacts_block card --- */
+  --contacts_block-card-background: #ffffff;
+  --contacts_block-card-border: 1px solid #e0e0e0;
+  --contacts_block-card-border-radius: 16px;
+  --contacts_block-card-padding: 20px;
+  --contacts_block-card-display: flex;
+  --contacts_block-card-align-items: center;
+  --contacts_block-card-justify-content: space-between;
+  --contacts_block-card-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --contacts_block-card-cursor: pointer;
+  --contacts_block-card-position: relative;
+  --contacts_block-card-transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* --- contacts_block card hover --- */
+  --contacts_block-card-hover-transform: translateY(-3px);
+  --contacts_block-card-hover-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+  /* --- contacts_block info --- */
+  --contacts_block-info-text-align: left;
+  --contacts_block-info-flex: 1;
+
+  /* --- contacts_block text --- */
+  --contacts_block-text-font-size: 1.1rem;
+  --contacts_block-text-margin-bottom: 4px;
+  --contacts_block-text-color: #333333;
+
+  /* --- contacts_block link --- */
+  --contacts_block-link-font-size: 0.9rem;
+  --contacts_block-link-color: #2a9d8f;
+  --contacts_block-link-font-weight: 500;
+  --contacts_block-link-text-decoration: none;
+  --contacts_block-link-hover-decoration: underline;
+
+  /* --- contacts_block checkmark --- */
+  --contacts_block-checkmark-color: #2a9d8f;
+  --contacts_block-checkmark-font-size: 4.4rem;
+  --contacts_block-checkmark-opacity-hidden: 0;
+  --contacts_block-checkmark-opacity-visible: 1;
+  --contacts_block-checkmark-transition: opacity 0.3s;
+  --contacts_block-checkmark-position: absolute;
+  --contacts_block-checkmark-right: -75px;
+}
+
+
+
+/* ===== section ===== */
+
+.contacts_block-section {
+  margin: var(--contacts_block-section-margin);
+  padding: var(--contacts_block-section-padding);
+  text-align: var(--contacts_block-section-text-align);
+}
+
+/* ===== grid ===== */
+
+.contacts_block-grid {
+  display: var(--contacts_block-grid-display);
+  gap: var(--contacts_block-grid-gap);
+}
+
+/* ===== card ===== */
+
+.contacts_block-card {
+  background: var(--contacts_block-card-background);
+  border: var(--contacts_block-card-border);
+  border-radius: var(--contacts_block-card-border-radius);
+  padding: var(--contacts_block-card-padding);
+  display: var(--contacts_block-card-display);
+  align-items: var(--contacts_block-card-align-items);
+  justify-content: var(--contacts_block-card-justify-content);
+  box-shadow: var(--contacts_block-card-box-shadow);
+  cursor: var(--contacts_block-card-cursor);
+  position: var(--contacts_block-card-position);
+  transition: var(--contacts_block-card-transition);
+}
+
+/* hover */
+
+.contacts_block-card:hover {
+  transform: var(--contacts_block-card-hover-transform);
+  box-shadow: var(--contacts_block-card-hover-box-shadow);
+}
+
+/* ===== info ===== */
+
+.contacts_block-info {
+  text-align: var(--contacts_block-info-text-align);
+  flex: var(--contacts_block-info-flex);
+}
+
+/* ===== text ===== */
+
+.contacts_block-text {
+  display: block;
+  font-size: var(--contacts_block-text-font-size);
+  margin-bottom: var(--contacts_block-text-margin-bottom);
+  color: var(--contacts_block-text-color);
+}
+
+/* ===== link ===== */
+
+.contacts_block-link {
+  font-size: var(--contacts_block-link-font-size);
+  color: var(--contacts_block-link-color);
+  font-weight: var(--contacts_block-link-font-weight);
+  text-decoration: var(--contacts_block-link-text-decoration);
+}
+
+.contacts_block-link:hover {
+  text-decoration: var(--contacts_block-link-hover-decoration);
+}
+
+/* ===== checkmark ===== */
+
+.contacts_block-checkmark {
+  color: var(--contacts_block-checkmark-color);
+  font-size: var(--contacts_block-checkmark-font-size);
+  opacity: var(--contacts_block-checkmark-opacity-hidden);
+  transition: var(--contacts_block-checkmark-transition);
+  position: var(--contacts_block-checkmark-position);
+  right: var(--contacts_block-checkmark-right);
+}
+
+/* copied state */
+
+.contacts_block-card.copied .contacts_block-checkmark {
+  opacity: var(--contacts_block-checkmark-opacity-visible);
+}
+

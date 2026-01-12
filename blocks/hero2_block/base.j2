@@ -1,0 +1,13 @@
+<div class="hero2_block-main">
+    <h1 class="hero2_block-lead">{{ content['content']["title"] }}</h1>
+    <div class="hero2_block-features">
+        <div class="hero2_block-container">
+        {%- for item in content['content']["items"] %}
+            <div class="hero2_block-item">
+                <span class="hero2_block-check">{{ item["icon"] }}</span>
+                <span>{{ item["text"] }}</span>
+            </div>
+        {%- endfor %}
+        </div>
+    </div>
+</div>

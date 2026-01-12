@@ -1,0 +1,155 @@
+:root {
+/* ================================
+   hero_block – variables
+   ================================ */
+
+
+  /* --- hero_block main layout --- */
+  --hero_block-main-display: flex;
+  --hero_block-main-direction: column;
+  --hero_block-main-text-align: justify;
+  --hero_block-main-padding: 2rem 1rem;
+
+  /* --- hero_block title --- */
+  --hero_block-lead-font-size: clamp(2rem, 5vw, 2.75rem);
+  --hero_block-lead-font-weight: 700;
+  --hero_block-lead-line-height: 1.2;
+
+  /* --- hero_block explanation --- */
+  --hero_block-explanation-margin-top: 1rem;
+  --hero_block-explanation-font-size: clamp(1rem, 2.5vw, 1.25rem);
+  --hero_block-explanation-line-height: 1.6;
+  --hero_block-explanation-color: #555555;
+  --hero_block-explanation-padding: 0 0.5rem;
+
+  /* --- hero_block features --- */
+  --hero_block-features-margin-left: 1rem;
+
+  --hero_block-container-margin: 1.5rem 0;
+  --hero_block-container-display: flex;
+  --hero_block-container-direction: column;
+  --hero_block-container-align: flex-start;
+  --hero_block-container-gap: 0.8rem;
+
+  /* --- hero_block feature item --- */
+  --hero_block-item-display: flex;
+  --hero_block-item-font-size: 1.1rem;
+  --hero_block-item-line-height: 1.4;
+
+  /* --- hero_block check --- */
+  --hero_block-check-color: #2a9d8f;
+  --hero_block-check-font-weight: bold;
+  --hero_block-check-margin-right: 0.5rem;
+  --hero_block-check-font-size: 1.2rem;
+
+  /* --- hero_block button --- */
+  --hero_block-btn-display: block;
+  --hero_block-btn-margin: 24px auto 0;
+  --hero_block-btn-padding: 14px 32px;
+  --hero_block-btn-background: #2a9d8f;
+  --hero_block-btn-color: #ffffff;
+  --hero_block-btn-font-size: 1.1rem;
+  --hero_block-btn-font-weight: 600;
+  --hero_block-btn-border-radius: 8px;
+  --hero_block-btn-text-decoration: none;
+  --hero_block-btn-text-align: center;
+  --hero_block-btn-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  --hero_block-btn-transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+
+  /* --- hero_block button hover / active --- */
+  --hero_block-btn-hover-background: #24867b;
+  --hero_block-btn-hover-transform: translateY(-2px);
+  --hero_block-btn-hover-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  --hero_block-btn-active-transform: translateY(1px);
+  --hero_block-btn-active-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+}
+
+/* ===== main ===== */
+
+.hero_block-main {
+  display: var(--hero_block-main-display);
+  flex-direction: var(--hero_block-main-direction);
+  text-align: var(--hero_block-main-text-align);
+  padding: var(--hero_block-main-padding);
+}
+
+/* ===== title ===== */
+
+.hero_block-lead {
+  font-size: var(--hero_block-lead-font-size);
+  font-weight: var(--hero_block-lead-font-weight);
+  line-height: var(--hero_block-lead-line-height);
+}
+
+/* ===== explanation ===== */
+
+.hero_block-explanation {
+  margin-top: var(--hero_block-explanation-margin-top);
+  font-size: var(--hero_block-explanation-font-size);
+  line-height: var(--hero_block-explanation-line-height);
+  color: var(--hero_block-explanation-color);
+  padding: var(--hero_block-explanation-padding);
+}
+
+/* ===== features ===== */
+
+.hero_block-features {
+  margin-left: var(--hero_block-features-margin-left);
+}
+
+.hero_block-container {
+  margin: var(--hero_block-container-margin);
+  display: var(--hero_block-container-display);
+  flex-direction: var(--hero_block-container-direction);
+  align-items: var(--hero_block-container-align);
+  gap: var(--hero_block-container-gap);
+}
+
+/* ===== item ===== */
+
+.hero_block-item {
+  display: var(--hero_block-item-display);
+  font-size: var(--hero_block-item-font-size);
+  line-height: var(--hero_block-item-line-height);
+}
+
+/* ===== check ===== */
+
+.hero_block-check {
+  color: var(--hero_block-check-color);
+  font-weight: var(--hero_block-check-font-weight);
+  margin-right: var(--hero_block-check-margin-right);
+  font-size: var(--hero_block-check-font-size);
+}
+
+/* ===== button ===== */
+
+.hero_block-btn {
+  display: var(--hero_block-btn-display);
+  margin: var(--hero_block-btn-margin);
+  padding: var(--hero_block-btn-padding);
+  background: var(--hero_block-btn-background);
+  color: var(--hero_block-btn-color);
+  font-size: var(--hero_block-btn-font-size);
+  font-weight: var(--hero_block-btn-font-weight);
+  text-decoration: var(--hero_block-btn-text-decoration);
+  border-radius: var(--hero_block-btn-border-radius);
+  box-shadow: var(--hero_block-btn-box-shadow);
+  transition: var(--hero_block-btn-transition);
+  text-align: var(--hero_block-btn-text-align);
+}
+
+/* hover / active */
+
+.hero_block-btn:hover {
+  background: var(--hero_block-btn-hover-background);
+  transform: var(--hero_block-btn-hover-transform);
+  box-shadow: var(--hero_block-btn-hover-box-shadow);
+}
+
+.hero_block-btn:active {
+  transform: var(--hero_block-btn-active-transform);
+  box-shadow: var(--hero_block-btn-active-box-shadow);
+}
+

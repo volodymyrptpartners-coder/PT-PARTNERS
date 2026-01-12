@@ -1,0 +1,27 @@
+<div class="site_txt_block-main">
+ {%- for section in content["content"]["sections"] %}
+  {%- if section.get("title") %}
+    <h3>{{ section["title"] }}</h3>
+  {%- endif %}
+
+  {%- if section.get("paragraphs") %}
+   {%- for p in section["paragraphs"] %}
+    <p>
+    {%- if p.get("strong") -%}
+        <strong>{{ p["strong"] }}</strong>
+    {%- endif -%}
+    {{ p["text"] }}
+    </p>
+   {%- endfor %}
+  {%- endif %}
+
+  {%- if section.get("list") %}
+    <ul>
+    {%- for item in section["list"] %}
+        <li>{{ item }}</li>
+    {%- endfor %}
+    </ul>
+  {%- endif %}
+ {%- endfor %}
+</div>
+

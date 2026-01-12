@@ -1,0 +1,15 @@
+{
+  "block_name": "site_txt_block",
+  "content": {
+    "sections": [
+      {
+        "paragraphs": [
+          {
+            "text": "Це найпростіший можливий текстовий блок."
+          }
+        ]
+      }
+    ]
+  }
+}
+

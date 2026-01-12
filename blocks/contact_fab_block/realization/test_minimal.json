@@ -1,0 +1,12 @@
+{
+  "block_name": "contact_fab_block",
+  "content": {
+    "items": [
+      {
+        "href": "#",
+        "label": "Test"
+      }
+    ]
+  }
+}
+

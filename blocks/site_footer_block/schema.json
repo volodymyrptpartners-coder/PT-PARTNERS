@@ -1,0 +1,28 @@
+{
+  "$id": "site_footer_block.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["block_name", "content"],
+  "additionalProperties": false,
+
+  "properties": {
+    "block_name": {
+      "type": "string",
+      "const": "site_footer_block"
+    },
+
+    "content": {
+      "type": "object",
+      "required": ["text"],
+      "additionalProperties": false,
+
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
+

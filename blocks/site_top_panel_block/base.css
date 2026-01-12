@@ -1,0 +1,172 @@
+/* =====================================
+   site_top_panel_block – variables
+   ===================================== */
+
+:root {
+  /* --- site_top_panel_block  bar --- */
+  --site_top_panel_block-main-position: sticky;
+  --site_top_panel_block-main-top: 0;
+  --site_top_panel_block-main-z-index: 999;
+
+  /* --- site_top_panel_block header --- */
+  --site_top_panel_block-header-margin: 0 auto;
+  --site_top_panel_block-header-padding: 0.5rem 1rem;
+  --site_top_panel_block-header-display: flex;
+  --site_top_panel_block-header-justify: space-between;
+  --site_top_panel_block-header-align: center;
+  --site_top_panel_block-header-border-bottom: 1px solid #dddddd;
+  --site_top_panel_block-header-background: #ffffff;
+
+  /* --- site_top_panel_block logo container --- */
+  --site_top_panel_block-container-display: flex;
+  --site_top_panel_block-container-align: center;
+  --site_top_panel_block-container-gap: 0.5rem;
+
+  /* --- site_top_panel_block logo image --- */
+  --site_top_panel_block-logo-height: 50px;
+  --site_top_panel_block-logo-width: auto;
+
+  /* --- site_top_panel_block logo text --- */
+  --site_top_panel_block-ltext-font-family: 'Noticia Text', serif;
+  --site_top_panel_block-ltext-font-size: 1.6rem;
+  --site_top_panel_block-ltext-font-weight: 700;
+  --site_top_panel_block-ltext-letter-spacing: 0.5px;
+
+  /* --- site_top_panel_block language switch --- */
+  --site_top_panel_block-switch-position: relative;
+
+  /* --- site_top_panel_block language button --- */
+  --site_top_panel_block-lbtn-display: flex;
+  --site_top_panel_block-lbtn-align: center;
+  --site_top_panel_block-lbtn-gap: 0.4rem;
+  --site_top_panel_block-lbtn-background: none;
+  --site_top_panel_block-lbtn-border: 1px solid #cccccc;
+  --site_top_panel_block-lbtn-border-radius: 4px;
+  --site_top_panel_block-lbtn-padding: 0.25rem 0.5rem;
+  --site_top_panel_block-lbtn-cursor: pointer;
+
+  /* --- site_top_panel_block language menu --- */
+  --site_top_panel_block-lmenu-position: absolute;
+  --site_top_panel_block-lmenu-top: 110%;
+  --site_top_panel_block-lmenu-right: 0;
+  --site_top_panel_block-lmenu-background: #ffffff;
+  --site_top_panel_block-lmenu-border: 1px solid #cccccc;
+  --site_top_panel_block-lmenu-border-radius: 4px;
+  --site_top_panel_block-lmenu-list-style: none;
+  --site_top_panel_block-lmenu-margin: 0;
+  --site_top_panel_block-lmenu-padding: 0.25rem 0;
+  --site_top_panel_block-lmenu-display-closed: none;
+  --site_top_panel_block-lmenu-display-open: block;
+  --site_top_panel_block-lmenu-z-index: 100;
+
+  /* --- site_top_panel_block language menu item --- */
+  --site_top_panel_block-lmenu-item-display: flex;
+  --site_top_panel_block-lmenu-item-align: center;
+  --site_top_panel_block-lmenu-item-gap: 0.4rem;
+  --site_top_panel_block-lmenu-item-padding: 0.4rem 0.75rem;
+  --site_top_panel_block-lmenu-item-cursor: pointer;
+  --site_top_panel_block-lmenu-item-font-size: 0.95rem;
+  --site_top_panel_block-lmenu-item-hover-background: #f0f0f0;
+}
+
+
+/* ===== bar ===== */
+
+.site_top_panel_block-main {
+  position: var(--site_top_panel_block-main-position);
+  top: var(--site_top_panel_block-main-top);
+  z-index: var(--site_top_panel_block-main-z-index);
+}
+
+/* ===== header ===== */
+
+.site_top_panel_block-header {
+  margin: var(--site_top_panel_block-header-margin);
+  padding: var(--site_top_panel_block-header-padding);
+  display: var(--site_top_panel_block-header-display);
+  justify-content: var(--site_top_panel_block-header-justify);
+  align-items: var(--site_top_panel_block-header-align);
+  border-bottom: var(--site_top_panel_block-header-border-bottom);
+  background: var(--site_top_panel_block-header-background);
+}
+
+/* ===== logo container ===== */
+
+.site_top_panel_block-container {
+  display: var(--site_top_panel_block-container-display);
+  align-items: var(--site_top_panel_block-container-align);
+  gap: var(--site_top_panel_block-container-gap);
+}
+
+/* ===== logo ===== */
+
+.site_top_panel_block-logo {
+  height: var(--site_top_panel_block-logo-height);
+  width: var(--site_top_panel_block-logo-width);
+}
+
+/* ===== logo text ===== */
+
+.site_top_panel_block-ltext {
+  font-family: var(--site_top_panel_block-ltext-font-family);
+  font-size: var(--site_top_panel_block-ltext-font-size);
+  font-weight: var(--site_top_panel_block-ltext-font-weight);
+  letter-spacing: var(--site_top_panel_block-ltext-letter-spacing);
+}
+
+/* ===== language switch ===== */
+
+.site_top_panel_block-switch {
+  position: var(--site_top_panel_block-switch-position);
+}
+
+/* ===== language button ===== */
+
+.site_top_panel_block-lbtn {
+  display: var(--site_top_panel_block-lbtn-display);
+  align-items: var(--site_top_panel_block-lbtn-align);
+  gap: var(--site_top_panel_block-lbtn-gap);
+  background: var(--site_top_panel_block-lbtn-background);
+  border: var(--site_top_panel_block-lbtn-border);
+  border-radius: var(--site_top_panel_block-lbtn-border-radius);
+  padding: var(--site_top_panel_block-lbtn-padding);
+  cursor: var(--site_top_panel_block-lbtn-cursor);
+}
+
+/* ===== menu ===== */
+
+.site_top_panel_block-lmenu {
+  position: var(--site_top_panel_block-lmenu-position);
+  top: var(--site_top_panel_block-lmenu-top);
+  right: var(--site_top_panel_block-lmenu-right);
+  background: var(--site_top_panel_block-lmenu-background);
+  border: var(--site_top_panel_block-lmenu-border);
+  border-radius: var(--site_top_panel_block-lmenu-border-radius);
+  list-style: var(--site_top_panel_block-lmenu-list-style);
+  margin: var(--site_top_panel_block-lmenu-margin);
+  padding: var(--site_top_panel_block-lmenu-padding);
+  display: var(--site_top_panel_block-lmenu-display-closed);
+  z-index: var(--site_top_panel_block-lmenu-z-index);
+}
+
+/* open state */
+
+.site_top_panel_block-lmenu.open {
+  display: var(--site_top_panel_block-lmenu-display-open);
+}
+
+/* ===== menu item ===== */
+
+.site_top_panel_block-lmenu li {
+  display: var(--site_top_panel_block-lmenu-item-display);
+  align-items: var(--site_top_panel_block-lmenu-item-align);
+  gap: var(--site_top_panel_block-lmenu-item-gap);
+  padding: var(--site_top_panel_block-lmenu-item-padding);
+  cursor: var(--site_top_panel_block-lmenu-item-cursor);
+  font-size: var(--site_top_panel_block-lmenu-item-font-size);
+}
+
+.site_top_panel_block-lmenu li:hover {
+  background: var(--site_top_panel_block-lmenu-item-hover-background);
+}
+

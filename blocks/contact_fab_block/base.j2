@@ -1,0 +1,5 @@
+<div class="contact_fab_block-fab">
+  {%- for item in content["content"]["items"] %}
+    <a href="{{ item["href"] }}" class="contact_fab_block-item" aria-label="{{ item["label"] }}" target="_blank" rel="noopener noreferrer">{{ item["label"] }}</a>
+  {%- endfor %}
+</div>

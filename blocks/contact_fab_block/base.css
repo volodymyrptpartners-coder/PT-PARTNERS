@@ -1,0 +1,61 @@
+:root {
+  /* --- fab container --- */
+  --contact_fab_block-fab-position: fixed;
+  --contact_fab_block-fab-bottom: 20px;
+  --contact_fab_block-fab-right: 20px;
+  --contact_fab_block-fab-display: flex;
+  --contact_fab_block-fab-direction: column;
+  --contact_fab_block-fab-gap: 12px;
+  --contact_fab_block-fab-z-index: 999;
+
+  /* --- fab item --- */
+  --contact_fab_block-item-size: 56px;
+  --contact_fab_block-item-radius: 50%;
+  --contact_fab_block-item-background: #ffffff;
+  --contact_fab_block-item-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --contact_fab_block-item-display: inline-flex;
+  --contact_fab_block-item-align: center;
+  --contact_fab_block-item-justify: center;
+  --contact_fab_block-item-transition: transform 0.2s ease, background 0.2s ease;
+
+  /* --- hover state --- */
+  --contact_fab_block-item-hover-scale: 1.15;
+  --contact_fab_block-item-hover-background: #457b9d;
+
+}
+
+
+
+/* ===== fab container ===== */
+
+.contact_fab_block-fab {
+  position: var(--contact_fab_block-fab-position);
+  bottom: var(--contact_fab_block-fab-bottom);
+  right: var(--contact_fab_block-fab-right);
+  display: var(--contact_fab_block-fab-display);
+  flex-direction: var(--contact_fab_block-fab-direction);
+  gap: var(--contact_fab_block-fab-gap);
+  z-index: var(--contact_fab_block-fab-z-index);
+}
+
+/* ===== fab item ===== */
+
+.contact_fab_block-item {
+  width: var(--contact_fab_block-item-size);
+  height: var(--contact_fab_block-item-size);
+  border-radius: var(--contact_fab_block-item-radius);
+  background: var(--contact_fab_block-item-background);
+  box-shadow: var(--contact_fab_block-item-box-shadow);
+  display: var(--contact_fab_block-item-display);
+  align-items: var(--contact_fab_block-item-align);
+  justify-content: var(--contact_fab_block-item-justify);
+  transition: var(--contact_fab_block-item-transition);
+}
+
+/* ===== hover ===== */
+
+.contact_fab_block-item:hover {
+  transform: scale(var(--contact_fab_block-item-hover-scale));
+  background: var(--contact_fab_block-item-hover-background);
+}
+

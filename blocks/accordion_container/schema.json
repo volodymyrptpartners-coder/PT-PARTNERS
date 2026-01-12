@@ -1,0 +1,51 @@
+{
+  "$id": "accordion_container.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["block_name", "content", "inline_block"],
+  "additionalProperties": false,
+
+  "properties": {
+    "block_name": {
+      "type": "string",
+      "const": "accordion_container"
+    },
+
+    "content": {
+      "type": "object",
+      "required": ["items"],
+      "additionalProperties": false,
+
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 1,
+
+          "items": {
+            "type": "object",
+            "required": ["id", "title"],
+            "additionalProperties": false,
+
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Accordion item identifier (used for JS binding if needed)"
+              },
+
+              "title": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "inline_block": {
+      "$ref": "inline_block.schema.json"
+    }
+  }
+}
+

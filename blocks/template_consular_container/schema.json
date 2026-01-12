@@ -1,0 +1,32 @@
+{
+  "$id": "template_consular_container.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["block_name", "content", "inline_block"],
+  "additionalProperties": false,
+
+  "properties": {
+    "block_name": {
+      "type": "string",
+      "const": "template_consular_container"
+    },
+
+    "content": {
+      "type": "object",
+      "required": ["lang"],
+      "additionalProperties": false,
+      "properties": {
+        "lang": {
+          "type": "string",
+          "minLength": 2,
+          "description": "Language of the HTML document (<html lang>)"
+        }
+      }
+    },
+
+    "inline_block": {
+      "$ref": "inline_block.schema.json"
+    }
+  }
+}
+

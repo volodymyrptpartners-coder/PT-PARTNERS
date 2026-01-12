@@ -1,0 +1,68 @@
+{
+  "$id": "contacts_block.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["block_name", "content"],
+  "additionalProperties": false,
+
+  "properties": {
+    "block_name": {
+      "type": "string",
+      "const": "contacts_block"
+    },
+
+    "content": {
+      "type": "object",
+      "required": ["items"],
+      "additionalProperties": false,
+
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 1,
+
+          "items": {
+            "type": "object",
+            "required": ["value", "copy", "action"],
+            "additionalProperties": false,
+
+            "properties": {
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text value shown to the user"
+              },
+
+              "copy": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Value copied to clipboard"
+              },
+
+              "action": {
+                "type": "object",
+                "required": ["href", "label"],
+                "additionalProperties": false,
+
+                "properties": {
+                  "href": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Action link or target"
+                  },
+
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Action label text"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

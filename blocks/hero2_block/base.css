@@ -1,0 +1,79 @@
+:root {
+
+  /* --- hero2_block main layout --- */
+  --hero2_block-main-display: flex;
+  --hero2_block-main-direction: column;
+  --hero2_block-main-text-align: justify;
+  --hero2_block-main-padding: 2rem 1rem;
+
+  /* --- hero2_block title --- */
+  --hero2_block-lead-font-size: clamp(2rem, 5vw, 2.75rem);
+  --hero2_block-lead-font-weight: 700;
+  --hero2_block-lead-line-height: 1.2;
+
+  /* --- hero2_block features --- */
+  --hero2_block-features-margin-left: 1rem;
+
+  --hero2_block-container-margin: 1.5rem 0;
+  --hero2_block-container-display: flex;
+  --hero2_block-container-direction: column;
+  --hero2_block-container-align: flex-start;
+  --hero2_block-container-gap: 0.8rem;
+
+  /* --- hero2_block item --- */
+  --hero2_block-item-display: flex;
+  --hero2_block-item-font-size: 1.1rem;
+  --hero2_block-item-line-height: 1.4;
+
+  /* --- hero2_block check --- */
+  --hero2_block-check-color: #2a9d8f;
+  --hero2_block-check-font-weight: bold;
+  --hero2_block-check-margin-right: 0.5rem;
+  --hero2_block-check-font-size: 1.2rem;
+}
+
+
+
+/* ===== main ===== */
+.hero2_block-main {
+  display: var(--hero2_block-main-display);
+  flex-direction: var(--hero2_block-main-direction);
+  text-align: var(--hero2_block-main-text-align);
+  padding: var(--hero2_block-main-padding);
+}
+
+/* ===== title ===== */
+.hero2_block-lead {
+  font-size: var(--hero2_block-lead-font-size);
+  font-weight: var(--hero2_block-lead-font-weight);
+  line-height: var(--hero2_block-lead-line-height);
+}
+
+/* ===== features ===== */
+.hero2_block-features {
+  margin-left: var(--hero2_block-features-margin-left);
+}
+
+.hero2_block-container {
+  margin: var(--hero2_block-container-margin);
+  display: var(--hero2_block-container-display);
+  flex-direction: var(--hero2_block-container-direction);
+  align-items: var(--hero2_block-container-align);
+  gap: var(--hero2_block-container-gap);
+}
+
+/* ===== item ===== */
+.hero2_block-item {
+  display: var(--hero2_block-item-display);
+  font-size: var(--hero2_block-item-font-size);
+  line-height: var(--hero2_block-item-line-height);
+}
+
+/* ===== check ===== */
+.hero2_block-check {
+  color: var(--hero2_block-check-color);
+  font-weight: var(--hero2_block-check-font-weight);
+  margin-right: var(--hero2_block-check-margin-right);
+  font-size: var(--hero2_block-check-font-size);
+}
+
