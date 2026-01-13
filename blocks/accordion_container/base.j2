@@ -1,11 +1,13 @@
 <section class="accordion_container-section">
   {%- for item in content["content"]["items"] %}
-    <button class="accordion_container-button" id="accordion_container-{{ item["id"] }}-toggle" aria-controls="accordion_container-{{ item["id"] }}-content">
-      {{ item["title"] }}
-      <span class="accordion_container-icon">＋</span>
-    </button>
-    <div class="accordion_container-content" id="accordion_container-{{ item["id"] }}-content">
-      {{ inline_block["site_txt_block"] | safe }}
+    <div class="accordion_container-item">
+        <button class="accordion_container-button" id="accordion_container-{{ item["id"] }}-toggle" aria-controls="accordion_container-{{ item["id"] }}-content">
+          {{ item["title"] }}
+          <span class="accordion_container-icon">＋</span>
+        </button>
+        <div class="accordion_container-content" id="accordion_container-{{ item["id"] }}-content">
+          {{ inline_block["site_txt_block"] | safe }}
+        </div>
     </div>
   {%- endfor %}
 </section>

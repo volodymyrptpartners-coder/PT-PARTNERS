@@ -22,12 +22,18 @@
   --contact_fab_block-item-hover-scale: 1.15;
   --contact_fab_block-item-hover-background: #457b9d;
 
+
+
+  /* contact_fab_block-icon */
+  --contact_fab_block-icon-width: 28px;
+  --contact_fab_block-icon-height: 28px;
+  --contact_fab_block-icon-object-fit: contain;
+  --contact_fab_block-icon-display: block;
 }
 
 
 
 /* ===== fab container ===== */
-
 .contact_fab_block-fab {
   position: var(--contact_fab_block-fab-position);
   bottom: var(--contact_fab_block-fab-bottom);
@@ -39,7 +45,6 @@
 }
 
 /* ===== fab item ===== */
-
 .contact_fab_block-item {
   width: var(--contact_fab_block-item-size);
   height: var(--contact_fab_block-item-size);
@@ -53,9 +58,17 @@
 }
 
 /* ===== hover ===== */
-
 .contact_fab_block-item:hover {
   transform: scale(var(--contact_fab_block-item-hover-scale));
   background: var(--contact_fab_block-item-hover-background);
+}
+
+
+/* === icon === */
+.contact_fab_block-icon {
+  width: var(--contact_fab_block-icon-width);
+  height: var(--contact_fab_block-icon-height);
+  object-fit: var(--contact_fab_block-icon-object-fit);
+  display: var(--contact_fab_block-icon-display);
 }
 

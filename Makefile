@@ -16,3 +16,7 @@ validate-realizations:
 	done; \
 	echo "✅ All realizations are valid"
 
+clean-realizations:
+	@echo "Removing non-test realization json files..."
+	@find blocks -type f -path "*/realization/*.json" ! -name "test_*.json" -delete ;\
+    rm -rvf b_index.html site.css site.js

@@ -15,7 +15,7 @@ result = {
 }
 
 for block_dir in BLOCKS_DIR.iterdir():
-    realization = block_dir / "realization" / f"{LANG}.json"
+    realization = block_dir / "realization" / "consular_ua.json"
     if realization.exists():
         with open(realization, "r", encoding="utf-8") as f:
             result["blocks"][block_dir.name] = {

@@ -4,7 +4,8 @@
     "items": [
       {
         "href": "#",
-        "label": "Test"
+        "label": "Test",
+        "icon": "test.svg"
       }
     ]
   }

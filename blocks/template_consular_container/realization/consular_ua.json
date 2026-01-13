@@ -1,0 +1,35 @@
+{
+  "block_name": "template_consular_container",
+  "content": {
+    "lang": "uk"
+  },
+  "inline_block": [
+    {
+      "block_name": "core_header_block"
+    },
+    {
+      "block_name": "site_top_panel_block"
+    },
+    {
+      "block_name": "hero_block"
+    },
+    {
+      "block_name": "hero2_block"
+    },
+    {
+      "block_name": "accordion_container"
+    },
+    {
+      "block_name": "contacts_block"
+    },
+    {
+      "block_name": "contact_fab_block"
+    },
+    {
+      "block_name": "site_footer_block"
+    },
+    {
+      "block_name": "hero_txt1_block"
+    }
+  ]
+}

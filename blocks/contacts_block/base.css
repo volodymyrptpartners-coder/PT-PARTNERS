@@ -1,7 +1,7 @@
 :root {
 
   /* --- contacts_block section --- */
-  --contacts_block-section-margin: 60px auto;
+  --contacts_block-section-margin-bottom: 60px;
   --contacts_block-section-padding: 0 20px;
   --contacts_block-section-text-align: center;
 
@@ -25,6 +25,7 @@
   /* --- contacts_block card hover --- */
   --contacts_block-card-hover-transform: translateY(-3px);
   --contacts_block-card-hover-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
 
   /* --- contacts_block info --- */
   --contacts_block-info-text-align: left;
@@ -57,7 +58,7 @@
 /* ===== section ===== */
 
 .contacts_block-section {
-  margin: var(--contacts_block-section-margin);
+  margin-bottom: var(--contacts_block-section-margin-bottom);
   padding: var(--contacts_block-section-padding);
   text-align: var(--contacts_block-section-text-align);
 }
@@ -86,11 +87,24 @@
 }
 
 /* hover */
-
 .contacts_block-card:hover {
   transform: var(--contacts_block-card-hover-transform);
   box-shadow: var(--contacts_block-card-hover-box-shadow);
 }
+
+
+.contacts_block-icon {
+  font-size: 1.8rem;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.contacts_block-icon .icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
 
 /* ===== info ===== */
 

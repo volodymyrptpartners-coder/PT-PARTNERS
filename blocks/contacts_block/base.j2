@@ -2,9 +2,12 @@
     <div class="contacts_block-grid">
     {%- for item in content["content"]["items"] %}
         <div class="contacts_block-card" data-copy="{{ item["copy"] }}">
+            <div class="contacts_block-icon">
+                <img class="icon" src="sources/{{ item["icon"] }}" alt="{{ item["icon-alt"] }}">
+            </div>
             <div class="contacts_block-info">
                 <span class="contacts_block-text">{{ item["value"] }}</span>
-                <a href="{{ item["action"]["href"] }}" class="contacts_block-link" target="_blank" rel="noopener noreferrer">{{ item["action"]["label"] }}</a>
+                <a href="{{ item["action"]["href"] }}" class="contacts_block-link" data-no-copy {% if item["icon-alt"] == "Mail" %}data-email-link{% endif %} target="_blank" rel="noopener noreferrer">{{ item["action"]["label"] }}</a>
             </div>
         <span class="contacts_block-checkmark">✓</span>
         </div>

@@ -10,9 +10,7 @@
   },
   "inline_block": [
     {
-      "block_name": "site_txt_block",
-      "realization_name": "ua"
+      "block_name": "site_txt_block"
     }
   ]
 }
-

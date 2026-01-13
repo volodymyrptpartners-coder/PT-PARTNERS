@@ -1,5 +1,8 @@
 python_environment/
 secret.sh
+site.js
+site.css
+b_index.html
 **/__pycache__/
 **/.pytest_cache/
 **/.ruff_cache/

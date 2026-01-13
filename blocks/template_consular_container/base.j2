@@ -2,15 +2,32 @@
 <html lang="{{ content["content"]["lang"] }}">
 <head>
   {{ inline_block["core_header_block"] | safe | indent }}
+  {%- if "include_css" in inline_block %}
+  <style>
+    {{ inline_block["include_css"] | safe | indent }}
+  </style>
+  {%- endif %}
 </head>
 <body>
-  {{ inline_block["site_top_panel_block"] | safe | indent }}
-  {{ inline_block["hero_block"] | safe | indent }}
-  {{ inline_block["hero2_block"] | safe | indent }}
-  {{ inline_block["accordion_container"] | safe | indent }}
-  {{ inline_block["contacts_block"] | safe | indent }}
-  {{ inline_block["contact_fab_block"] | safe | indent }}
-  {{ inline_block["site_footer_block"] | safe | indent }}
+  <div class="main_block">
+    {{ inline_block["site_top_panel_block"] | safe | indent }}
+    {{ inline_block["hero_block"] | safe | indent }}
+    <hr>
+    {{ inline_block["hero2_block"] | safe | indent }}
+    {{ inline_block["accordion_container"] | safe | indent }}
+    <hr>
+    <!-- hero_block has ref to contacts -->
+    <div id="contacts"></div>
+    {{ inline_block["hero_txt1_block"] | safe | indent }}
+    {{ inline_block["contacts_block"] | safe | indent }}
+    {{ inline_block["contact_fab_block"] | safe | indent }}
+    {{ inline_block["site_footer_block"] | safe | indent }}
+  </div>
+  {%- if "include_js" in inline_block %}
+  <script>
+    {{ inline_block["include_js"] | safe | indent }}
+  </script>
+  {%- endif %}
 </body>
 </html>
 

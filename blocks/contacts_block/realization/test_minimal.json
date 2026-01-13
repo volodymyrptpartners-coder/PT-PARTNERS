@@ -3,11 +3,13 @@
   "content": {
     "items": [
       {
-        "value": "test",
-        "copy": "test",
+        "value": "Test",
+        "copy": "Test",
+        "icon": "test.svg",
+        "icon-alt": "Test",
         "action": {
           "href": "#",
-          "label": "Click"
+          "label": "Action"
         }
       }
     ]

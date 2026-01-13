@@ -57,6 +57,11 @@
   box-shadow: var(--accordion_container-section-box-shadow);
 }
 
+.accordion_container-item {
+/* To save structure for JS */
+}
+
+
 /* ===== header button ===== */
 
 .accordion_container-button {

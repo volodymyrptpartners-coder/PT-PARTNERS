@@ -4,11 +4,13 @@
     "items": [
       {
         "href": "https://t.me/VolodymyrPtPartners",
-        "label": "Telegram"
+        "label": "Telegram",
+        "icon": "telegram.svg"
       },
       {
         "href": "tel:+48884930030",
-        "label": "Phone"
+        "label": "Phone",
+        "icon": "phone.svg"
       }
     ]
   }

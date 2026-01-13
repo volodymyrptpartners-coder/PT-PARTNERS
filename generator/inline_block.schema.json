@@ -7,7 +7,7 @@
 
   "items": {
     "type": "object",
-    "required": ["block_name", "realization_name"],
+    "required": ["block_name"],
     "additionalProperties": false,
 
     "properties": {

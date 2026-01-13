@@ -31,93 +31,970 @@
     <link rel="apple-touch-icon" sizes="144x144" href="sources/logo_144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="sources/logo_152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="sources/logo_180x180.png">
+  <style>
+    
+    /* ===== contacts_block ===== */
+    :root {
+
+      /* --- contacts_block section --- */
+      --contacts_block-section-margin-bottom: 60px;
+      --contacts_block-section-padding: 0 20px;
+      --contacts_block-section-text-align: center;
+
+      /* --- contacts_block grid --- */
+      --contacts_block-grid-display: grid;
+      --contacts_block-grid-gap: 20px;
+
+      /* --- contacts_block card --- */
+      --contacts_block-card-background: #ffffff;
+      --contacts_block-card-border: 1px solid #e0e0e0;
+      --contacts_block-card-border-radius: 16px;
+      --contacts_block-card-padding: 20px;
+      --contacts_block-card-display: flex;
+      --contacts_block-card-align-items: center;
+      --contacts_block-card-justify-content: space-between;
+      --contacts_block-card-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --contacts_block-card-cursor: pointer;
+      --contacts_block-card-position: relative;
+      --contacts_block-card-transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      /* --- contacts_block card hover --- */
+      --contacts_block-card-hover-transform: translateY(-3px);
+      --contacts_block-card-hover-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+
+      /* --- contacts_block info --- */
+      --contacts_block-info-text-align: left;
+      --contacts_block-info-flex: 1;
+
+      /* --- contacts_block text --- */
+      --contacts_block-text-font-size: 1.1rem;
+      --contacts_block-text-margin-bottom: 4px;
+      --contacts_block-text-color: #333333;
+
+      /* --- contacts_block link --- */
+      --contacts_block-link-font-size: 0.9rem;
+      --contacts_block-link-color: #2a9d8f;
+      --contacts_block-link-font-weight: 500;
+      --contacts_block-link-text-decoration: none;
+      --contacts_block-link-hover-decoration: underline;
+
+      /* --- contacts_block checkmark --- */
+      --contacts_block-checkmark-color: #2a9d8f;
+      --contacts_block-checkmark-font-size: 4.4rem;
+      --contacts_block-checkmark-opacity-hidden: 0;
+      --contacts_block-checkmark-opacity-visible: 1;
+      --contacts_block-checkmark-transition: opacity 0.3s;
+      --contacts_block-checkmark-position: absolute;
+      --contacts_block-checkmark-right: -75px;
+    }
+
+
+
+    /* ===== section ===== */
+
+    .contacts_block-section {
+      margin-bottom: var(--contacts_block-section-margin-bottom);
+      padding: var(--contacts_block-section-padding);
+      text-align: var(--contacts_block-section-text-align);
+    }
+
+    /* ===== grid ===== */
+
+    .contacts_block-grid {
+      display: var(--contacts_block-grid-display);
+      gap: var(--contacts_block-grid-gap);
+    }
+
+    /* ===== card ===== */
+
+    .contacts_block-card {
+      background: var(--contacts_block-card-background);
+      border: var(--contacts_block-card-border);
+      border-radius: var(--contacts_block-card-border-radius);
+      padding: var(--contacts_block-card-padding);
+      display: var(--contacts_block-card-display);
+      align-items: var(--contacts_block-card-align-items);
+      justify-content: var(--contacts_block-card-justify-content);
+      box-shadow: var(--contacts_block-card-box-shadow);
+      cursor: var(--contacts_block-card-cursor);
+      position: var(--contacts_block-card-position);
+      transition: var(--contacts_block-card-transition);
+    }
+
+    /* hover */
+    .contacts_block-card:hover {
+      transform: var(--contacts_block-card-hover-transform);
+      box-shadow: var(--contacts_block-card-hover-box-shadow);
+    }
+
+
+    .contacts_block-icon {
+      font-size: 1.8rem;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .contacts_block-icon .icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+
+    /* ===== info ===== */
+
+    .contacts_block-info {
+      text-align: var(--contacts_block-info-text-align);
+      flex: var(--contacts_block-info-flex);
+    }
+
+    /* ===== text ===== */
+
+    .contacts_block-text {
+      display: block;
+      font-size: var(--contacts_block-text-font-size);
+      margin-bottom: var(--contacts_block-text-margin-bottom);
+      color: var(--contacts_block-text-color);
+    }
+
+    /* ===== link ===== */
+
+    .contacts_block-link {
+      font-size: var(--contacts_block-link-font-size);
+      color: var(--contacts_block-link-color);
+      font-weight: var(--contacts_block-link-font-weight);
+      text-decoration: var(--contacts_block-link-text-decoration);
+    }
+
+    .contacts_block-link:hover {
+      text-decoration: var(--contacts_block-link-hover-decoration);
+    }
+
+    /* ===== checkmark ===== */
+
+    .contacts_block-checkmark {
+      color: var(--contacts_block-checkmark-color);
+      font-size: var(--contacts_block-checkmark-font-size);
+      opacity: var(--contacts_block-checkmark-opacity-hidden);
+      transition: var(--contacts_block-checkmark-transition);
+      position: var(--contacts_block-checkmark-position);
+      right: var(--contacts_block-checkmark-right);
+    }
+
+    /* copied state */
+
+    .contacts_block-card.copied .contacts_block-checkmark {
+      opacity: var(--contacts_block-checkmark-opacity-visible);
+    }
+
+
+    /* ===== site_top_panel_block ===== */
+    /* =====================================
+       site_top_panel_block – variables
+       ===================================== */
+
+    :root {
+      /* --- site_top_panel_block  bar --- */
+      --site_top_panel_block-main-position: sticky;
+      --site_top_panel_block-main-top: 0;
+      --site_top_panel_block-main-z-index: 999;
+
+      /* --- site_top_panel_block header --- */
+      --site_top_panel_block-header-margin: 0 auto;
+      --site_top_panel_block-header-padding: 0.5rem 1rem;
+      --site_top_panel_block-header-display: flex;
+      --site_top_panel_block-header-justify: space-between;
+      --site_top_panel_block-header-align: center;
+      --site_top_panel_block-header-border-bottom: 1px solid #dddddd;
+      --site_top_panel_block-header-background: #ffffff;
+
+      /* --- site_top_panel_block logo container --- */
+      --site_top_panel_block-container-display: flex;
+      --site_top_panel_block-container-align: center;
+      --site_top_panel_block-container-gap: 0.5rem;
+
+      /* --- site_top_panel_block logo image --- */
+      --site_top_panel_block-logo-height: 50px;
+      --site_top_panel_block-logo-width: auto;
+
+      /* --- site_top_panel_block logo text --- */
+      --site_top_panel_block-ltext-font-family: 'Noticia Text', serif;
+      --site_top_panel_block-ltext-font-size: 1.6rem;
+      --site_top_panel_block-ltext-font-weight: 700;
+      --site_top_panel_block-ltext-letter-spacing: 0.5px;
+
+      /* --- site_top_panel_block language switch --- */
+      --site_top_panel_block-switch-position: relative;
+
+      /* --- site_top_panel_block language button --- */
+      --site_top_panel_block-lbtn-display: flex;
+      --site_top_panel_block-lbtn-align: center;
+      --site_top_panel_block-lbtn-gap: 0.4rem;
+      --site_top_panel_block-lbtn-background: none;
+      --site_top_panel_block-lbtn-border: 1px solid #cccccc;
+      --site_top_panel_block-lbtn-border-radius: 4px;
+      --site_top_panel_block-lbtn-padding: 0.25rem 0.5rem;
+      --site_top_panel_block-lbtn-cursor: pointer;
+
+      /* --- site_top_panel_block language menu --- */
+      --site_top_panel_block-lmenu-position: absolute;
+      --site_top_panel_block-lmenu-top: 110%;
+      --site_top_panel_block-lmenu-right: 0;
+      --site_top_panel_block-lmenu-background: #ffffff;
+      --site_top_panel_block-lmenu-border: 1px solid #cccccc;
+      --site_top_panel_block-lmenu-border-radius: 4px;
+      --site_top_panel_block-lmenu-list-style: none;
+      --site_top_panel_block-lmenu-margin: 0;
+      --site_top_panel_block-lmenu-padding: 0.25rem 0;
+      --site_top_panel_block-lmenu-display-closed: none;
+      --site_top_panel_block-lmenu-display-open: block;
+      --site_top_panel_block-lmenu-z-index: 100;
+
+      /* --- site_top_panel_block language menu item --- */
+      --site_top_panel_block-lmenu-item-display: flex;
+      --site_top_panel_block-lmenu-item-align: center;
+      --site_top_panel_block-lmenu-item-gap: 0.4rem;
+      --site_top_panel_block-lmenu-item-padding: 0.4rem 0.75rem;
+      --site_top_panel_block-lmenu-item-cursor: pointer;
+      --site_top_panel_block-lmenu-item-font-size: 0.95rem;
+      --site_top_panel_block-lmenu-item-hover-background: #f0f0f0;
+    }
+
+
+    /* ===== bar ===== */
+
+    .site_top_panel_block-main {
+      position: var(--site_top_panel_block-main-position);
+      top: var(--site_top_panel_block-main-top);
+      z-index: var(--site_top_panel_block-main-z-index);
+    }
+
+    /* ===== header ===== */
+
+    .site_top_panel_block-header {
+      margin: var(--site_top_panel_block-header-margin);
+      padding: var(--site_top_panel_block-header-padding);
+      display: var(--site_top_panel_block-header-display);
+      justify-content: var(--site_top_panel_block-header-justify);
+      align-items: var(--site_top_panel_block-header-align);
+      border-bottom: var(--site_top_panel_block-header-border-bottom);
+      background: var(--site_top_panel_block-header-background);
+    }
+
+    /* ===== logo container ===== */
+
+    .site_top_panel_block-container {
+      display: var(--site_top_panel_block-container-display);
+      align-items: var(--site_top_panel_block-container-align);
+      gap: var(--site_top_panel_block-container-gap);
+    }
+
+    /* ===== logo ===== */
+
+    .site_top_panel_block-logo {
+      height: var(--site_top_panel_block-logo-height);
+      width: var(--site_top_panel_block-logo-width);
+    }
+
+    /* ===== logo text ===== */
+
+    .site_top_panel_block-ltext {
+      font-family: var(--site_top_panel_block-ltext-font-family);
+      font-size: var(--site_top_panel_block-ltext-font-size);
+      font-weight: var(--site_top_panel_block-ltext-font-weight);
+      letter-spacing: var(--site_top_panel_block-ltext-letter-spacing);
+    }
+
+    /* ===== language switch ===== */
+
+    .site_top_panel_block-switch {
+      position: var(--site_top_panel_block-switch-position);
+    }
+
+    /* ===== language button ===== */
+
+    .site_top_panel_block-lbtn {
+      display: var(--site_top_panel_block-lbtn-display);
+      align-items: var(--site_top_panel_block-lbtn-align);
+      gap: var(--site_top_panel_block-lbtn-gap);
+      background: var(--site_top_panel_block-lbtn-background);
+      border: var(--site_top_panel_block-lbtn-border);
+      border-radius: var(--site_top_panel_block-lbtn-border-radius);
+      padding: var(--site_top_panel_block-lbtn-padding);
+      cursor: var(--site_top_panel_block-lbtn-cursor);
+    }
+
+    /* ===== menu ===== */
+
+    .site_top_panel_block-lmenu {
+      position: var(--site_top_panel_block-lmenu-position);
+      top: var(--site_top_panel_block-lmenu-top);
+      right: var(--site_top_panel_block-lmenu-right);
+      background: var(--site_top_panel_block-lmenu-background);
+      border: var(--site_top_panel_block-lmenu-border);
+      border-radius: var(--site_top_panel_block-lmenu-border-radius);
+      list-style: var(--site_top_panel_block-lmenu-list-style);
+      margin: var(--site_top_panel_block-lmenu-margin);
+      padding: var(--site_top_panel_block-lmenu-padding);
+      display: var(--site_top_panel_block-lmenu-display-closed);
+      z-index: var(--site_top_panel_block-lmenu-z-index);
+    }
+
+    /* open state */
+
+    .site_top_panel_block-lmenu.open {
+      display: var(--site_top_panel_block-lmenu-display-open);
+    }
+
+    /* ===== menu item ===== */
+
+    .site_top_panel_block-lmenu li {
+      display: var(--site_top_panel_block-lmenu-item-display);
+      align-items: var(--site_top_panel_block-lmenu-item-align);
+      gap: var(--site_top_panel_block-lmenu-item-gap);
+      padding: var(--site_top_panel_block-lmenu-item-padding);
+      cursor: var(--site_top_panel_block-lmenu-item-cursor);
+      font-size: var(--site_top_panel_block-lmenu-item-font-size);
+    }
+
+    .site_top_panel_block-lmenu li:hover {
+      background: var(--site_top_panel_block-lmenu-item-hover-background);
+    }
+
+
+    /* ===== accordion_container ===== */
+    :root {
+      /* accordion_container – section */
+      --accordion_container-section-margin: 40px auto;
+      --accordion_container-section-border: 1px solid #e0e0e0;
+      --accordion_container-section-border-radius: 12px;
+      --accordion_container-section-overflow: hidden;
+      --accordion_container-section-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      /* accordion_container – button */
+      --accordion_container-button-width: 100%;
+      --accordion_container-button-background: #2a9d8f;
+      --accordion_container-button-color: #ffffff;
+      --accordion_container-button-font-size: 1.2rem;
+      --accordion_container-button-padding: 18px 24px;
+      --accordion_container-button-border: none;
+      --accordion_container-button-text-align: left;
+      --accordion_container-button-cursor: pointer;
+      --accordion_container-button-display: flex;
+      --accordion_container-button-justify-content: space-between;
+      --accordion_container-button-align-items: center;
+
+      /* accordion_container – icon */
+      --accordion_container-icon-font-size: 1.5rem;
+      --accordion_container-icon-transition: transform 0.3s;
+
+      /* accordion_container – content */
+      --accordion_container-content-display-closed: none;
+      --accordion_container-content-display-open: block;
+      --accordion_container-content-padding: 20px 24px;
+      --accordion_container-content-line-height: 1.6;
+      --accordion_container-content-text-align-open: justify;
+
+      /* accordion_container – typography inside content */
+      --accordion_container-heading-margin-top: 1.4em;
+      --accordion_container-heading-margin-bottom: 0.6em;
+      --accordion_container-heading-font-size: 1.2rem;
+      --accordion_container-heading-color: #2a9d8f;
+      --accordion_container-heading-font-weight: 600;
+
+      --accordion_container-paragraph-margin-bottom: 1em;
+
+      --accordion_container-list-margin: 0.6em 0 1.2em 1.5em;
+      --accordion_container-list-item-padding-left: 1.4em;
+      --accordion_container-list-item-margin-bottom: 0.5em;
+      --accordion_container-list-bullet-color: #2a9d8f;
+
+      --accordion_container-strong-color: #264653;
+    }
+
+    /* ===== container ===== */
+
+    .accordion_container-section {
+      margin: var(--accordion_container-section-margin);
+      border: var(--accordion_container-section-border);
+      border-radius: var(--accordion_container-section-border-radius);
+      overflow: var(--accordion_container-section-overflow);
+      box-shadow: var(--accordion_container-section-box-shadow);
+    }
+
+    .accordion_container-item {
+    /* To save structure for JS */
+    }
+
+
+    /* ===== header button ===== */
+
+    .accordion_container-button {
+      width: var(--accordion_container-button-width);
+      background: var(--accordion_container-button-background);
+      color: var(--accordion_container-button-color);
+      font-size: var(--accordion_container-button-font-size);
+      padding: var(--accordion_container-button-padding);
+      border: var(--accordion_container-button-border);
+      text-align: var(--accordion_container-button-text-align);
+      cursor: var(--accordion_container-button-cursor);
+      display: var(--accordion_container-button-display);
+      justify-content: var(--accordion_container-button-justify-content);
+      align-items: var(--accordion_container-button-align-items);
+    }
+
+    /* ===== icon ===== */
+
+    .accordion_container-icon {
+      font-size: var(--accordion_container-icon-font-size);
+      transition: var(--accordion_container-icon-transition);
+    }
+
+    /* ===== content ===== */
+
+    .accordion_container-content {
+      display: var(--accordion_container-content-display-closed);
+      padding: var(--accordion_container-content-padding);
+      line-height: var(--accordion_container-content-line-height);
+    }
+
+    /* ===== open state ===== */
+
+    .accordion_container-section.open .accordion_container-content {
+      display: var(--accordion_container-content-display-open);
+      text-align: var(--accordion_container-content-text-align-open);
+    }
+
+    .accordion_container-section.open .accordion_container-icon {
+      transform: rotate(45deg);
+    }
+
+    /* ===== typography inside content ===== */
+
+    .accordion_container-content h3 {
+      margin-top: var(--accordion_container-heading-margin-top);
+      margin-bottom: var(--accordion_container-heading-margin-bottom);
+      font-size: var(--accordion_container-heading-font-size);
+      color: var(--accordion_container-heading-color);
+      font-weight: var(--accordion_container-heading-font-weight);
+    }
+
+    .accordion_container-content p {
+      margin-bottom: var(--accordion_container-paragraph-margin-bottom);
+    }
+
+    .accordion_container-content ul {
+      margin: var(--accordion_container-list-margin);
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .accordion_container-content ul li {
+      position: relative;
+      padding-left: var(--accordion_container-list-item-padding-left);
+      margin-bottom: var(--accordion_container-list-item-margin-bottom);
+    }
+
+    .accordion_container-content ul li::before {
+      content: '•';
+      color: var(--accordion_container-list-bullet-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .accordion_container-content strong {
+      color: var(--accordion_container-strong-color);
+    }
+
+
+    /* ===== site_txt_block ===== */
+    .site_txt_block-main {
+
+    }
+
+
+    /* ===== contact_fab_block ===== */
+    :root {
+      /* --- fab container --- */
+      --contact_fab_block-fab-position: fixed;
+      --contact_fab_block-fab-bottom: 20px;
+      --contact_fab_block-fab-right: 20px;
+      --contact_fab_block-fab-display: flex;
+      --contact_fab_block-fab-direction: column;
+      --contact_fab_block-fab-gap: 12px;
+      --contact_fab_block-fab-z-index: 999;
+
+      /* --- fab item --- */
+      --contact_fab_block-item-size: 56px;
+      --contact_fab_block-item-radius: 50%;
+      --contact_fab_block-item-background: #ffffff;
+      --contact_fab_block-item-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      --contact_fab_block-item-display: inline-flex;
+      --contact_fab_block-item-align: center;
+      --contact_fab_block-item-justify: center;
+      --contact_fab_block-item-transition: transform 0.2s ease, background 0.2s ease;
+
+      /* --- hover state --- */
+      --contact_fab_block-item-hover-scale: 1.15;
+      --contact_fab_block-item-hover-background: #457b9d;
+
+
+
+      /* contact_fab_block-icon */
+      --contact_fab_block-icon-width: 28px;
+      --contact_fab_block-icon-height: 28px;
+      --contact_fab_block-icon-object-fit: contain;
+      --contact_fab_block-icon-display: block;
+    }
+
+
+
+    /* ===== fab container ===== */
+    .contact_fab_block-fab {
+      position: var(--contact_fab_block-fab-position);
+      bottom: var(--contact_fab_block-fab-bottom);
+      right: var(--contact_fab_block-fab-right);
+      display: var(--contact_fab_block-fab-display);
+      flex-direction: var(--contact_fab_block-fab-direction);
+      gap: var(--contact_fab_block-fab-gap);
+      z-index: var(--contact_fab_block-fab-z-index);
+    }
+
+    /* ===== fab item ===== */
+    .contact_fab_block-item {
+      width: var(--contact_fab_block-item-size);
+      height: var(--contact_fab_block-item-size);
+      border-radius: var(--contact_fab_block-item-radius);
+      background: var(--contact_fab_block-item-background);
+      box-shadow: var(--contact_fab_block-item-box-shadow);
+      display: var(--contact_fab_block-item-display);
+      align-items: var(--contact_fab_block-item-align);
+      justify-content: var(--contact_fab_block-item-justify);
+      transition: var(--contact_fab_block-item-transition);
+    }
+
+    /* ===== hover ===== */
+    .contact_fab_block-item:hover {
+      transform: scale(var(--contact_fab_block-item-hover-scale));
+      background: var(--contact_fab_block-item-hover-background);
+    }
+
+
+    /* === icon === */
+    .contact_fab_block-icon {
+      width: var(--contact_fab_block-icon-width);
+      height: var(--contact_fab_block-icon-height);
+      object-fit: var(--contact_fab_block-icon-object-fit);
+      display: var(--contact_fab_block-icon-display);
+    }
+
+
+    /* ===== site_footer_block ===== */
+    :root {
+
+      /* --- site_footer_block layout --- */
+      --site_footer_block-background: #ffffff;
+      --site_footer_block-text-align: center;
+      --site_footer_block-padding: 20px;
+      --site_footer_block-font-size: 14px;
+
+      /* --- site_footer_block border --- */
+      --site_footer_block-border-top: 1px solid #dddddd;
+    }
+
+    /* ===== footer ===== */
+    .site_footer_block-main {
+      background: var(--site_footer_block-background);
+      text-align: var(--site_footer_block-text-align);
+      padding: var(--site_footer_block-padding);
+      font-size: var(--site_footer_block-font-size);
+      border-top: var(--site_footer_block-border-top);
+    }
+
+
+    /* ===== hero_block ===== */
+    :root {
+    /* ================================
+       hero_block – variables
+       ================================ */
+
+
+      /* --- hero_block main layout --- */
+      --hero_block-main-display: flex;
+      --hero_block-main-direction: column;
+      --hero_block-main-text-align: justify;
+      --hero_block-main-padding: 2rem 1rem;
+
+      /* --- hero_block title --- */
+      --hero_block-lead-font-size: clamp(2rem, 5vw, 2.75rem);
+      --hero_block-lead-font-weight: 700;
+      --hero_block-lead-line-height: 1.2;
+
+      /* --- hero_block explanation --- */
+      --hero_block-explanation-margin-top: 1rem;
+      --hero_block-explanation-font-size: clamp(1rem, 2.5vw, 1.25rem);
+      --hero_block-explanation-line-height: 1.6;
+      --hero_block-explanation-color: #555555;
+      --hero_block-explanation-padding: 0 0.5rem;
+
+      /* --- hero_block features --- */
+      --hero_block-features-margin-left: 1rem;
+
+      --hero_block-container-margin: 1.5rem 0;
+      --hero_block-container-display: flex;
+      --hero_block-container-direction: column;
+      --hero_block-container-align: flex-start;
+      --hero_block-container-gap: 0.8rem;
+
+      /* --- hero_block feature item --- */
+      --hero_block-item-display: flex;
+      --hero_block-item-font-size: 1.1rem;
+      --hero_block-item-line-height: 1.4;
+
+      /* --- hero_block check --- */
+      --hero_block-check-color: #2a9d8f;
+      --hero_block-check-font-weight: bold;
+      --hero_block-check-margin-right: 0.5rem;
+      --hero_block-check-font-size: 1.2rem;
+
+      /* --- hero_block button --- */
+      --hero_block-btn-display: block;
+      --hero_block-btn-margin: 24px auto 0;
+      --hero_block-btn-padding: 14px 32px;
+      --hero_block-btn-background: #2a9d8f;
+      --hero_block-btn-color: #ffffff;
+      --hero_block-btn-font-size: 1.1rem;
+      --hero_block-btn-font-weight: 600;
+      --hero_block-btn-border-radius: 8px;
+      --hero_block-btn-text-decoration: none;
+      --hero_block-btn-text-align: center;
+      --hero_block-btn-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+      --hero_block-btn-transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+
+      /* --- hero_block button hover / active --- */
+      --hero_block-btn-hover-background: #24867b;
+      --hero_block-btn-hover-transform: translateY(-2px);
+      --hero_block-btn-hover-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      --hero_block-btn-active-transform: translateY(1px);
+      --hero_block-btn-active-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+    }
+
+    /* ===== main ===== */
+
+    .hero_block-main {
+      display: var(--hero_block-main-display);
+      flex-direction: var(--hero_block-main-direction);
+      text-align: var(--hero_block-main-text-align);
+      padding: var(--hero_block-main-padding);
+    }
+
+    /* ===== title ===== */
+
+    .hero_block-lead {
+      font-size: var(--hero_block-lead-font-size);
+      font-weight: var(--hero_block-lead-font-weight);
+      line-height: var(--hero_block-lead-line-height);
+    }
+
+    /* ===== explanation ===== */
+
+    .hero_block-explanation {
+      margin-top: var(--hero_block-explanation-margin-top);
+      font-size: var(--hero_block-explanation-font-size);
+      line-height: var(--hero_block-explanation-line-height);
+      color: var(--hero_block-explanation-color);
+      padding: var(--hero_block-explanation-padding);
+    }
+
+    /* ===== features ===== */
+
+    .hero_block-features {
+      margin-left: var(--hero_block-features-margin-left);
+    }
+
+    .hero_block-container {
+      margin: var(--hero_block-container-margin);
+      display: var(--hero_block-container-display);
+      flex-direction: var(--hero_block-container-direction);
+      align-items: var(--hero_block-container-align);
+      gap: var(--hero_block-container-gap);
+    }
+
+    /* ===== item ===== */
+
+    .hero_block-item {
+      display: var(--hero_block-item-display);
+      font-size: var(--hero_block-item-font-size);
+      line-height: var(--hero_block-item-line-height);
+    }
+
+    /* ===== check ===== */
+
+    .hero_block-check {
+      color: var(--hero_block-check-color);
+      font-weight: var(--hero_block-check-font-weight);
+      margin-right: var(--hero_block-check-margin-right);
+      font-size: var(--hero_block-check-font-size);
+    }
+
+    /* ===== button ===== */
+
+    .hero_block-btn {
+      display: var(--hero_block-btn-display);
+      margin: var(--hero_block-btn-margin);
+      padding: var(--hero_block-btn-padding);
+      background: var(--hero_block-btn-background);
+      color: var(--hero_block-btn-color);
+      font-size: var(--hero_block-btn-font-size);
+      font-weight: var(--hero_block-btn-font-weight);
+      text-decoration: var(--hero_block-btn-text-decoration);
+      border-radius: var(--hero_block-btn-border-radius);
+      box-shadow: var(--hero_block-btn-box-shadow);
+      transition: var(--hero_block-btn-transition);
+      text-align: var(--hero_block-btn-text-align);
+    }
+
+    /* hover / active */
+
+    .hero_block-btn:hover {
+      background: var(--hero_block-btn-hover-background);
+      transform: var(--hero_block-btn-hover-transform);
+      box-shadow: var(--hero_block-btn-hover-box-shadow);
+    }
+
+    .hero_block-btn:active {
+      transform: var(--hero_block-btn-active-transform);
+      box-shadow: var(--hero_block-btn-active-box-shadow);
+    }
+
+
+    /* ===== template_consular_container ===== */
+    :root {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+        color: #0b1220;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    .main_block {
+    /* 'main_block' is reserved for JS !!! */
+        max-width: 560px;
+        padding: 0 16px;
+        background: #fff;
+        margin: 50px auto 0;
+    }
+
+
+    /* ===== hero_txt1_block ===== */
+    .hero_txt1_block-main {
+      padding: 2rem 1rem;
+      text-align: justify;
+    }
+
+    .hero_txt1_block-lead {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      margin-top: 20px;
+      line-height: 1.2;
+    }
+
+    .hero_txt1_block-text {
+      margin-top: 1rem;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.6;
+      color: #555;
+      padding: 0 0.5rem;
+    }
+
+
+    /* ===== hero2_block ===== */
+    :root {
+
+      /* --- hero2_block main layout --- */
+      --hero2_block-main-display: flex;
+      --hero2_block-main-direction: column;
+      --hero2_block-main-text-align: justify;
+      --hero2_block-main-padding: 2rem 1rem;
+
+      /* --- hero2_block title --- */
+      --hero2_block-lead-font-size: clamp(2rem, 5vw, 2.75rem);
+      --hero2_block-lead-font-weight: 700;
+      --hero2_block-lead-line-height: 1.2;
+
+      /* --- hero2_block features --- */
+      --hero2_block-features-margin-left: 1rem;
+
+      --hero2_block-container-margin: 1.5rem 0;
+      --hero2_block-container-display: flex;
+      --hero2_block-container-direction: column;
+      --hero2_block-container-align: flex-start;
+      --hero2_block-container-gap: 0.8rem;
+
+      /* --- hero2_block item --- */
+      --hero2_block-item-display: flex;
+      --hero2_block-item-font-size: 1.1rem;
+      --hero2_block-item-line-height: 1.4;
+
+      /* --- hero2_block check --- */
+      --hero2_block-check-color: #2a9d8f;
+      --hero2_block-check-font-weight: bold;
+      --hero2_block-check-margin-right: 0.5rem;
+      --hero2_block-check-font-size: 1.2rem;
+    }
+
+
+
+    /* ===== main ===== */
+    .hero2_block-main {
+      display: var(--hero2_block-main-display);
+      flex-direction: var(--hero2_block-main-direction);
+      text-align: var(--hero2_block-main-text-align);
+      padding: var(--hero2_block-main-padding);
+    }
+
+    /* ===== title ===== */
+    .hero2_block-lead {
+      font-size: var(--hero2_block-lead-font-size);
+      font-weight: var(--hero2_block-lead-font-weight);
+      line-height: var(--hero2_block-lead-line-height);
+    }
+
+    /* ===== features ===== */
+    .hero2_block-features {
+      margin-left: var(--hero2_block-features-margin-left);
+    }
+
+    .hero2_block-container {
+      margin: var(--hero2_block-container-margin);
+      display: var(--hero2_block-container-display);
+      flex-direction: var(--hero2_block-container-direction);
+      align-items: var(--hero2_block-container-align);
+      gap: var(--hero2_block-container-gap);
+    }
+
+    /* ===== item ===== */
+    .hero2_block-item {
+      display: var(--hero2_block-item-display);
+      font-size: var(--hero2_block-item-font-size);
+      line-height: var(--hero2_block-item-line-height);
+    }
+
+    /* ===== check ===== */
+    .hero2_block-check {
+      color: var(--hero2_block-check-color);
+      font-weight: var(--hero2_block-check-font-weight);
+      margin-right: var(--hero2_block-check-margin-right);
+      font-size: var(--hero2_block-check-font-size);
+    }
+
+  </style>
 </head>
 <body>
-  
-    <div class="top_bar">
-        <div class="site-header">
-            <div class="logo-block">
-                <img src="sources/logo_vector.svg" alt="PT&PARTNERS" class="site-logo">
-                <span class="logo-text">PT&PARTNERS</span>
+  <div class="main_block">
+    <div class="site_top_panel_block-main">
+        <div class="site_top_panel_block-header">
+            <div class="site_top_panel_block-container">
+                <img src="sources/logo_vector.svg" alt="PT&PARTNERS" class="site_top_panel_block-logo">
+                <span class="site_top_panel_block-ltext">PT&PARTNERS</span>
             </div>
-            <div class="lang-switch">
-                <button class="lang-btn" type="button">
-                    <span class="chevron">&#9662;</span>
-                </button>
-                <ul class="lang-menu">
+
+            <div class="site_top_panel_block-switch">
+              <button class="site_top_panel_block-lbtn" type="button">
+                <span class="site_top_panel_block-ficon">
+                  <img src="sources/ua-flag.svg"
+                       alt="UA"
+                       width="24"
+                       height="16">
+                </span>
+                <span class="site_top_panel_block-chevron">&#9662;</span>
+              </button>
+            
+              <ul class="site_top_panel_block-lmenu">
                   <li>
-                    <a href="ukraine-consul.html"> 
-                        <span class="flag-icon">
-                            <img src="sources/ua-flag.svg" alt="UA" width="24" height="16">
-                        </span>
+                    <a href="ukraine-consul.html">
+                      <span class="site_top_panel_block-ficon">
+                        <img src="sources/ua-flag.svg"
+                             alt="UA"
+                             width="24"
+                             height="16">
+                      </span>
                     </a>
                   </li>
                   <li>
-                    <a href="ukraine-consul-ru.html"> 
-                        <span class="flag-icon">
-                            <img src="sources/ru-flag.svg" alt="RU" width="24" height="16">
-                        </span>
+                    <a href="ukraine-consul-ru.html">
+                      <span class="site_top_panel_block-ficon">
+                        <img src="sources/ru-flag.svg"
+                             alt="RU"
+                             width="24"
+                             height="16">
+                      </span>
                     </a>
                   </li>
-                 </ul>
+              </ul>
             </div>
         </div>
     </div>
-  <div class="basic_format">
-        <h1 class="hero-lead">Консульський облік у Польщі</h1>
-        <p class="hero-explanation">Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.</p>
-        <div class="hero-features">
-            <div class="hero-features-container">
-                <div class="hero-feature-item">
-                    <span class="check">✓</span>
+    <div class="hero_block-main">
+        <h1 class="hero_block-lead">Консульський облік у Польщі</h1>
+        <p class="hero_block-explanation">Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.</p>
+        <div class="hero_block-features">
+            <div class="hero_block-container">
+                <div class="hero_block-item">
+                    <span class="hero_block-check">✓</span>
                     <span>Швидке оформлення</span>
                 </div>
-                <div class="hero-feature-item">
-                    <span class="check">✓</span>
+                <div class="hero_block-item">
+                    <span class="hero_block-check">✓</span>
                     <span>Перевірка документів</span>
                 </div>
-                <div class="hero-feature-item">
-                    <span class="check">⏱</span>
+                <div class="hero_block-item">
+                    <span class="hero_block-check">⏱</span>
                     <span>Терміни виконання: до 10 днів.</span>
                 </div>
-                <div class="hero-feature-item">
-                    <span class="check">✓</span>
+                <div class="hero_block-item">
+                    <span class="hero_block-check">✓</span>
                     <span>Оплата лише після результату — ви платите тільки тоді, коли облік оформлено.</span>
                 </div>
-                <div class="hero-feature-item">
-                    <span class="check">✓</span>
+                <div class="hero_block-item">
+                    <span class="hero_block-check">✓</span>
                     <span>Вартість послуги: 380 zł</span>
                 </div>
-                <a href="#contacts" class="btn-order">Замовити</a>
+                <a href="#contacts" class="hero_block-btn">Замовити</a>
             </div>
         </div>
     </div>
-  <div class="basic_format">
-        <h1 class="hero-lead">Наші послуги</h1>
-        <div class="hero-features">
-            <div class="hero-features-container">
-                <div class="hero-feature-item">
-                    <span class="check">★</span>
+    <hr>
+    <div class="hero2_block-main">
+        <h1 class="hero2_block-lead">Наші послуги</h1>
+        <div class="hero2_block-features">
+            <div class="hero2_block-container">
+                <div class="hero2_block-item">
+                    <span class="hero2_block-check">★</span>
                     <span>Консультація з вибору типу обліку</span>
                 </div>
-                <div class="hero-feature-item">
-                    <span class="check">★</span>
+                <div class="hero2_block-item">
+                    <span class="hero2_block-check">★</span>
                     <span>Перевірка та підготовка документів</span>
                 </div>
-                <div class="hero-feature-item">
-                    <span class="check">★</span>
+                <div class="hero2_block-item">
+                    <span class="hero2_block-check">★</span>
                     <span>Подача документів</span>
                 </div>
             </div>
         </div>
     </div>
-  <section class="accordion">
-        <button class="accordion-header" id="consularToggle" aria-controls="consularContent">
-          Що таке консульський облік?
-          <span class="accordion-icon">＋</span>
-        </button>
-        <div class="accordion-content" id="consularContent">
-          <div class="site-text-block">
+    <section class="accordion_container-section">
+        <div class="accordion_container-item">
+            <button class="accordion_container-button" id="accordion_container-consular-toggle" aria-controls="accordion_container-consular-content">
+              Що таке консульський облік?
+              <span class="accordion_container-icon">＋</span>
+            </button>
+            <div class="accordion_container-content" id="accordion_container-consular-content">
+              <div class="site_txt_block-main">
         <p><strong>Консульський облік</strong> — офіційна реєстрація громадянина України у посольстві або консульстві України за кордоном.
         </p>
         <h3>Тимчасовий</h3>
@@ -144,44 +1021,240 @@
         </p>
     </div>
 
-        </div>
-    </section>
-  <section class="contacts">
-        <div class="contacts-grid">
-            <div class="contact-card" data-copy="volodymyrptpartners@gmail.com">
-                <div class="contact-info">
-                    <span class="contact-text">volodymyrptpartners@gmail.com</span>
-                    <a href="mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт," class="contact-link" target="_blank" rel="noopener noreferrer">Написати листа</a>
-                </div>
-            <span class="checkmark">✓</span>
-            </div>
-            <div class="contact-card" data-copy="tel:+48884930030">
-                <div class="contact-info">
-                    <span class="contact-text">+48 884 930 030</span>
-                    <a href="tel:+48884930030" class="contact-link" target="_blank" rel="noopener noreferrer">Зателефонувати</a>
-                </div>
-            <span class="checkmark">✓</span>
-            </div>
-            <div class="contact-card" data-copy="@VolodymyrPtPartners">
-                <div class="contact-info">
-                    <span class="contact-text">@VolodymyrPtPartners</span>
-                    <a href="https://t.me/VolodymyrPtPartners" class="contact-link" target="_blank" rel="noopener noreferrer">Відкрити в Telegram</a>
-                </div>
-            <span class="checkmark">✓</span>
-            </div>
-            <div class="contact-card" data-copy="https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno">
-                <div class="contact-info">
-                    <span class="contact-text">PT&PARTNERS</span>
-                    <a href="https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno" class="contact-link" target="_blank" rel="noopener noreferrer">Відкрити в Google Maps</a>
-                </div>
-            <span class="checkmark">✓</span>
             </div>
         </div>
     </section>
-  <div class="contact-fab">
-        <a href="https://t.me/VolodymyrPtPartners" class="fab-item" aria-label="Telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="tel:+48884930030" class="fab-item" aria-label="Phone" target="_blank" rel="noopener noreferrer">Phone</a>
+    <hr>
+    <!-- hero_block has ref to contacts -->
+    <div id="contacts"></div>
+    <section class="hero_txt1_block-main">
+      <h1 class="hero_txt1_block-lead">
+        Замовити
+      </h1>
+      <p class="hero_txt1_block-text">
+        Зв’яжіться з нами через Telegram або зателефонуйте для швидкої консультації.
+      </p>
+    </section>
+    <section class="contacts_block-section">
+        <div class="contacts_block-grid">
+            <div class="contacts_block-card" data-copy="volodymyrptpartners@gmail.com">
+                <div class="contacts_block-icon">
+                    <img class="icon" src="sources/email.svg" alt="Mail">
+                </div>
+                <div class="contacts_block-info">
+                    <span class="contacts_block-text">volodymyrptpartners@gmail.com</span>
+                    <a href="mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт," class="contacts_block-link" data-no-copy data-email-link target="_blank" rel="noopener noreferrer">Написати листа</a>
+                </div>
+            <span class="contacts_block-checkmark">✓</span>
+            </div>
+            <div class="contacts_block-card" data-copy="tel:+48884930030">
+                <div class="contacts_block-icon">
+                    <img class="icon" src="sources/phone.svg" alt="Phone">
+                </div>
+                <div class="contacts_block-info">
+                    <span class="contacts_block-text">+48 884 930 030</span>
+                    <a href="tel:+48884930030" class="contacts_block-link" data-no-copy  target="_blank" rel="noopener noreferrer">Зателефонувати</a>
+                </div>
+            <span class="contacts_block-checkmark">✓</span>
+            </div>
+            <div class="contacts_block-card" data-copy="@VolodymyrPtPartners">
+                <div class="contacts_block-icon">
+                    <img class="icon" src="sources/telegram.svg" alt="Telegram">
+                </div>
+                <div class="contacts_block-info">
+                    <span class="contacts_block-text">@VolodymyrPtPartners</span>
+                    <a href="https://t.me/VolodymyrPtPartners" class="contacts_block-link" data-no-copy  target="_blank" rel="noopener noreferrer">Відкрити в Telegram</a>
+                </div>
+            <span class="contacts_block-checkmark">✓</span>
+            </div>
+            <div class="contacts_block-card" data-copy="https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno">
+                <div class="contacts_block-icon">
+                    <img class="icon" src="sources/office.svg" alt="Office">
+                </div>
+                <div class="contacts_block-info">
+                    <span class="contacts_block-text">PT&PARTNERS</span>
+                    <a href="https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno" class="contacts_block-link" data-no-copy  target="_blank" rel="noopener noreferrer">Відкрити в Google Maps</a>
+                </div>
+            <span class="contacts_block-checkmark">✓</span>
+            </div>
+        </div>
+    </section>
+    <div class="contact_fab_block-fab" id="contact_fab_block-fab">
+        <a href="https://t.me/VolodymyrPtPartners" class="contact_fab_block-item" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+            <img class="contact_fab_block-icon" src="sources/telegram.svg" alt="Telegram">
+        </a>
+        <a href="tel:+48884930030" class="contact_fab_block-item" aria-label="Phone" target="_blank" rel="noopener noreferrer">
+            <img class="contact_fab_block-icon" src="sources/phone.svg" alt="Phone">
+        </a>
     </div>
-  <footer class="site-footer">©<span class="footer-year"></span>PT&PARTNERS. Усі права захищено.</footer>
+    <footer class="site_footer_block-main">© <span id="site_footer_block-footer-year"></span> PT&PARTNERS. Усі права захищено.</footer>
+  </div>
+  <script>
+    
+    // ===== contacts_block =====
+    // Copy to clipboard
+    (() => {
+      document.querySelectorAll('.contacts_block-card').forEach(card => {
+        card.addEventListener('click', e => {
+          if (e.target.closest('[data-no-copy]')) return;
+
+          const value = card.dataset.copy;
+          if (!value) return;
+
+          navigator.clipboard.writeText(value)
+            .then(() => {
+              card.classList.add('copied');
+              setTimeout(() => card.classList.remove('copied'), 1500);
+            })
+            .catch(() => {
+              console.warn('Clipboard unavailable:', value);
+            });
+        });
+      });
+    })();
+
+
+    // EMAIL
+    (() => {
+      const links = document.querySelectorAll('a[data-email-link]');
+      if (!links.length) return;
+
+      const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|webOS/i.test(
+        navigator.userAgent
+      );
+
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('mailto:')) return;
+
+        if (isMobile) return;
+
+        const [mailtoPart, query = ''] = href.split('?');
+        const email = mailtoPart.replace('mailto:', '');
+
+        const params = new URLSearchParams(query);
+
+        const gmailParams = new URLSearchParams();
+        gmailParams.set('to', email);
+        gmailParams.set('fs', '1');
+        gmailParams.set('tf', 'cm');
+
+        if (params.has('subject')) {
+          gmailParams.set('su', params.get('subject'));
+        }
+
+        if (params.has('body')) {
+          gmailParams.set('body', params.get('body'));
+        }
+
+        if (params.has('cc')) {
+          gmailParams.set('cc', params.get('cc'));
+        }
+
+        if (params.has('bcc')) {
+          gmailParams.set('bcc', params.get('bcc'));
+        }
+
+        const gmailUrl =
+          'https://mail.google.com/mail/u/0/?' + gmailParams.toString();
+
+        link.setAttribute('href', gmailUrl);
+      });
+    })();
+
+
+    // ===== site_top_panel_block =====
+    (() => {
+      // LANG SWITCH
+      const btn = document.querySelector('.site_top_panel_block-lbtn');
+      const menu = document.querySelector('.site_top_panel_block-lmenu');
+      const wrapper = document.querySelector('.site_top_panel_block-switch');
+
+      if (btn && menu && wrapper) {
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('open');
+        });
+
+        document.addEventListener('click', e => {
+          if (!e.target.closest('.site_top_panel_block-switch')) {
+            menu.classList.remove('open');
+          }
+        });
+
+        menu.querySelectorAll('li').forEach(item => {
+          item.addEventListener('click', () => {
+            const flag = item.querySelector('.site_top_panel_block-ficon');
+            const btnFlag = btn.querySelector('.site_top_panel_block-ficon');
+
+            if (flag && btnFlag) {
+              btnFlag.innerHTML = flag.innerHTML;
+            }
+
+            menu.classList.remove('open');
+          });
+        });
+      }
+
+    })();
+
+
+    // ===== accordion_container =====
+    (() => {
+      document
+        .querySelectorAll('.accordion_container-section')
+        .forEach(section => {
+          section
+            .querySelectorAll('.accordion_container-item')
+            .forEach(item => {
+              const button = item.querySelector('.accordion_container-button');
+              const content = item.querySelector('.accordion_container-content');
+
+              if (!button || !content) return;
+
+              button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!expanded));
+                content.hidden = expanded;
+              });
+            });
+        });
+    })();
+
+
+    // ===== contact_fab_block =====
+    (() => {
+      const layout = document.querySelector('.main_block');
+      if (!layout) return;
+
+      const fabs = document.querySelectorAll('.contact_fab_block-fab');
+      if (!fabs.length) return;
+
+      const alignFab = fab => {
+        const rect = layout.getBoundingClientRect();
+        const offsetRight = window.innerWidth - rect.right;
+        fab.style.right = `${offsetRight + 20}px`;
+      };
+
+      const alignAll = () => {
+        fabs.forEach(alignFab);
+      };
+
+      // initial
+      window.addEventListener('load', alignAll);
+
+      // responsive
+      window.addEventListener('resize', alignAll);
+    })();
+
+
+    // ===== site_footer_block =====
+    (() => {
+      const yearEl = document.getElementById('site_footer_block-footer-year');
+      if (!yearEl) return;
+
+      yearEl.textContent = new Date().getFullYear();
+    })();
+
+  </script>
 </body>
 </html>
