@@ -1,18 +1,20 @@
 :root {
   /* accordion_container – section */
-  --accordion_container-section-margin: 40px auto;
-  --accordion_container-section-border: 1px solid #e0e0e0;
-  --accordion_container-section-border-radius: 12px;
+  --accordion_container-section-margin-bottom: 40px;
   --accordion_container-section-overflow: hidden;
-  --accordion_container-section-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  /* accordion_container-item */
+  --accordion_container-item-margin-bottom: 12px;
 
   /* accordion_container – button */
+  --accordion_container-button-border: 1px solid #e0e0e0; /* FIX: одне значення */
+  --accordion_container-button-border-radius: 12px;
+  --accordion_container-button-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   --accordion_container-button-width: 100%;
   --accordion_container-button-background: #2a9d8f;
   --accordion_container-button-color: #ffffff;
   --accordion_container-button-font-size: 1.2rem;
   --accordion_container-button-padding: 18px 24px;
-  --accordion_container-button-border: none;
   --accordion_container-button-text-align: left;
   --accordion_container-button-cursor: pointer;
   --accordion_container-button-display: flex;
@@ -24,13 +26,11 @@
   --accordion_container-icon-transition: transform 0.3s;
 
   /* accordion_container – content */
-  --accordion_container-content-display-closed: none;
-  --accordion_container-content-display-open: block;
   --accordion_container-content-padding: 20px 24px;
   --accordion_container-content-line-height: 1.6;
   --accordion_container-content-text-align-open: justify;
 
-  /* accordion_container – typography inside content */
+  /* typography */
   --accordion_container-heading-margin-top: 1.4em;
   --accordion_container-heading-margin-bottom: 0.6em;
   --accordion_container-heading-font-size: 1.2rem;
@@ -38,29 +38,25 @@
   --accordion_container-heading-font-weight: 600;
 
   --accordion_container-paragraph-margin-bottom: 1em;
-
   --accordion_container-list-margin: 0.6em 0 1.2em 1.5em;
   --accordion_container-list-item-padding-left: 1.4em;
   --accordion_container-list-item-margin-bottom: 0.5em;
   --accordion_container-list-bullet-color: #2a9d8f;
-
   --accordion_container-strong-color: #264653;
 }
 
-/* ===== container ===== */
+/* ===== section ===== */
 
 .accordion_container-section {
-  margin: var(--accordion_container-section-margin);
-  border: var(--accordion_container-section-border);
-  border-radius: var(--accordion_container-section-border-radius);
+  margin-bottom: var(--accordion_container-section-margin-bottom);
   overflow: var(--accordion_container-section-overflow);
-  box-shadow: var(--accordion_container-section-box-shadow);
 }
+
+/* ===== item ===== */
 
 .accordion_container-item {
-/* To save structure for JS */
+  margin-bottom: var(--accordion_container-item-margin-bottom); /* FIX: margin замість padding */
 }
-
 
 /* ===== header button ===== */
 
@@ -71,6 +67,8 @@
   font-size: var(--accordion_container-button-font-size);
   padding: var(--accordion_container-button-padding);
   border: var(--accordion_container-button-border);
+  border-radius: var(--accordion_container-button-border-radius);
+  box-shadow: var(--accordion_container-button-box-shadow);
   text-align: var(--accordion_container-button-text-align);
   cursor: var(--accordion_container-button-cursor);
   display: var(--accordion_container-button-display);
@@ -88,23 +86,23 @@
 /* ===== content ===== */
 
 .accordion_container-content {
-  display: var(--accordion_container-content-display-closed);
+  display: none; /* закрито за замовчуванням */
   padding: var(--accordion_container-content-padding);
   line-height: var(--accordion_container-content-line-height);
 }
 
 /* ===== open state ===== */
 
-.accordion_container-section.open .accordion_container-content {
-  display: var(--accordion_container-content-display-open);
+.accordion_container-item.open .accordion_container-content {
+  display: block;
   text-align: var(--accordion_container-content-text-align-open);
 }
 
-.accordion_container-section.open .accordion_container-icon {
+.accordion_container-item.open .accordion_container-icon {
   transform: rotate(45deg);
 }
 
-/* ===== typography inside content ===== */
+/* ===== typography ===== */
 
 .accordion_container-content h3 {
   margin-top: var(--accordion_container-heading-margin-top);
@@ -140,5 +138,19 @@
 
 .accordion_container-content strong {
   color: var(--accordion_container-strong-color);
+}
+/* ===== open state – visual card ===== */
+
+.accordion_container-item.open .accordion_container-content {
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0 0 12px 12px;
+}
+
+/* щоб кнопка і контент виглядали як одне ціле */
+.accordion_container-item.open .accordion_container-button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 

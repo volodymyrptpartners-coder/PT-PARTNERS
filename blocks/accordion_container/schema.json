@@ -23,19 +23,24 @@
 
           "items": {
             "type": "object",
-            "required": ["id", "title"],
+            "required": ["id", "title", "block_name_link"],
             "additionalProperties": false,
 
             "properties": {
               "id": {
                 "type": "string",
                 "minLength": 1,
-                "description": "Accordion item identifier (used for JS binding if needed)"
+                "description": "Accordion item identifier"
               },
 
               "title": {
                 "type": "string",
                 "minLength": 1
+              },
+
+              "block_name_link": {
+                "type": "string",
+                "description": "Name of inline block to render inside accordion item"
               }
             }
           }

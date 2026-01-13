@@ -4,15 +4,22 @@
     "items": [
       {
         "id": "consular",
-        "title": "Що таке консульський облік?"
+        "title": "Що таке консульський облік?",
+        "block_name_link": "site_txt_block"
+      },
+      {
+        "id": "team",
+        "title": "Наша команда",
+        "block_name_link": "team_block"
       }
     ]
   },
   "inline_block": [
     {
-      "block_name": "site_txt_block",
-      "realization_name": "ua"
+      "block_name": "site_txt_block"
+    },
+    {
+      "block_name": "team_block"
     }
   ]
 }
-

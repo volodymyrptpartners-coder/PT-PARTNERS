@@ -30,6 +30,9 @@
     },
     {
       "block_name": "hero_txt1_block"
+    },
+    {
+      "block_name": "team_block"
     }
   ]
 }

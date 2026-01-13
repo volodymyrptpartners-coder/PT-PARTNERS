@@ -80,13 +80,22 @@
           "items": [
             {
               "id": "consular",
-              "title": "Що таке консульський облік?"
+              "title": "Що таке консульський облік?",
+              "block_name_link": "site_txt_block"
+            },
+            {
+              "id": "team",
+              "title": "Наша команда",
+              "block_name_link": "team_block"
             }
           ]
         },
         "inline_block": [
           {
             "block_name": "site_txt_block"
+          },
+          {
+            "block_name": "team_block"
           }
         ]
       }
@@ -248,6 +257,22 @@
         }
       }
     },
+    "team_block": {
+      "realization": {
+        "block_name": "team_block",
+        "content": {
+          "items": [
+            {
+              "name": "Володимир",
+              "role": "Супроводжує оформлення консульського обліку",
+              "text": "Веде процес від першого звернення до результату. Допомагає з підготовкою документів, перевіряє деталі та залишається на звʼязку на кожному етапі.",
+              "photo": "team/volodymyr.jpg",
+              "photo_alt": "Володимир"
+            }
+          ]
+        }
+      }
+    },
     "contact_fab_block": {
       "realization": {
         "block_name": "contact_fab_block",
@@ -343,6 +368,9 @@
           },
           {
             "block_name": "hero_txt1_block"
+          },
+          {
+            "block_name": "team_block"
           }
         ]
       }

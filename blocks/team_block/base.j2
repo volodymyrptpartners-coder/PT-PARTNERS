@@ -1,0 +1,20 @@
+<div class="team_block-main">
+  {%- for item in content["content"]["items"] %}
+    <div class="team_block-item">
+      <div class="team_block-photo">
+        <img
+          src="sources/{{ item["photo"] }}"
+          alt="{{ item["photo_alt"] }}"
+          class="team_block-img"
+        >
+      </div>
+
+      <div class="team_block-info">
+        <div class="team_block-name">{{ item["name"] }}</div>
+        <div class="team_block-role">{{ item["role"] }}</div>
+        <div class="team_block-text">{{ item["text"] }}</div>
+      </div>
+    </div>
+  {%- endfor %}
+</div>
+
