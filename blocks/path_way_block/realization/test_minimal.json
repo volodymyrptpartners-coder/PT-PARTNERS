@@ -1,0 +1,69 @@
+{
+  "block_name": "path_way_block",
+  "content": {
+    "title": "Some title",
+    "steps": [
+      {
+        "step": 1,
+        "icon": "●",
+        "label": "First contact",
+        "time": "15m"
+      },
+      {
+        "step": 2,
+        "icon": "▲",
+        "label": "Verification",
+        "time": "1 day"
+      },
+      {
+        "step": 3,
+        "icon": "■",
+        "label": "Documant validation",
+        "time": "10 days"
+      },
+      {
+        "step": 4,
+        "icon": "★",
+        "label": "Result",
+        "time": "few min"
+      }
+    ],
+    "details": [
+      {
+        "step": 1,
+        "title": "First contact",
+        "items": [
+          "Sentense 1",
+          "Sentense 2",
+          "Sentense 3"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "Verification",
+        "items": [
+          "Sentense 4",
+          "Sentense 5",
+          "Sentense 6"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "Documant validation",
+        "items": [
+          "Sentense 7",
+          "Sentense 8",
+          "Sentense 9"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "Finish",
+        "items": [
+            "Get result"
+        ]
+      }
+    ]
+  }
+}
+

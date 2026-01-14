@@ -16,6 +16,11 @@
         "id": "path_way",
         "title": "Етапи оформлення",
         "block_name_link": "path_way_block"
+      },
+      {
+        "id": "office",
+        "title": "Наш офіс в Польщі",
+        "block_name_link": "office_block"
       }
     ]
   },
@@ -28,6 +33,9 @@
     },
     {
       "block_name": "path_way_block"
+    },
+    {
+      "block_name": "office_block"
     }
   ]
 }

@@ -5,15 +5,15 @@
       {
         "paragraphs": [
           {
-            "text": "Цей текст залишили."
+            "text": "Paragraph"
           }
         ]
       },
       {
-        "title": "Додаткова інформація",
+        "title": "title",
         "list": [
-          "Пункт 1",
-          "Пункт 2"
+          "item 1",
+          "item 2"
         ]
       }
     ]

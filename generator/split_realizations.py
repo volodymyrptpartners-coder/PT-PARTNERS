@@ -3,15 +3,16 @@ import sys
 import json
 from pathlib import Path
 
-IN_FILE = Path("sites/site_ua.json")
 BLOCKS_DIR = Path("blocks")
+
 
 def die(message: str) -> None:
     print(f"ERROR: {message}", file=sys.stderr)
     sys.exit(1)
 
 
-def split_realization(infile:str,realization_name:str)->None:
+def split_realization(realization_name: str) -> None:
+    infile = Path(f"sites/{realization_name}.json")
     with open(infile, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -21,20 +22,15 @@ def split_realization(infile:str,realization_name:str)->None:
 
         out_file = realization_dir / f"{realization_name}.json"
         out_file.write_text(
-            json.dumps(
-                block_data["realization"],
-                ensure_ascii=False,
-                indent=2
-            ),
+            json.dumps(block_data["realization"], ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
         print(f"OK: wrote {out_file}")
 
-if __name__ == '__main__':
-    if len(sys.argv) != 3:
-        die("usage: split_realizations.py <site_path> <realization_name>")
-    site_path = sys.argv[1]
-    realization_name = sys.argv[2]
-    print(f"site_path\t\t{site_path}  \nrealization_name\t{realization_name}")
 
-    split_realization(infile=site_path,realization_name=realization_name) 
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        die("usage: split_realizations.py <realization_name>")
+    realization_name = sys.argv[1]
+    print(f"realization_name\t{realization_name}")
+    split_realization(realization_name=realization_name)

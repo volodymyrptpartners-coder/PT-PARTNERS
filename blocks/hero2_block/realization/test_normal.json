@@ -1,19 +1,19 @@
 {
   "block_name": "hero2_block",
   "content": {
-    "title": "Наші послуги",
+    "title": "Our hero block",
     "items": [
       {
         "icon": "★",
-        "text": "Консультація з вибору типу обліку"
+        "text": "item1"
       },
       {
         "icon": "★",
-        "text": "Перевірка та підготовка документів"
+        "text": "item2"
       },
       {
         "icon": "★",
-        "text": "Подача документів"
+        "text": "item3"
       }
     ]
   }

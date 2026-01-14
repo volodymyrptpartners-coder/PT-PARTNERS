@@ -39,38 +39,26 @@ def collect_assets(site_data: dict):
         js_file = block_dir / "base.js"
 
         if css_file.exists():
-            css_parts.append(
-                f"\n/* ===== {block_name} ===== */\n" +
-                css_file.read_text(encoding="utf-8").strip()
-            )
+            css_parts.append(f"\n/* ===== {block_name} ===== */\n" + css_file.read_text(encoding="utf-8").strip())
 
         if js_file.exists():
-            js_parts.append(
-                f"\n// ===== {block_name} =====\n" +
-                js_file.read_text(encoding="utf-8").strip()
-            )
+            js_parts.append(f"\n// ===== {block_name} =====\n" + js_file.read_text(encoding="utf-8").strip())
 
     return css_parts, js_parts
 
 
-def main(site_path:str)->None:
+def main(site_path: str) -> None:
     site_data = load_site_json(Path(site_path))
     css_parts, js_parts = collect_assets(site_data)
 
     if css_parts:
-        OUT_CSS.write_text(
-            "\n\n".join(css_parts) + "\n",
-            encoding="utf-8"
-        )
+        OUT_CSS.write_text("\n\n".join(css_parts) + "\n", encoding="utf-8")
         print(f"OK: generated {OUT_CSS}")
     else:
         print("INFO: no css generated")
 
     if js_parts:
-        OUT_JS.write_text(
-            "\n\n".join(js_parts) + "\n",
-            encoding="utf-8"
-        )
+        OUT_JS.write_text("\n\n".join(js_parts) + "\n", encoding="utf-8")
         print(f"OK: generated {OUT_JS}")
     else:
         print("INFO: no js generated")
@@ -81,4 +69,3 @@ if __name__ == "__main__":
         die("usage: generate_site_assets.py <site_json_path>")
     site_path = sys.argv[1]
     main(site_path=site_path)
-

@@ -1,0 +1,97 @@
+<div class="office_block-main">
+
+  {% set photos = content["content"]["photos"] %}
+
+  {% if photos and photos|length > 0 %}
+  <!-- GALLERY -->
+  <div class="office_block-gallery">
+
+    <!-- radios -->
+    {% for photo in photos %}
+      <input
+        type="radio"
+        name="office_gallery"
+        id="office_photo_{{ loop.index }}"
+        class="office_block-radio"
+        {% if loop.first %}checked{% endif %}
+      >
+    {% endfor %}
+
+    <!-- hero -->
+    <div class="office_block-hero">
+      {% for photo in photos %}
+        <div class="office_block-hero-item">
+          <img
+            src="sources/{{ photo["src"] }}"
+            alt="{{ photo["alt"] }}"
+            loading="lazy"
+          >
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- thumbs -->
+    <div class="office_block-thumbs">
+      {% for photo in photos %}
+        <label
+          class="office_block-thumb"
+          for="office_photo_{{ loop.index }}"
+          aria-label="Показати фото {{ loop.index }}"
+        >
+          <img
+            src="sources/{{ photo["src"] }}"
+            alt="{{ photo["alt"] }}"
+            loading="lazy"
+          >
+        </label>
+      {% endfor %}
+    </div>
+
+  </div>
+  {% endif %}
+
+  <!-- INFO -->
+  <div class="office_block-info">
+
+    {% if content["content"]["title"] %}
+    <div class="office_block-title">
+      {{ content["content"]["title"] }}
+    </div>
+    {% endif %}
+
+    {% if content["content"]["address"] %}
+    <div class="office_block-line">
+      <strong>Адреса:</strong><br>
+      {{ content["content"]["address"] }}
+    </div>
+    {% endif %}
+
+    {% if content["content"]["reception_note"] %}
+    <div class="office_block-line">
+      {{ content["content"]["reception_note"] }}
+    </div>
+    {% endif %}
+
+    {% if content["content"]["extra_note"] %}
+    <div class="office_block-extra">
+      {{ content["content"]["extra_note"] }}
+    </div>
+    {% endif %}
+
+  </div>
+
+  <!-- ACTION -->
+  {% if content["content"]["maps_url"] %}
+  <div class="office_block-actions">
+    <a
+      class="office_block-map-link"
+      href="{{ content["content"]["maps_url"] }}"
+      target="_blank"
+      rel="noopener noreferrer">
+      Перевірити локацію в Google Maps
+    </a>
+  </div>
+  {% endif %}
+
+</div>
+

@@ -1,0 +1,24 @@
+{
+  "block_name": "office_block",
+  "content": {
+    "title": "Some company",
+    "address": "Some address",
+    "reception_note": "Some reception note.",
+    "extra_note": "",
+    "maps_url": "Some url",
+    "photos": [
+      {
+        "src": "email.svg",
+        "alt": "Office enter"
+      },
+      {
+        "src": "telegram.svg",
+        "alt": "Table of office"
+      },
+      {
+        "src": "whatsapp.svg",
+        "alt": "Working space of office"
+      }
+    ]
+  }
+}

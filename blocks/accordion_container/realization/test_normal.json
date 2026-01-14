@@ -4,12 +4,12 @@
     "items": [
       {
         "id": "consular",
-        "title": "Що таке консульський облік?",
+        "title": "Some title1",
         "block_name_link": "site_txt_block"
       },
       {
         "id": "team",
-        "title": "Наша команда",
+        "title": "Our members",
         "block_name_link": "team_block"
       }
     ]

@@ -99,6 +99,7 @@ def print_context(
 
         print(f"{marker} {lineno:4d} | {content}", file=sys.stderr)
 
+
 def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> bool:
     schema = load_json(schema_path)
     validator = Draft202012Validator(schema, resolver=get_ref())
@@ -127,6 +128,7 @@ def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> boo
             # 2. Fallback: parse from error message
             if extra_key is None and isinstance(err.message, str):
                 import re
+
                 m = re.search(r"\('([^']+)' was unexpected\)", err.message)
                 if m:
                     extra_key = m.group(1)
@@ -149,12 +151,7 @@ def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> boo
 
             if error_line is not None:
                 print("\nContext:", file=sys.stderr)
-                print_context(
-                    lines,
-                    error_line,
-                    before=context_lines,
-                    after=context_lines
-                )
+                print_context(lines, error_line, before=context_lines, after=context_lines)
 
         print("\nWhat to do:\t", file=sys.stderr, end="")
 
@@ -171,6 +168,7 @@ def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> boo
         return False
 
     return True
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
