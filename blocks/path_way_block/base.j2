@@ -1,0 +1,52 @@
+<section class="path_way_block-section">
+
+  {%- if content['content'].get('title') %}
+  <h2 class="path_way_block-title">
+    {{ content['content']['title'] }}
+  </h2>
+  {%- endif %}
+
+  <div class="path_way_block-main">
+
+    {# контейнер для водоспаду (JS / CSS працюють поверх нього) #}
+    <div class="path_way_block-flow"></div>
+
+    <div class="path_way_block-steps">
+      {%- for step in content['content']['steps'] %}
+      <div class="path_way_block-step">
+        <div class="path_way_block-step-icon">
+          {{ step['icon'] }}
+        </div>
+        <div class="path_way_block-step-meta">
+          <div class="path_way_block-step-label">
+            {{ step['step'] }}. {{ step['label'] }}
+          </div>
+          <div class="path_way_block-step-time">
+            {{ step['time'] }}
+          </div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+
+  </div>
+
+  <div class="path_way_block-details">
+    {%- for detail in content['content']['details'] %}
+    <div class="path_way_block-detail">
+      <h3 class="path_way_block-detail-title">
+        {{ detail['step'] }}. {{ detail['title'] }}
+      </h3>
+      <ul class="path_way_block-detail-list">
+        {%- for item in detail['items'] %}
+        <li class="path_way_block-detail-item">
+          {{ item }}
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endfor %}
+  </div>
+
+</section>
+

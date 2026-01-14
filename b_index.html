@@ -33,6 +33,129 @@
     <link rel="apple-touch-icon" sizes="180x180" href="sources/logo_180x180.png">
   <style>
     
+    /* ===== path_way_block ===== */
+    /* ===== Path Way Block ===== */
+
+    .path_way_block-section {
+      padding: 16px 0;
+    }
+
+    /* ----- Title ----- */
+
+    .path_way_block-title {
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* ===== Main / Flow ===== */
+
+    .path_way_block-main {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .path_way_block-step {
+      position: relative;
+      display: flex;
+      gap: 12px;
+      padding-left: 36px;
+    }
+
+    /* вертикальна лінія */
+    .path_way_block-step::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 28px;
+      width: 2px;
+      height: calc(100% + 16px);
+      background-color: #e0e0e0;
+    }
+
+    /* прибрати лінію у останнього кроку */
+    .path_way_block-step:last-child::before {
+      display: none;
+    }
+
+
+    /* ===== Steps ===== */
+
+    .path_way_block-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .path_way_block-step {
+      position: relative;
+      display: flex;
+      gap: 12px;
+      padding-left: 32px;
+    }
+
+    /* Icon */
+    .path_way_block-step-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      z-index: 1;
+    }
+
+    /* Meta */
+
+    .path_way_block-step-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .path_way_block-step-label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .path_way_block-step-time {
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* ===== Details ===== */
+
+    .path_way_block-details {
+      margin-top: 8px;
+    }
+
+    .path_way_block-detail {
+      margin-bottom: 20px;
+    }
+
+    .path_way_block-detail-title {
+      margin-bottom: 6px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .path_way_block-detail-list {
+      padding-left: 16px;
+      margin: 0;
+    }
+
+    .path_way_block-detail-item {
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+
     /* ===== contacts_block ===== */
     :root {
 
@@ -1117,6 +1240,147 @@
 
             </div>
         </div>
+        <div class="accordion_container-item">
+            <button class="accordion_container-button" id="accordion_container-path_way-toggle" aria-controls="accordion_container-path_way-content">
+              Етапи оформлення
+              <span class="accordion_container-icon">＋</span>
+            </button>
+            <div class="accordion_container-content" id="accordion_container-path_way-content">
+              <section class="path_way_block-section">
+          <h2 class="path_way_block-title">
+            Етапи оформлення
+          </h2>
+
+          <div class="path_way_block-main">
+
+            
+            <div class="path_way_block-flow"></div>
+
+            <div class="path_way_block-steps">
+              <div class="path_way_block-step">
+                <div class="path_way_block-step-icon">
+                  ●
+                </div>
+                <div class="path_way_block-step-meta">
+                  <div class="path_way_block-step-label">
+                    1. Звернення та первинна консультація
+                  </div>
+                  <div class="path_way_block-step-time">
+                    15 хв
+                  </div>
+                </div>
+              </div>
+              <div class="path_way_block-step">
+                <div class="path_way_block-step-icon">
+                  ▲
+                </div>
+                <div class="path_way_block-step-meta">
+                  <div class="path_way_block-step-label">
+                    2. Перевірка
+                  </div>
+                  <div class="path_way_block-step-time">
+                    1 день
+                  </div>
+                </div>
+              </div>
+              <div class="path_way_block-step">
+                <div class="path_way_block-step-icon">
+                  ■
+                </div>
+                <div class="path_way_block-step-meta">
+                  <div class="path_way_block-step-label">
+                    3. Оформлення
+                  </div>
+                  <div class="path_way_block-step-time">
+                    2–5 днів
+                  </div>
+                </div>
+              </div>
+              <div class="path_way_block-step">
+                <div class="path_way_block-step-icon">
+                  ★
+                </div>
+                <div class="path_way_block-step-meta">
+                  <div class="path_way_block-step-label">
+                    4. Результат
+                  </div>
+                  <div class="path_way_block-step-time">
+                    30 хв
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="path_way_block-details">
+            <div class="path_way_block-detail">
+              <h3 class="path_way_block-detail-title">
+                1. Початкове звернення
+              </h3>
+              <ul class="path_way_block-detail-list">
+                <li class="path_way_block-detail-item">
+                  Ви звертаєтесь до нас зручним способом (Telegram, WhatsApp,  телефон або email)
+                </li>
+                <li class="path_way_block-detail-item">
+                  Ми зʼясовуємо ваш статус у Польщі (побут, робота, навчання, ПМЖ)
+                </li>
+                <li class="path_way_block-detail-item">
+                  Пояснюємо, який тип консульського обліку вам підходить і що буде потрібно саме у вашому випадку
+                </li>
+              </ul>
+            </div>
+            <div class="path_way_block-detail">
+              <h3 class="path_way_block-detail-title">
+                2. Перевірка документів
+              </h3>
+              <ul class="path_way_block-detail-list">
+                <li class="path_way_block-detail-item">
+                  Аналізуємо надані документи
+                </li>
+                <li class="path_way_block-detail-item">
+                  Повідомляємо, якщо чогось бракує
+                </li>
+                <li class="path_way_block-detail-item">
+                  Узгоджуємо формат роботи
+                </li>
+              </ul>
+            </div>
+            <div class="path_way_block-detail">
+              <h3 class="path_way_block-detail-title">
+                3. Оформлення
+              </h3>
+              <ul class="path_way_block-detail-list">
+                <li class="path_way_block-detail-item">
+                  Готуємо пакет документів
+                </li>
+                <li class="path_way_block-detail-item">
+                  Супроводжуємо подачу
+                </li>
+                <li class="path_way_block-detail-item">
+                  Контролюємо процес
+                </li>
+              </ul>
+            </div>
+            <div class="path_way_block-detail">
+              <h3 class="path_way_block-detail-title">
+                4. Завершення
+              </h3>
+              <ul class="path_way_block-detail-list">
+                <li class="path_way_block-detail-item">
+                  Ви отримуєте підтвердження консульського обліку
+                </li>
+                <li class="path_way_block-detail-item">
+                  Після цього здійснюється оплата послуги
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+            </div>
+        </div>
     </section>
     <hr>
     <!-- hero_block has ref to contacts -->
@@ -1158,6 +1422,16 @@
                 <div class="contacts_block-info">
                     <span class="contacts_block-text">@VolodymyrPtPartners</span>
                     <a href="https://t.me/VolodymyrPtPartners" class="contacts_block-link" data-no-copy  target="_blank" rel="noopener noreferrer">Відкрити в Telegram</a>
+                </div>
+            <span class="contacts_block-checkmark">✓</span>
+            </div>
+            <div class="contacts_block-card" data-copy="https://wa.me/48884930030">
+                <div class="contacts_block-icon">
+                    <img class="icon" src="sources/whatsapp.svg" alt="WhatsApp">
+                </div>
+                <div class="contacts_block-info">
+                    <span class="contacts_block-text">+48 884 930 030</span>
+                    <a href="https://wa.me/48884930030" class="contacts_block-link" data-no-copy  target="_blank" rel="noopener noreferrer">Написати в WhatsApp</a>
                 </div>
             <span class="contacts_block-checkmark">✓</span>
             </div>

@@ -1,0 +1,121 @@
+/* ===== Path Way Block ===== */
+
+.path_way_block-section {
+  padding: 16px 0;
+}
+
+/* ----- Title ----- */
+
+.path_way_block-title {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== Main / Flow ===== */
+
+.path_way_block-main {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.path_way_block-step {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding-left: 36px;
+}
+
+/* вертикальна лінія */
+.path_way_block-step::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 28px;
+  width: 2px;
+  height: calc(100% + 16px);
+  background-color: #e0e0e0;
+}
+
+/* прибрати лінію у останнього кроку */
+.path_way_block-step:last-child::before {
+  display: none;
+}
+
+
+/* ===== Steps ===== */
+
+.path_way_block-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.path_way_block-step {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding-left: 32px;
+}
+
+/* Icon */
+.path_way_block-step-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Meta */
+
+.path_way_block-step-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.path_way_block-step-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.path_way_block-step-time {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ===== Details ===== */
+
+.path_way_block-details {
+  margin-top: 8px;
+}
+
+.path_way_block-detail {
+  margin-bottom: 20px;
+}
+
+.path_way_block-detail-title {
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.path_way_block-detail-list {
+  padding-left: 16px;
+  margin: 0;
+}
+
+.path_way_block-detail-item {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+

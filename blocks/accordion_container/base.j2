@@ -1,6 +1,6 @@
 <section class="accordion_container-section">
   {%- for item in content["content"]["items"] %}
-   {%- for inline_block_name in ["site_txt_block", "team_block"] %}
+   {%- for inline_block_name in ["site_txt_block", "team_block", "path_way_block"] %}
     {%- if inline_block_name in inline_block and item['block_name_link'] == inline_block_name %}
     <div class="accordion_container-item">
         <button class="accordion_container-button" id="accordion_container-{{ item["id"] }}-toggle" aria-controls="accordion_container-{{ item["id"] }}-content">

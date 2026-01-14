@@ -11,6 +11,11 @@
         "id": "team",
         "title": "Наша команда",
         "block_name_link": "team_block"
+      },
+      {
+        "id": "path_way",
+        "title": "Етапи оформлення",
+        "block_name_link": "path_way_block"
       }
     ]
   },
@@ -20,6 +25,9 @@
     },
     {
       "block_name": "team_block"
+    },
+    {
+      "block_name": "path_way_block"
     }
   ]
 }
