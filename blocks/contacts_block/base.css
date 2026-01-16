@@ -1,17 +1,18 @@
 :root {
-
-  /* --- contacts_block section --- */
+  /* ===== section ===== */
   --contacts_block-section-margin-bottom: 60px;
   --contacts_block-section-padding: 0 20px;
   --contacts_block-section-text-align: center;
 
-  /* --- contacts_block grid --- */
+  /* ===== grid ===== */
   --contacts_block-grid-display: grid;
   --contacts_block-grid-gap: 20px;
 
-  /* --- contacts_block card --- */
+  /* ===== card ===== */
   --contacts_block-card-background: #ffffff;
-  --contacts_block-card-border: 1px solid #e0e0e0;
+  --contacts_block-card-border-width: 1px;
+  --contacts_block-card-border-style: solid;
+  --contacts_block-card-border-color: #e0e0e0;
   --contacts_block-card-border-radius: 16px;
   --contacts_block-card-padding: 20px;
   --contacts_block-card-display: flex;
@@ -22,28 +23,37 @@
   --contacts_block-card-position: relative;
   --contacts_block-card-transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  /* --- contacts_block card hover --- */
+  /* ===== card hover ===== */
   --contacts_block-card-hover-transform: translateY(-3px);
   --contacts_block-card-hover-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 
+  /* ===== icon ===== */
+  --contacts_block-icon-font-size: 1.8rem;
+  --contacts_block-icon-margin-right: 16px;
+  --contacts_block-icon-flex-shrink: 0;
 
-  /* --- contacts_block info --- */
+  --contacts_block-icon-image-width: 28px;
+  --contacts_block-icon-image-height: 28px;
+  --contacts_block-icon-image-object-fit: contain;
+
+  /* ===== info ===== */
   --contacts_block-info-text-align: left;
   --contacts_block-info-flex: 1;
 
-  /* --- contacts_block text --- */
+  /* ===== text ===== */
+  --contacts_block-text-display: block;
   --contacts_block-text-font-size: 1.1rem;
   --contacts_block-text-margin-bottom: 4px;
   --contacts_block-text-color: #333333;
 
-  /* --- contacts_block link --- */
+  /* ===== link ===== */
   --contacts_block-link-font-size: 0.9rem;
   --contacts_block-link-color: #2a9d8f;
   --contacts_block-link-font-weight: 500;
   --contacts_block-link-text-decoration: none;
   --contacts_block-link-hover-decoration: underline;
 
-  /* --- contacts_block checkmark --- */
+  /* ===== checkmark ===== */
   --contacts_block-checkmark-color: #2a9d8f;
   --contacts_block-checkmark-font-size: 4.4rem;
   --contacts_block-checkmark-opacity-hidden: 0;
@@ -52,8 +62,6 @@
   --contacts_block-checkmark-position: absolute;
   --contacts_block-checkmark-right: -75px;
 }
-
-
 
 /* ===== section ===== */
 
@@ -74,7 +82,9 @@
 
 .contacts_block-card {
   background: var(--contacts_block-card-background);
-  border: var(--contacts_block-card-border);
+  border: var(--contacts_block-card-border-width)
+          var(--contacts_block-card-border-style)
+          var(--contacts_block-card-border-color);
   border-radius: var(--contacts_block-card-border-radius);
   padding: var(--contacts_block-card-padding);
   display: var(--contacts_block-card-display);
@@ -86,25 +96,24 @@
   transition: var(--contacts_block-card-transition);
 }
 
-/* hover */
 .contacts_block-card:hover {
   transform: var(--contacts_block-card-hover-transform);
   box-shadow: var(--contacts_block-card-hover-box-shadow);
 }
 
+/* ===== icon ===== */
 
 .contacts_block-icon {
-  font-size: 1.8rem;
-  margin-right: 16px;
-  flex-shrink: 0;
+  font-size: var(--contacts_block-icon-font-size);
+  margin-right: var(--contacts_block-icon-margin-right);
+  flex-shrink: var(--contacts_block-icon-flex-shrink);
 }
 
 .contacts_block-icon .icon {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+  width: var(--contacts_block-icon-image-width);
+  height: var(--contacts_block-icon-image-height);
+  object-fit: var(--contacts_block-icon-image-object-fit);
 }
-
 
 /* ===== info ===== */
 
@@ -116,7 +125,7 @@
 /* ===== text ===== */
 
 .contacts_block-text {
-  display: block;
+  display: var(--contacts_block-text-display);
   font-size: var(--contacts_block-text-font-size);
   margin-bottom: var(--contacts_block-text-margin-bottom);
   color: var(--contacts_block-text-color);
@@ -146,7 +155,7 @@
   right: var(--contacts_block-checkmark-right);
 }
 
-/* copied state */
+/* ===== copied state ===== */
 
 .contacts_block-card.copied .contacts_block-checkmark {
   opacity: var(--contacts_block-checkmark-opacity-visible);

@@ -1,15 +1,27 @@
 :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-    color: #0b1220;
-    margin: 0;
-    box-sizing: border-box;
+  /* ===== global ===== */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+  color: #0b1220;
+  margin: 0;
+  box-sizing: border-box;
+
+  /* ===== main_block vars ===== */
+  --main_block-max-width: 560px;
+  --main_block-padding: 0 16px;
+  --main_block-background: #ffffff;
+  --main_block-margin: 50px auto 0;
 }
 
+/* ===== main_block ===== */
+/* IMPORTANT:
+   - class name is reserved for JS
+   - do not rename
+   - do not change selector */
 
 .main_block {
-/* 'main_block' is reserved for JS !!! */
-    max-width: 560px;
-    padding: 0 16px;
-    background: #fff;
-    margin: 50px auto 0;
+  max-width: var(--main_block-max-width);
+  padding: var(--main_block-padding);
+  background: var(--main_block-background);
+  margin: var(--main_block-margin);
 }
+

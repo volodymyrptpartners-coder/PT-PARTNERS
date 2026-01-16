@@ -1,0 +1,41 @@
+{
+  "block_name": "accordion_container",
+  "content": {
+    "items": [
+      {
+        "id": "service",
+        "title": "Про послугу",
+        "block_name_link": "site_txt_block"
+      },
+      {
+        "id": "process",
+        "title": "Як проходить оформлення",
+        "block_name_link": "path_way_block"
+      },
+      {
+        "id": "team",
+        "title": "Наша команда",
+        "block_name_link": "team_block"
+      },
+      {
+        "id": "office",
+        "title": "Наш офіс у Польщі",
+        "block_name_link": "office_block"
+      }
+    ]
+  },
+  "inline_block": [
+    {
+      "block_name": "site_txt_block"
+    },
+    {
+      "block_name": "path_way_block"
+    },
+    {
+      "block_name": "team_block"
+    },
+    {
+      "block_name": "office_block"
+    }
+  ]
+}

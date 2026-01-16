@@ -8,6 +8,38 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 SITE_CSS = "site.css"
 SITE_JS = "site.js"
+BLOCK_DICT = {
+    "consular_": "template_consular_container",
+    "auto_registration_": "template_consular_container",
+}
+
+
+def get_block_name(realization_name:str)->str:
+    for key,value in BLOCK_DICT.items():
+        if realization_name.startswith(key):
+            return value
+    raise KeyError(f"{realization_name!r} not found in BLOCK_DICT.")
+
+def get_language(realization_name:str)->str:
+    for key,_ in BLOCK_DICT.items():
+        if realization_name.startswith(key):
+            return realization_name[len(key):]
+    raise KeyError(f"{realization_name!r} not found in BLOCK_DICT.")
+
+def get_realization_path(block_name:str,realization_name:str)->str:
+    lang = get_language(realization_name=realization_name)
+    blocks_root = Path("blocks")
+    block_dir = blocks_root / str(block_name)
+    template_path = block_dir / "base.j2"
+    realization_path = block_dir / "realization" / f"{realization_name}.json"
+    realization_path_default = block_dir / "realization" / f"default_{lang}.json"
+
+    if not realization_path.exists():
+        if not realization_path_default.exists():
+            die(f"realization not found: {realization_path}")
+        else:
+            realization_path = realization_path_default
+    return realization_path
 
 
 def die(message: str) -> None:
@@ -42,10 +74,12 @@ def load_json(path: Path) -> Any:
 def render_block(block_name: str, realization_name: str, include_css: bool = False, include_js: bool = False) -> str:
     inline_block = {}
 
+    lang = get_language(realization_name=realization_name)
     blocks_root = Path("blocks")
     block_dir = blocks_root / str(block_name)
     template_path = block_dir / "base.j2"
-    realization_path = block_dir / "realization" / f"{realization_name}.json"
+    realization_path = get_realization_path(block_name=block_name,realization_name=realization_name)
+
 
     if include_css:
         if not Path(SITE_CSS).exists():
@@ -65,9 +99,6 @@ def render_block(block_name: str, realization_name: str, include_css: bool = Fal
 
     if not template_path.exists():
         die(f"template not found: {template_path}")
-
-    if not realization_path.exists():
-        die(f"realization not found: {realization_path}")
 
     realization_data = load_json(realization_path)
 
@@ -94,10 +125,10 @@ def render_block(block_name: str, realization_name: str, include_css: bool = Fal
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        die("usage: render_block.py <block_name> <realization_name>")
-    block_name = sys.argv[1]
-    realization_name = sys.argv[2]
+    if len(sys.argv) != 2:
+        die("usage: render_block.py <realization_name>")
+    realization_name = sys.argv[1]
+    block_name = get_block_name(realization_name)
     print(f"block_name\t\t{block_name}  \nrealization_name\t{realization_name}")
     html_rendered = render_block(block_name=block_name, realization_name=realization_name, include_css=True, include_js=True)
 

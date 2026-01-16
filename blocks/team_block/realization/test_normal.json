@@ -1,0 +1,14 @@
+{
+  "block_name": "team_block",
+  "content": {
+    "items": [
+      {
+        "name": "John",
+        "role": "007",
+        "text": "Access denided",
+        "photo": "team/volodymyr.jpg",
+        "photo_alt": "John"
+      }
+    ]
+  }
+}

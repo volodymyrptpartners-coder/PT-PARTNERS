@@ -169,15 +169,31 @@ def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> boo
 
     return True
 
+from generator.core.cli_core import get_block_names, get_json_schema_path , get_realization_jsons
+def main()->None:
+    for block_name in get_block_names():
+        schema_path = get_json_schema_path(block_name=block_name)
+        
+        for data_path in get_realization_jsons(block_name=block_name):
+            correct = verify_json(schema_path=schema_path, data_path=data_path)
+            if not correct:
+                print(f"[ERROR] validated {data_path}")
+                raise ValueError("Json is invalid!")
+            print(f"[OK] validated {data_path}")
+    print("All realizations are valid")
 
+#      @set -e; \
+#        for block in blocks/*; do \
+#                if [ -d "$$block/realization" ] && [ -f "$$block/schema.json" ]; then \
+#                        echo "Validating $$block"; \
+#                        for json in $$block/realization/*.json; do \
+#                                if [ -f "$$json" ]; then \
+#                                        python generator/validate_json.py $$block/schema.json $$json; \
+#                                fi; \
+#                        done; \
+#                fi; \
+#        done; \
+#        echo "All realizations are valid"
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        die("usage: validate_json.py <schema.json> <data.json>")
 
-    schema_path = sys.argv[1]
-    data_path = sys.argv[2]
-
-    correct = verify_json(schema_path=schema_path, data_path=data_path)
-    if not correct:
-        sys.exit(1)
-    print(f"[OK] validated {data_path}")
+    main()

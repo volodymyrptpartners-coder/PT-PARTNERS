@@ -1,54 +1,89 @@
-/* ===== team_block ===== */
+:root {
+  /* ===== main ===== */
+  --team_block-main-display: flex;
+  --team_block-main-flex-direction: column;
+  --team_block-main-gap: 20px;
+
+  /* ===== item ===== */
+  --team_block-item-display: flex;
+  --team_block-item-gap: 16px;
+  --team_block-item-align-items: flex-start;
+
+  /* ===== image ===== */
+  --team_block-img-width: 140px;
+  --team_block-img-height: auto;
+  --team_block-img-border-radius: 8px;
+  --team_block-img-display: block;
+
+  /* ===== info ===== */
+  --team_block-info-flex: 1;
+
+  /* ===== name ===== */
+  --team_block-name-font-size: 1rem;
+  --team_block-name-font-weight: 600;
+  --team_block-name-margin-bottom: 2px;
+
+  /* ===== role ===== */
+  --team_block-role-font-size: 0.9rem;
+  --team_block-role-color: #555;
+  --team_block-role-margin-bottom: 8px;
+
+  /* ===== text ===== */
+  --team_block-text-font-size: 0.95rem;
+  --team_block-text-line-height: 1.5;
+}
+
+/* ===== main ===== */
 
 .team_block-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: var(--team_block-main-display);
+  flex-direction: var(--team_block-main-flex-direction);
+  gap: var(--team_block-main-gap);
 }
 
-/* один співробітник */
+/* ===== item ===== */
 
 .team_block-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  display: var(--team_block-item-display);
+  gap: var(--team_block-item-gap);
+  align-items: var(--team_block-item-align-items);
 }
 
-/* фото */
+/* ===== image ===== */
 
 .team_block-img {
-  width: 140px;
-  height: auto;
-  border-radius: 8px;
-  display: block;
+  width: var(--team_block-img-width);
+  height: var(--team_block-img-height);
+  border-radius: var(--team_block-img-border-radius);
+  display: var(--team_block-img-display);
 }
 
-/* текстова частина */
+/* ===== info ===== */
 
 .team_block-info {
-  flex: 1;
+  flex: var(--team_block-info-flex);
 }
 
-/* імʼя */
+/* ===== name ===== */
 
 .team_block-name {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 2px;
+  font-size: var(--team_block-name-font-size);
+  font-weight: var(--team_block-name-font-weight);
+  margin-bottom: var(--team_block-name-margin-bottom);
 }
 
-/* роль */
+/* ===== role ===== */
 
 .team_block-role {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 8px;
+  font-size: var(--team_block-role-font-size);
+  color: var(--team_block-role-color);
+  margin-bottom: var(--team_block-role-margin-bottom);
 }
 
-/* опис */
+/* ===== text ===== */
 
 .team_block-text {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: var(--team_block-text-font-size);
+  line-height: var(--team_block-text-line-height);
 }
 

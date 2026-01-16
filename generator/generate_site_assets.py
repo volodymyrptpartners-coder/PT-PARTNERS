@@ -47,8 +47,8 @@ def collect_assets(site_data: dict):
     return css_parts, js_parts
 
 
-def main(site_path: str) -> None:
-    site_data = load_site_json(Path(site_path))
+def main(realization_name: str) -> None:
+    site_data = load_site_json(Path(f"sites/{realization_name}.json"))
     css_parts, js_parts = collect_assets(site_data)
 
     if css_parts:
@@ -66,6 +66,6 @@ def main(site_path: str) -> None:
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        die("usage: generate_site_assets.py <site_json_path>")
-    site_path = sys.argv[1]
-    main(site_path=site_path)
+        die("usage: generate_site_assets.py <realization_name>")
+    realization_name = sys.argv[1]
+    main(realization_name=realization_name)
