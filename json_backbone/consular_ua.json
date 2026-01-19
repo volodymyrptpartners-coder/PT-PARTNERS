@@ -12,122 +12,63 @@
             {
               "step": 1,
               "icon": "●",
-              "label": "Первинна консультація",
-              "time": "15 хв"
+              "label": "Звернення",
+              "time": "близько 15 хв"
             },
             {
               "step": 2,
               "icon": "▲",
-              "label": "Перевірка",
-              "time": "1 день"
+              "label": "Перевірка даних",
+              "time": "до 1 дня"
             },
             {
               "step": 3,
               "icon": "■",
               "label": "Оформлення",
-              "time": "до 10 днів"
+              "time": "індивідуально (~10 днів)"
             },
             {
               "step": 4,
               "icon": "★",
               "label": "Результат",
-              "time": "Одразу"
+              "time": "після завершення"
             }
           ],
           "details": [
             {
               "step": 1,
-              "title": "Початкове звернення",
+              "title": "Звернення та уточнення ситуації",
               "items": [
-                "Ви звертаєтесь до нас зручним способом (Telegram, WhatsApp,  телефон або email)",
-                "Ми зʼясовуємо ваш статус у Польщі (побут, робота, навчання, ПМЖ)",
-                "Пояснюємо, який тип консульського обліку вам підходить і що буде потрібно саме у вашому випадку"
+                "ви залишаєте звернення зручним для вас способом",
+                "під час спілкування описуєте свою ситуацію та мету звернення",
+                "отримуєте розуміння, чи підходить консульський облік у вашому випадку та що знадобиться далі"
               ]
             },
             {
               "step": 2,
-              "title": "Перевірка документів",
+              "title": "Перевірка наданої інформації",
               "items": [
-                "Аналізуємо надані документи",
-                "Повідомляємо, якщо чогось бракує",
-                "Узгоджуємо формат роботи"
+                "ви передаєте наявні документи для ознайомлення",
+                "після перевірки стає зрозуміло, чи достатньо поточних документів",
+                "за потреби отримуєте перелік того, що потрібно додати або уточнити"
               ]
             },
             {
               "step": 3,
-              "title": "Оформлення",
+              "title": "Процес оформлення",
               "items": [
-                "Готуємо пакет документів",
-                "Супроводжуємо подачу",
-                "Контролюємо процес"
+                "ви дієте за узгодженим порядком кроків",
+                "на кожному етапі зрозуміло, що відбувається і чого очікувати далі",
+                "тривалість залежить від індивідуальної ситуації та зовнішніх факторів"
               ]
             },
             {
               "step": 4,
-              "title": "Завершення",
+              "title": "Отримання результату",
               "items": [
-                "Ви отримуєте підтвердження консульського обліку",
-                "Після цього здійснюється оплата послуги"
+                "ви отримуєте підтвердження завершення консульського обліку",
+                "після цього процес вважається завершеним"
               ]
-            }
-          ]
-        }
-      }
-    },
-    "contacts_block": {
-      "realization": {
-        "block_name": "contacts_block",
-        "content": {
-          "items": [
-            {
-              "value": "volodymyrptpartners@gmail.com",
-              "copy": "volodymyrptpartners@gmail.com",
-              "icon": "email.svg",
-              "icon-alt": "Mail",
-              "action": {
-                "href": "mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт,",
-                "label": "Написати листа"
-              }
-            },
-            {
-              "value": "+48 884 930 030",
-              "copy": "tel:+48884930030",
-              "icon": "phone.svg",
-              "icon-alt": "Phone",
-              "action": {
-                "href": "tel:+48884930030",
-                "label": "Зателефонувати"
-              }
-            },
-            {
-              "value": "@VolodymyrPtPartners",
-              "copy": "@VolodymyrPtPartners",
-              "icon": "telegram.svg",
-              "icon-alt": "Telegram",
-              "action": {
-                "href": "https://t.me/VolodymyrPtPartners",
-                "label": "Відкрити в Telegram"
-              }
-            },
-            {
-              "value": "+48 884 930 030",
-              "copy": "https://wa.me/48884930030",
-              "icon": "whatsapp.svg",
-              "icon-alt": "WhatsApp",
-              "action": {
-                "href": "https://wa.me/48884930030",
-                "label": "Написати в WhatsApp"
-              }
-            },
-            {
-              "value": "PT&PARTNERS",
-              "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-              "icon": "office.svg",
-              "icon-alt": "Office",
-              "action": {
-                "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-                "label": "Відкрити в Google Maps"
-              }
             }
           ]
         }
@@ -400,16 +341,20 @@
           "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
           "photos": [
             {
-              "src": "email.svg",
+              "src": "office/office_image.jpg",
               "alt": "Вхід до офісу PT&PARTNERS у Piaseczno"
             },
             {
-              "src": "telegram.svg",
-              "alt": "Табличка офісу PT&PARTNERS"
+              "src": "office/cup_with_logo.jpg",
+              "alt": "Cups PT&PARTNERS"
             },
             {
-              "src": "whatsapp.svg",
-              "alt": "Робочий простір офісу PT&PARTNERS"
+              "src": "office/logo_from_google_maps.png",
+              "alt": "Logo PT&PARTNERS"
+            },
+            {
+              "src": "office/car_nomers.jpg",
+              "alt": "PT&PARTNERS"
             }
           ]
         }

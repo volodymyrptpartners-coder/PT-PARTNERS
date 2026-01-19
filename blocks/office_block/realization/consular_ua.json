@@ -8,15 +8,15 @@
     "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
     "photos": [
       {
-        "src": "offiсe/office_image.jpg",
+        "src": "office/office_image.jpg",
         "alt": "Вхід до офісу PT&PARTNERS у Piaseczno"
       },
       {
-        "src": "offiсe/cup_with_logo.jpg",
+        "src": "office/cup_with_logo.jpg",
         "alt": "Cups PT&PARTNERS"
       },
       {
-        "src": "offiсe/logo_from_google_maps.png",
+        "src": "office/logo_from_google_maps.png",
         "alt": "Logo PT&PARTNERS"
       },
       {
