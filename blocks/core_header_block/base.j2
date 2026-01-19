@@ -16,11 +16,13 @@
 <meta name="twitter:{{ key }}" content="{{ value }}">
   {%- endfor %}
 {%- endif %}
+{#
 {%- if content["content"].get("stylesheets") %}
   {%- for css in content["content"]["stylesheets"] %}
 <link rel="stylesheet" href="{{ css }}">
   {%- endfor %}
 {%- endif %}
+#}
 {%- if content["content"].get("icons") %}
   {%- for icon in content["content"]["icons"].get("favicon", []) %}
 <link rel="icon"

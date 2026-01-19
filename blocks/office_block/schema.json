@@ -24,6 +24,10 @@
           "type": "string",
           "minLength": 1
         },
+        "address_label": {
+          "type": "string",
+          "minLength": 1
+        },
         "reception_note": {
           "type": "string"
         },
@@ -33,6 +37,14 @@
         "maps_url": {
           "type": "string",
           "format": "uri"
+        },
+        "maps_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "show_photo_label": {
+          "type": "string",
+          "minLength": 1
         },
         "photos": {
           "type": "array",

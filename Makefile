@@ -4,15 +4,13 @@
 consular_ua:
 	@:
 
+consular_ru:
+	@:
+
 auto_registration_ua:
 	@:
 
 
-visa_ru:
-	@:
-
-visa_en:
-	@:
 
 # ---- внутрішня змінна: другий аргумент
 ARG := $(word 2, $(MAKECMDGOALS))

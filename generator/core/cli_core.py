@@ -188,15 +188,38 @@ def render_block(realization_name: str) -> None:
     output_path.write_text(html_rendered, encoding="utf-8")
     print(f"[OK] rendered block '{block_name}' with realization '{realization_name}' → {output_path}")
 
+def collect_block_names(block_name: str, realization_name: str, collected: List[str]) -> List[str]:
+    if block_name in collected:
+        return collected
+    collected.append(block_name)
+    realization_path = get_realization_path(block_name=block_name,realization_name=realization_name,check_exist=True,take_def=True)
+    realization_data = json.loads(load_file(path=realization_path))
+
+    if "inline_block" not in realization_data:
+        return collected
+
+    for inline in realization_data["inline_block"]:
+        if not isinstance(inline, dict):
+            raise ValueError(f"inline_block must be an object in {realization_path}")
+
+        if "block_name" not in inline:
+            raise ValueError(f"inline_block must contain block_name in {realization_path}")
+
+        sub_block_name = inline["block_name"]
+        sub_realization_name = inline.get("realization_name", realization_name)
+        collect_block_names(block_name=sub_block_name,realization_name=sub_realization_name,collected=collected)
+    return collected
+
+ 
 
 def collect_assets(realization_name: str) -> None:
     raw_site_data = load_file(path=str(Path(JSON_DIR) / f"{realization_name}.json"))
     site_data = json.loads(raw_site_data)
+    bl_name = get_block_name(realization_name=realization_name)
+    site_blocks =  collect_block_names(block_name=bl_name,realization_name=realization_name,collected=[])
     css_parts = []
     js_parts = []
-    for block_name in get_block_names():
-        if block_name not in site_data["blocks"].keys():
-            continue
+    for block_name in site_blocks:
         css_file = Path(BLOCKS_DIR) / block_name / BASE_CSS
         js_file = Path(BLOCKS_DIR) / block_name / BASE_JS
         if css_file.exists():
@@ -241,13 +264,13 @@ def clean(realization_name: str) -> None:
             print(f"[OK] removed {json_file}")
             removed_any = True
 
-    # 3. remove realization-specific HTML
-    html_path = Path(SITES_DIR) / f"{realization_name}.html"
-    if html_path.exists():
-        html_path.unlink()
-        print(f"[OK] removed {html_path}")
-        removed_any = True
-
-    if not removed_any:
-        print(f"[OK] nothing to clean for realization '{realization_name}'")
-
+#    # 3. remove realization-specific HTML
+#    html_path = Path(SITES_DIR) / f"{realization_name}.html"
+#    if html_path.exists():
+#        html_path.unlink()
+#        print(f"[OK] removed {html_path}")
+#        removed_any = True
+#
+#    if not removed_any:
+#        print(f"[OK] nothing to clean for realization '{realization_name}'")
+#

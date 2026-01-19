@@ -3,9 +3,12 @@
   "content": {
     "title": "Some company",
     "address": "Some address",
+    "address_label": "Address:",
     "reception_note": "Some reception note.",
     "extra_note": "",
-    "maps_url": "Some url",
+    "maps_url": "https://example.com",
+    "maps_label": "Open in Google Maps",
+    "show_photo_label": "Show photo",
     "photos": [
       {
         "src": "email.svg",
@@ -22,3 +25,4 @@
     ]
   }
 }
+

@@ -36,7 +36,7 @@
         <label
           class="office_block-thumb"
           for="office_photo_{{ loop.index }}"
-          aria-label="Показати фото {{ loop.index }}"
+          aria-label="{{ content["content"]["show_photo_label"] }} {{ loop.index }}"
         >
           <img
             src="sources/{{ photo["src"] }}"
@@ -61,7 +61,7 @@
 
     {% if content["content"]["address"] %}
     <div class="office_block-line">
-      <strong>Адреса:</strong><br>
+      <strong>{{ content["content"]["address_label"] }}</strong><br>
       {{ content["content"]["address"] }}
     </div>
     {% endif %}
@@ -88,7 +88,7 @@
       href="{{ content["content"]["maps_url"] }}"
       target="_blank"
       rel="noopener noreferrer">
-      Перевірити локацію в Google Maps
+      {{ content["content"]["maps_label"] }}
     </a>
   </div>
   {% endif %}

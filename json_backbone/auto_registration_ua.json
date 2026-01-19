@@ -74,65 +74,6 @@
         }
       }
     },
-    "contacts_block": {
-      "realization": {
-        "block_name": "contacts_block",
-        "content": {
-          "items": [
-            {
-              "value": "volodymyrptpartners@gmail.com",
-              "copy": "volodymyrptpartners@gmail.com",
-              "icon": "email.svg",
-              "icon-alt": "Mail",
-              "action": {
-                "href": "mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт,",
-                "label": "Написати листа"
-              }
-            },
-            {
-              "value": "+48 884 930 030",
-              "copy": "tel:+48884930030",
-              "icon": "phone.svg",
-              "icon-alt": "Phone",
-              "action": {
-                "href": "tel:+48884930030",
-                "label": "Зателефонувати"
-              }
-            },
-            {
-              "value": "@VolodymyrPtPartners",
-              "copy": "@VolodymyrPtPartners",
-              "icon": "telegram.svg",
-              "icon-alt": "Telegram",
-              "action": {
-                "href": "https://t.me/VolodymyrPtPartners",
-                "label": "Відкрити в Telegram"
-              }
-            },
-            {
-              "value": "+48 884 930 030",
-              "copy": "https://wa.me/48884930030",
-              "icon": "whatsapp.svg",
-              "icon-alt": "WhatsApp",
-              "action": {
-                "href": "https://wa.me/48884930030",
-                "label": "Написати в WhatsApp"
-              }
-            },
-            {
-              "value": "PT&PARTNERS",
-              "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-              "icon": "office.svg",
-              "icon-alt": "Office",
-              "action": {
-                "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-                "label": "Відкрити в Google Maps"
-              }
-            }
-          ]
-        }
-      }
-    },
     "site_top_panel_block": {
       "realization": {
         "block_name": "site_top_panel_block",
@@ -368,73 +309,13 @@
               "photo_alt": "Володимир"
             },
             {
-              "name": "Yana",
+              "name": "Рената",
               "role": "Супроводжує оформлення консульського обліку",
               "text": "Веде процес від першого звернення до результату. Допомагає з підготовкою документів, перевіряє деталі та залишається на звʼязку на кожному етапі.",
-              "photo": "team/no_photo_girl.svg",
-              "photo_alt": "Yana"
-            },
-            {
-              "name": "Oleg",
-              "role": "Супроводжує оформлення консульського обліку",
-              "text": "Веде процес від першого звернення до результату. Допомагає з підготовкою документів, перевіряє деталі та залишається на звʼязку на кожному етапі.",
-              "photo": "team/no_photo_man.svg",
-              "photo_alt": "Oleg"
+              "photo": "team/renata.jpg",
+              "photo_alt": "Рената"
             }
           ]
-        }
-      }
-    },
-    "contact_fab_block": {
-      "realization": {
-        "block_name": "contact_fab_block",
-        "content": {
-          "items": [
-            {
-              "href": "https://t.me/VolodymyrPtPartners",
-              "label": "Telegram",
-              "icon": "telegram.svg"
-            },
-            {
-              "href": "tel:+48884930030",
-              "label": "Phone",
-              "icon": "phone.svg"
-            }
-          ]
-        }
-      }
-    },
-    "office_block": {
-      "realization": {
-        "block_name": "office_block",
-        "content": {
-          "title": "PT&PARTNERS",
-          "address": "ul. Żeromskiego 9 / lok. 1, 05-500 Piaseczno, Польща",
-          "reception_note": "Прийом здійснюється за попереднім записом.",
-          "extra_note": "",
-          "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-          "photos": [
-            {
-              "src": "email.svg",
-              "alt": "Вхід до офісу PT&PARTNERS у Piaseczno"
-            },
-            {
-              "src": "telegram.svg",
-              "alt": "Табличка офісу PT&PARTNERS"
-            },
-            {
-              "src": "whatsapp.svg",
-              "alt": "Робочий простір офісу PT&PARTNERS"
-            }
-          ]
-        }
-      }
-    },
-    "site_footer_block": {
-      "realization": {
-        "block_name": "site_footer_block",
-        "content": {
-          "text": "PT&PARTNERS. Усі права захищено."
         }
       }
     },
@@ -471,46 +352,6 @@
             "href": "#contacts"
           }
         }
-      }
-    },
-    "template_consular_container": {
-      "realization": {
-        "block_name": "template_consular_container",
-        "content": {
-          "lang": "uk"
-        },
-        "inline_block": [
-          {
-            "block_name": "core_header_block"
-          },
-          {
-            "block_name": "site_top_panel_block"
-          },
-          {
-            "block_name": "hero_block"
-          },
-          {
-            "block_name": "hero2_block"
-          },
-          {
-            "block_name": "accordion_container"
-          },
-          {
-            "block_name": "contacts_block"
-          },
-          {
-            "block_name": "contact_fab_block"
-          },
-          {
-            "block_name": "site_footer_block"
-          },
-          {
-            "block_name": "hero_txt1_block"
-          },
-          {
-            "block_name": "team_block"
-          }
-        ]
       }
     },
     "hero_txt1_block": {

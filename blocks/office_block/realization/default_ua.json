@@ -3,9 +3,12 @@
   "content": {
     "title": "PT&PARTNERS",
     "address": "ul. Żeromskiego 9 / lok. 1, 05-500 Piaseczno, Польща",
+    "address_label": "Адреса:",
     "reception_note": "Прийом здійснюється за попереднім записом.",
     "extra_note": "",
     "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+    "maps_label": "Перевірити локацію в Google Maps",
+    "show_photo_label": "Показати фото",
     "photos": [
       {
         "src": "office/office_image.jpg",
@@ -26,3 +29,4 @@
     ]
   }
 }
+
