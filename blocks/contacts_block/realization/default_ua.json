@@ -45,7 +45,7 @@
       {
         "value": "PT&PARTNERS",
         "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-        "icon": "office.svg",
+        "icon": "office_icon.svg",
         "icon-alt": "Office",
         "action": {
           "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",

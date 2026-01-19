@@ -5,6 +5,7 @@ from typing import List
 from pathlib import Path
 from jsonschema import Draft202012Validator
 from jsonschema import RefResolver
+from generator.core.cli_core import get_block_names, get_json_schema_path, get_realization_jsons
 
 
 def die(msg: str) -> None:
@@ -169,11 +170,11 @@ def verify_json(schema_path: str, data_path: str, context_lines: int = 4) -> boo
 
     return True
 
-from generator.core.cli_core import get_block_names, get_json_schema_path , get_realization_jsons
-def main()->None:
+
+def main() -> None:
     for block_name in get_block_names():
         schema_path = get_json_schema_path(block_name=block_name)
-        
+
         for data_path in get_realization_jsons(block_name=block_name):
             correct = verify_json(schema_path=schema_path, data_path=data_path)
             if not correct:
@@ -182,18 +183,6 @@ def main()->None:
             print(f"[OK] validated {data_path}")
     print("All realizations are valid")
 
-#      @set -e; \
-#        for block in blocks/*; do \
-#                if [ -d "$$block/realization" ] && [ -f "$$block/schema.json" ]; then \
-#                        echo "Validating $$block"; \
-#                        for json in $$block/realization/*.json; do \
-#                                if [ -f "$$json" ]; then \
-#                                        python generator/validate_json.py $$block/schema.json $$json; \
-#                                fi; \
-#                        done; \
-#                fi; \
-#        done; \
-#        echo "All realizations are valid"
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     main()

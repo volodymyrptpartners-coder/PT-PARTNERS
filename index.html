@@ -1,1 +1,47 @@
-<meta http-equiv="refresh" content="0; URL='b_index.html'" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PT Partners</title>
+  <noscript>
+    JavaScript is required to view this site.
+  </noscript>
+</head>
+<body>
+
+<script>
+(async function () {
+  const DEFAULT_SITE = "consular_ua";
+  const BASE_PATH = "sites";
+  const FALLBACK_404 = `${BASE_PATH}/404.html`;
+
+  const params = new URLSearchParams(window.location.search);
+  const site = params.get("site") || DEFAULT_SITE;
+
+  // basic validation (path traversal protection)
+  if (!/^[a-z0-9_]+$/.test(site)) {
+    window.location.replace(FALLBACK_404);
+    return;
+  }
+
+  const target = `${BASE_PATH}/${site}.html`;
+
+  try {
+    // Check if target file exists
+    const res = await fetch(target, { method: "HEAD" });
+
+    if (res.ok) {
+      window.location.replace(target);
+    } else {
+      window.location.replace(FALLBACK_404);
+    }
+  } catch (e) {
+    // Network / fetch error → fallback
+    window.location.replace(FALLBACK_404);
+  }
+})();
+</script>
+
+</body>
+</html>
+
