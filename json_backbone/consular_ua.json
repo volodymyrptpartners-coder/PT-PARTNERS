@@ -79,17 +79,17 @@
         "block_name": "site_top_panel_block",
         "content": {
           "brand": "PT&PARTNERS",
-          "current": "ua",
+          "current": "sources/flags/ua-flag.svg",
           "languages": [
             {
               "code": "ua",
               "href": "consular_ua.html",
-              "flag": "ua-flag.svg"
+              "flag": "sources/flags/ua-flag.svg"
             },
             {
               "code": "ru",
               "href": "consular_ru.html",
-              "flag": "ru-flag.svg"
+              "flag": "sources/flags/ru-flag.svg"
             }
           ]
         }
@@ -149,8 +149,8 @@
           "og": {
             "title": "Консульський облік у Польщі – допомога українцям",
             "description": "Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.",
-            "image": "https://pt-partners.org/sources/logo.jpg",
-            "url": "https://pt-partners.org/ukraine-consul.html",
+            "image": "https://pt-partners.org/sites/sources/logo/logo.jpg",
+            "url": "https://pt-partners.org/sites/consular_ua.html",
             "type": "website",
             "locale": "uk_UA"
           },
@@ -158,7 +158,7 @@
             "card": "summary_large_image",
             "title": "Консульський облік у Польщі – допомога українцям",
             "description": "Допомагаємо громадянам України швидко й без проблем стати на консульський облік у Польщі.",
-            "image": "https://pt-partners.org/sources/logo.jpg"
+            "image": "https://pt-partners.org/sites/sources/logo/logo.jpg"
           },
           "stylesheets": [
             "styles.css"
@@ -167,70 +167,70 @@
             "favicon": [
               {
                 "type": "image/svg+xml",
-                "href": "sources/logo_vector.svg"
+                "href": "sources/logo/logo_vector.svg"
               },
               {
                 "type": "image/png",
                 "sizes": "32x32",
-                "href": "sources/logo_32x32.png"
+                "href": "sources/logo/logo_32x32.png"
               },
               {
                 "type": "image/png",
                 "sizes": "48x48",
-                "href": "sources/logo_48x48.png"
+                "href": "sources/logo/logo_48x48.png"
               },
               {
                 "type": "image/png",
                 "sizes": "64x64",
-                "href": "sources/logo_64x64.png"
+                "href": "sources/logo/logo_64x64.png"
               },
               {
                 "type": "image/png",
                 "sizes": "128x128",
-                "href": "sources/logo_128x128.png"
+                "href": "sources/logo/logo_128x128.png"
               },
               {
                 "type": "image/png",
                 "sizes": "256x256",
-                "href": "sources/logo_256x256.png"
+                "href": "sources/logo/logo_256x256.png"
               }
             ],
             "apple_touch": [
               {
                 "sizes": "57x57",
-                "href": "sources/logo_57x57.png"
+                "href": "sources/logo/logo_57x57.png"
               },
               {
                 "sizes": "60x60",
-                "href": "sources/logo_60x60.png"
+                "href": "sources/logo/logo_60x60.png"
               },
               {
                 "sizes": "72x72",
-                "href": "sources/logo_72x72.png"
+                "href": "sources/logo/logo_72x72.png"
               },
               {
                 "sizes": "76x76",
-                "href": "sources/logo_76x76.png"
+                "href": "sources/logo/logo_76x76.png"
               },
               {
                 "sizes": "114x114",
-                "href": "sources/logo_114x114.png"
+                "href": "sources/logo/logo_114x114.png"
               },
               {
                 "sizes": "120x120",
-                "href": "sources/logo_120x120.png"
+                "href": "sources/logo/logo_120x120.png"
               },
               {
                 "sizes": "144x144",
-                "href": "sources/logo_144x144.png"
+                "href": "sources/logo/logo_144x144.png"
               },
               {
                 "sizes": "152x152",
-                "href": "sources/logo_152x152.png"
+                "href": "sources/logo/logo_152x152.png"
               },
               {
                 "sizes": "180x180",
-                "href": "sources/logo_180x180.png"
+                "href": "sources/logo/logo_180x180.png"
               }
             ]
           }
@@ -304,7 +304,7 @@
               "name": "Володимир",
               "role": "Супроводжує оформлення консульського обліку",
               "text": "Веде процес від першого звернення до результату. Допомагає з підготовкою документів, перевіряє деталі та залишається на звʼязку на кожному етапі.",
-              "photo": "team/volodymyr.jpg",
+              "photo": "sources/team/volodymyr.jpg",
               "photo_alt": "Володимир"
             }
           ]
