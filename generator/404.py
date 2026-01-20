@@ -1,11 +1,18 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+
+SITES_DIR = Path("sites")
+OUTPUT_FILE = SITES_DIR / "404.html"
+
+
+HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>404</title>
   <meta name="robots" content="noindex, nofollow">
   <style>
-    body {
+    body {{
       margin: 0;
       min-height: 100vh;
       display: flex;
@@ -14,47 +21,47 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: #f5f5f5;
       color: #1a1a1a;
-    }
+    }}
 
-    .box {
+    .box {{
       background: #ffffff;
       padding: 40px;
       border-radius: 16px;
       max-width: 520px;
       width: 100%;
-    }
+    }}
 
-    h1 {
+    h1 {{
       margin: 0 0 16px;
       font-size: 32px;
       font-weight: 600;
-    }
+    }}
 
-    p {
+    p {{
       margin: 0 0 24px;
       color: #555;
       font-size: 16px;
-    }
+    }}
 
-    ul {
+    ul {{
       margin: 0;
       padding: 0;
       list-style: none;
-    }
+    }}
 
-    li + li {
+    li + li {{
       margin-top: 8px;
-    }
+    }}
 
-    a {
+    a {{
       text-decoration: none;
       color: #1a1a1a;
       border-bottom: 1px solid #ccc;
-    }
+    }}
 
-    a:hover {
+    a:hover {{
       border-color: #1a1a1a;
-    }
+    }}
   </style>
 </head>
 <body>
@@ -63,12 +70,36 @@
     <h1>404</h1>
     <p>Available pages:</p>
     <ul>
-      <li><a href="auto_registration_ru.html">auto_registration_ru.html</a></li>
-<li><a href="auto_registration_ua.html">auto_registration_ua.html</a></li>
-<li><a href="consular_ru.html">consular_ru.html</a></li>
-<li><a href="consular_ua.html">consular_ua.html</a></li>
+      {links}
     </ul>
   </div>
 
 </body>
 </html>
+"""
+
+
+def generate_404() -> None:
+    if not SITES_DIR.exists():
+        raise RuntimeError(f"{SITES_DIR} directory not found")
+
+    pages = sorted(
+        p.name
+        for p in SITES_DIR.glob("*.html")
+        if p.name != "404.html"
+    )
+
+    links_html = "\n".join(
+        f'<li><a href="{page}">{page}</a></li>'
+        for page in pages
+    )
+
+    html = HTML_TEMPLATE.format(links=links_html)
+
+    OUTPUT_FILE.write_text(html, encoding="utf-8")
+    print(f"[OK] generated {OUTPUT_FILE}")
+
+
+if __name__ == "__main__":
+    generate_404()
+

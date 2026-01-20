@@ -1,0 +1,37 @@
+/* ===== DESKTOP SIDE BACKGROUNDS ===== */
+@media (min-width: 1024px) {
+  .main_left,
+  .main_right {
+    position: fixed;
+    top: 0;
+    width: 22vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .main_left {
+    left: 0;
+    background-image: url("sources/warsaw_light_theme.jpg");
+  }
+
+  .main_right {
+    right: 0;
+    background-image: url("sources/car_light_theme.jpg");
+  }
+
+  .main_block {
+    position: relative;
+    z-index: 1;
+
+
+    background: #ffffff;
+    border-radius: 16px;
+  }
+}
+

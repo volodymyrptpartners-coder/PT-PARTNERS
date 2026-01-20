@@ -1,14 +1,14 @@
 <div class="site_top_panel_block-main">
     <div class="site_top_panel_block-header">
         <div class="site_top_panel_block-container">
-            <img src="sources/logo_vector.svg" alt="{{ content['content']['brand'] }}" class="site_top_panel_block-logo">
+            <img src="sources/logo/logo_vector.svg" alt="{{ content['content']['brand'] }}" class="site_top_panel_block-logo">
             <span class="site_top_panel_block-ltext">{{ content['content']['brand']  }}</span>
         </div>
 
         <div class="site_top_panel_block-switch">
           <button class="site_top_panel_block-lbtn" type="button">
             <span class="site_top_panel_block-ficon">
-              <img src="sources/{{ content['content']['current'] }}-flag.svg"
+              <img src="{{ content['content']['current'] }}"
                    alt="{{ content['content']['current'] | upper }}"
                    width="24"
                    height="16">
@@ -21,7 +21,7 @@
               <li>
                 <a href="{{ lang["href"] }}">
                   <span class="site_top_panel_block-ficon">
-                    <img src="sources/{{ lang["flag"] }}"
+                    <img src="{{ lang["flag"] }}"
                          alt="{{ lang["code"] | upper }}"
                          width="24"
                          height="16">

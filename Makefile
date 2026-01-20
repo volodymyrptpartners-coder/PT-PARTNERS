@@ -7,10 +7,12 @@ consular_ua:
 consular_ru:
 	@:
 
+
 auto_registration_ua:
 	@:
 
-
+auto_registration_ru:
+	@:
 
 # ---- внутрішня змінна: другий аргумент
 ARG := $(word 2, $(MAKECMDGOALS))
@@ -34,6 +36,7 @@ split:
 build:
 	$(call require_arg,build)
 	python3 generator/cli.py build $(ARG)
+	python3 generator/404.py
 
 clean:
 	$(call require_arg,clean)
@@ -41,3 +44,4 @@ clean:
 
 validate:
 	python3 generator/cli.py validate
+	python3 generator/check_assets.py

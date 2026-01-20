@@ -7,30 +7,30 @@
     <meta name="description" content="Реєстрація автомобілів і оформлення обовʼязкового страхування у Варшаві та околицях. Послуга під ключ без зайвих формальностей.">
     <meta property="og:title" content="Реєстрація авто та страхування під ключ у Польщі">
     <meta property="og:description" content="Повна реєстрація автомобіля та оформлення страхування у Варшаві та околицях. Стандартні випадки — до 24 годин.">
-    <meta property="og:image" content="https://pt-partners.org/sources/logo.jpg">
-    <meta property="og:url" content="https://pt-partners.org/auto-registration.html">
+    <meta property="og:image" content="https://pt-partners.org/sources/logo/logo.jpg">
+    <meta property="og:url" content="https://pt-partners.org/sites/auto_registration_ua.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Реєстрація авто у Польщі">
     <meta name="twitter:description" content="Реєстрація автомобілів і оформлення страхування під ключ у Польщі.">
-    <meta name="twitter:image" content="https://pt-partners.org/sources/logo.jpg">
+    <meta name="twitter:image" content="https://pt-partners.org/sources/logo/logo.jpg">
 
-    <link rel="icon" type="image/svg+xml"href="sources/logo_vector.svg">
-    <link rel="icon" type="image/png" sizes="32x32"href="sources/logo_32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48"href="sources/logo_48x48.png">
-    <link rel="icon" type="image/png" sizes="64x64"href="sources/logo_64x64.png">
-    <link rel="icon" type="image/png" sizes="128x128"href="sources/logo_128x128.png">
-    <link rel="icon" type="image/png" sizes="256x256"href="sources/logo_256x256.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="sources/logo_57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="sources/logo_60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="sources/logo_72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="sources/logo_76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="sources/logo_114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="sources/logo_120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="sources/logo_144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="sources/logo_152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="sources/logo_180x180.png">
+    <link rel="icon" type="image/svg+xml"href="sources/logo/logo_vector.svg">
+    <link rel="icon" type="image/png" sizes="32x32"href="sources/logo/logo_32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48"href="sources/logo/logo_48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64"href="sources/logo/logo_64x64.png">
+    <link rel="icon" type="image/png" sizes="128x128"href="sources/logo/logo_128x128.png">
+    <link rel="icon" type="image/png" sizes="256x256"href="sources/logo/logo_256x256.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="sources/logo/logo_57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="sources/logo/logo_60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="sources/logo/logo_72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="sources/logo/logo_76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="sources/logo/logo_114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="sources/logo/logo_120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="sources/logo/logo_144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="sources/logo/logo_152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="sources/logo/logo_180x180.png">
   <style>
     
     /* ===== template_consular_container ===== */
@@ -233,6 +233,18 @@
 
     .site_top_panel_block-lmenu li:hover {
       background: var(--site_top_panel_block-lmenu-item-hover-background);
+    }
+    .site_top_panel_block-lmenu li {
+      padding: 0;
+    }
+
+    .site_top_panel_block-lmenu li a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0.4rem 0.75rem;
+      text-decoration: none;
+      color: inherit;
     }
 
 
@@ -1506,22 +1518,62 @@
       padding: var(--hero_txt1_block-text-padding);
     }
 
+
+    /* ===== EXTRA CSS ===== */
+    /* ===== DESKTOP SIDE BACKGROUNDS ===== */
+    @media (min-width: 1024px) {
+      .main_left,
+      .main_right {
+        position: fixed;
+        top: 0;
+        width: 22vw;
+        height: 100vh;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .main_left {
+        left: 0;
+        background-image: url("sources/warsaw_light_theme.jpg");
+      }
+
+      .main_right {
+        right: 0;
+        background-image: url("sources/car_light_theme.jpg");
+      }
+
+      .main_block {
+        position: relative;
+        z-index: 1;
+
+
+        background: #ffffff;
+        border-radius: 16px;
+      }
+    }
+
   </style>
 </head>
 <body>
+  <div class="main_left"></div>
   <div class="main_block">
     <div class="site_top_panel_block-main">
         <div class="site_top_panel_block-header">
             <div class="site_top_panel_block-container">
-                <img src="sources/logo_vector.svg" alt="PT&PARTNERS" class="site_top_panel_block-logo">
+                <img src="sources/logo/logo_vector.svg" alt="PT&PARTNERS" class="site_top_panel_block-logo">
                 <span class="site_top_panel_block-ltext">PT&PARTNERS</span>
             </div>
 
             <div class="site_top_panel_block-switch">
               <button class="site_top_panel_block-lbtn" type="button">
                 <span class="site_top_panel_block-ficon">
-                  <img src="sources/ua-flag.svg"
-                       alt="UA"
+                  <img src="sources/flags/ua-flag.svg"
+                       alt="SOURCES/FLAGS/UA-FLAG.SVG"
                        width="24"
                        height="16">
                 </span>
@@ -1530,9 +1582,9 @@
             
               <ul class="site_top_panel_block-lmenu">
                   <li>
-                    <a href="ukraine-consul.html">
+                    <a href="auto_registration_ua.html">
                       <span class="site_top_panel_block-ficon">
-                        <img src="sources/ua-flag.svg"
+                        <img src="sources/flags/ua-flag.svg"
                              alt="UA"
                              width="24"
                              height="16">
@@ -1540,9 +1592,9 @@
                     </a>
                   </li>
                   <li>
-                    <a href="ukraine-consul-ru.html">
+                    <a href="auto_registration_ru.html">
                       <span class="site_top_panel_block-ficon">
-                        <img src="sources/ru-flag.svg"
+                        <img src="sources/flags/ru-flag.svg"
                              alt="RU"
                              width="24"
                              height="16">
@@ -1682,27 +1734,14 @@
               </div>
               <div class="path_way_block-step">
                 <div class="path_way_block-step-icon">
-                  ▲
-                </div>
-                <div class="path_way_block-step-meta">
-                  <div class="path_way_block-step-label">
-                    2. Узгодження деталей
-                  </div>
-                  <div class="path_way_block-step-time">
-                    до 1 дня
-                  </div>
-                </div>
-              </div>
-              <div class="path_way_block-step">
-                <div class="path_way_block-step-icon">
                   ■
                 </div>
                 <div class="path_way_block-step-meta">
                   <div class="path_way_block-step-label">
-                    3. Оформлення автомобіля
+                    2. Оформлення автомобіля
                   </div>
                   <div class="path_way_block-step-time">
-                    до 24 годин*
+                    зазвичай у межах 1 дня*
                   </div>
                 </div>
               </div>
@@ -1712,7 +1751,7 @@
                 </div>
                 <div class="path_way_block-step-meta">
                   <div class="path_way_block-step-label">
-                    4. Готовий результат
+                    3. Готовий результат
                   </div>
                   <div class="path_way_block-step-time">
                     після завершення
@@ -1726,62 +1765,49 @@
           <div class="path_way_block-details">
             <div class="path_way_block-detail">
               <h3 class="path_way_block-detail-title">
-                1. Звернення
+                1. Звернення та надання інформації
               </h3>
               <ul class="path_way_block-detail-list">
                 <li class="path_way_block-detail-item">
-                  Ви звертаєтесь до нас зручним способом
+                  Ви звертаєтесь зручним для вас способом
                 </li>
                 <li class="path_way_block-detail-item">
                   Надаєте інформацію про автомобіль і наявні документи
                 </li>
                 <li class="path_way_block-detail-item">
-                  Отримуєте первинну консультацію щодо можливості та строків
+                  Отримуєте розуміння, чи можливе оформлення у вашому випадку та як виглядатиме подальший процес
                 </li>
               </ul>
             </div>
             <div class="path_way_block-detail">
               <h3 class="path_way_block-detail-title">
-                2. Узгодження
+                2. Оформлення автомобіля
               </h3>
               <ul class="path_way_block-detail-list">
                 <li class="path_way_block-detail-item">
-                  Ми уточнюємо деталі саме вашої ситуації
+                  Ви передаєте необхідні документи для оформлення
                 </li>
                 <li class="path_way_block-detail-item">
-                  Погоджуємо строки та обсяг послуги
+                  Процес реєстрації та страхування проходить без необхідності вашої особистої участі
                 </li>
                 <li class="path_way_block-detail-item">
-                  Ви розумієте, що і в які терміни буде зроблено
+                  Ви залишаєтесь на звʼязку та за потреби отримуєте уточнення щодо статусу
                 </li>
               </ul>
             </div>
             <div class="path_way_block-detail">
               <h3 class="path_way_block-detail-title">
-                3. Оформлення
-              </h3>
-              <ul class="path_way_block-detail-list">
-                <li class="path_way_block-detail-item">
-                  Ви передаєте необхідні документи
-                </li>
-                <li class="path_way_block-detail-item">
-                  Процес реєстрації та страхування відбувається без вашої участі
-                </li>
-              </ul>
-            </div>
-            <div class="path_way_block-detail">
-              <h3 class="path_way_block-detail-title">
-                4. Завершення
+                3. Готовий результат
               </h3>
               <ul class="path_way_block-detail-list">
                 <li class="path_way_block-detail-item">
                   Ви отримуєте зареєстрований автомобіль
                 </li>
                 <li class="path_way_block-detail-item">
-                  Отримуєте діюче страхування
+                  Маєте діюче обовʼязкове страхування
                 </li>
                 <li class="path_way_block-detail-item">
-                  Можете користуватися авто без додаткових формальностей
+                  Можете користуватися автомобілем без додаткових формальностей
                 </li>
               </ul>
             </div>
@@ -1809,8 +1835,8 @@
 
               <div class="team_block-info">
                 <div class="team_block-name">Володимир</div>
-                <div class="team_block-role">Супроводжує оформлення консульського обліку</div>
-                <div class="team_block-text">Веде процес від першого звернення до результату. Допомагає з підготовкою документів, перевіряє деталі та залишається на звʼязку на кожному етапі.</div>
+                <div class="team_block-role">Супроводжує реєстрацію та перереєстрацію автомобіля</div>
+                <div class="team_block-text">Веде процес реєстрації автомобіля від першого звернення до завершення оформлення. Перевіряє документи, координує подачу.</div>
               </div>
             </div>
             <div class="team_block-item">
@@ -1824,8 +1850,8 @@
 
               <div class="team_block-info">
                 <div class="team_block-name">Рената</div>
-                <div class="team_block-role">Супроводжує оформлення консульського обліку</div>
-                <div class="team_block-text">Веде процес від першого звернення до результату. Допомагає з підготовкою документів, перевіряє деталі та залишається на звʼязку на кожному етапі.</div>
+                <div class="team_block-role">Супроводжує реєстрацію та перереєстрацію автомобіля</div>
+                <div class="team_block-text">Супроводжує процес реєстрації автомобіля на всіх етапах — від старту до фінального результату.</div>
               </div>
             </div>
         </div>
@@ -2033,7 +2059,7 @@
         <div class="contacts_block-grid">
             <div class="contacts_block-card" data-copy="volodymyrptpartners@gmail.com">
                 <div class="contacts_block-icon">
-                    <img class="icon" src="sources/email.svg" alt="Mail">
+                    <img class="icon" src="sources/icons/email.svg" alt="Mail">
                 </div>
                 <div class="contacts_block-info">
                     <span class="contacts_block-text">volodymyrptpartners@gmail.com</span>
@@ -2043,7 +2069,7 @@
             </div>
             <div class="contacts_block-card" data-copy="tel:+48884930030">
                 <div class="contacts_block-icon">
-                    <img class="icon" src="sources/phone.svg" alt="Phone">
+                    <img class="icon" src="sources/icons/phone.svg" alt="Phone">
                 </div>
                 <div class="contacts_block-info">
                     <span class="contacts_block-text">+48 884 930 030</span>
@@ -2053,7 +2079,7 @@
             </div>
             <div class="contacts_block-card" data-copy="@VolodymyrPtPartners">
                 <div class="contacts_block-icon">
-                    <img class="icon" src="sources/telegram.svg" alt="Telegram">
+                    <img class="icon" src="sources/icons/telegram.svg" alt="Telegram">
                 </div>
                 <div class="contacts_block-info">
                     <span class="contacts_block-text">@VolodymyrPtPartners</span>
@@ -2063,7 +2089,7 @@
             </div>
             <div class="contacts_block-card" data-copy="https://wa.me/48884930030">
                 <div class="contacts_block-icon">
-                    <img class="icon" src="sources/whatsapp.svg" alt="WhatsApp">
+                    <img class="icon" src="sources/icons/whatsapp.svg" alt="WhatsApp">
                 </div>
                 <div class="contacts_block-info">
                     <span class="contacts_block-text">+48 884 930 030</span>
@@ -2073,7 +2099,7 @@
             </div>
             <div class="contacts_block-card" data-copy="https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno">
                 <div class="contacts_block-icon">
-                    <img class="icon" src="sources/office_icon.svg" alt="Office">
+                    <img class="icon" src="sources/icons/office_icon.svg" alt="Office">
                 </div>
                 <div class="contacts_block-info">
                     <span class="contacts_block-text">PT&PARTNERS</span>
@@ -2085,14 +2111,15 @@
     </section>
     <div class="contact_fab_block-fab" id="contact_fab_block-fab">
         <a href="https://t.me/VolodymyrPtPartners" class="contact_fab_block-item" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
-            <img class="contact_fab_block-icon" src="sources/telegram.svg" alt="Telegram">
+            <img class="contact_fab_block-icon" src="sources/icons/telegram.svg" alt="Telegram">
         </a>
         <a href="tel:+48884930030" class="contact_fab_block-item" aria-label="Phone" target="_blank" rel="noopener noreferrer">
-            <img class="contact_fab_block-icon" src="sources/phone.svg" alt="Phone">
+            <img class="contact_fab_block-icon" src="sources/icons/phone.svg" alt="Phone">
         </a>
     </div>
     <footer class="site_footer_block-main">© <span id="site_footer_block-footer-year"></span> PT&PARTNERS. Усі права захищено.</footer>
   </div>
+  <div class="main_right"></div>
   <script>
     
     /* ===== site_top_panel_block ===== */

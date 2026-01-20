@@ -22,7 +22,7 @@
       {% for photo in photos %}
         <div class="office_block-hero-item">
           <img
-            src="sources/{{ photo["src"] }}"
+            src="{{ photo["src"] }}"
             alt="{{ photo["alt"] }}"
             loading="lazy"
           >
@@ -39,7 +39,7 @@
           aria-label="{{ content["content"]["show_photo_label"] }} {{ loop.index }}"
         >
           <img
-            src="sources/{{ photo["src"] }}"
+            src="{{ photo["src"] }}"
             alt="{{ photo["alt"] }}"
             loading="lazy"
           >

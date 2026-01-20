@@ -11,7 +11,7 @@ BLOCKS_DIR = "blocks"
 REALIZATION_DIR = "realization"
 SITES_DIR = "sites"
 JSON_DIR = "json_backbone"
-
+EXTRA_DIR = "extra_assets"
 
 FILE_OUT_CSS = "/tmp/site.css"
 FILE_OUT_JS = "/tmp/site.js"
@@ -67,6 +67,13 @@ def get_language_by_realization_name(realization_name: str) -> str:
     for key, _ in BLOCK_DICT.items():
         if realization_name.startswith(key):
             return realization_name[len(key) :]
+    raise KeyError(f"{realization_name!r} not found in BLOCK_DICT.")
+
+
+def get_raw_realization_name(realization_name: str) -> str:
+    for key, _ in BLOCK_DICT.items():
+        if realization_name.startswith(key):
+            return key[:-1:]
     raise KeyError(f"{realization_name!r} not found in BLOCK_DICT.")
 
 
@@ -138,7 +145,7 @@ def load_file(path: str) -> str:
 
 
 def render(block_name: str, realization_name: str, include_css: bool = False, include_js: bool = False) -> str:
-    inline_block = {}
+    inline_block = {'realization_name': realization_name, 'block_name': block_name}
     realization_path = get_realization_path(block_name=block_name, realization_name=realization_name, check_exist=True, take_def=True)
     if include_css:
         inline_block["include_css"] = load_file(path=FILE_OUT_CSS)
@@ -188,11 +195,12 @@ def render_block(realization_name: str) -> None:
     output_path.write_text(html_rendered, encoding="utf-8")
     print(f"[OK] rendered block '{block_name}' with realization '{realization_name}' → {output_path}")
 
+
 def collect_block_names(block_name: str, realization_name: str, collected: List[str]) -> List[str]:
     if block_name in collected:
         return collected
     collected.append(block_name)
-    realization_path = get_realization_path(block_name=block_name,realization_name=realization_name,check_exist=True,take_def=True)
+    realization_path = get_realization_path(block_name=block_name, realization_name=realization_name, check_exist=True, take_def=True)
     realization_data = json.loads(load_file(path=realization_path))
 
     if "inline_block" not in realization_data:
@@ -207,16 +215,15 @@ def collect_block_names(block_name: str, realization_name: str, collected: List[
 
         sub_block_name = inline["block_name"]
         sub_realization_name = inline.get("realization_name", realization_name)
-        collect_block_names(block_name=sub_block_name,realization_name=sub_realization_name,collected=collected)
+        collect_block_names(block_name=sub_block_name, realization_name=sub_realization_name, collected=collected)
     return collected
 
- 
 
 def collect_assets(realization_name: str) -> None:
     raw_site_data = load_file(path=str(Path(JSON_DIR) / f"{realization_name}.json"))
-    site_data = json.loads(raw_site_data)
+    json.loads(raw_site_data)
     bl_name = get_block_name(realization_name=realization_name)
-    site_blocks =  collect_block_names(block_name=bl_name,realization_name=realization_name,collected=[])
+    site_blocks = collect_block_names(block_name=bl_name, realization_name=realization_name, collected=[])
     css_parts = []
     js_parts = []
     for block_name in site_blocks:
@@ -228,6 +235,16 @@ def collect_assets(realization_name: str) -> None:
         if js_file.exists():
             js_parts.append(f"\n/* ===== {block_name} ===== */\n" + js_file.read_text(encoding="utf-8").strip())
 
+    raw_realization_name = get_raw_realization_name(realization_name=realization_name)
+    extra_css_path = Path(EXTRA_DIR) / f"{raw_realization_name}.css"
+    if extra_css_path.exists():
+        css_parts.append("\n/* ===== EXTRA CSS ===== */\n" + extra_css_path.read_text(encoding="utf-8").strip())
+
+    raw_realization_name = get_raw_realization_name(realization_name=realization_name)
+    extra_js_path = Path(EXTRA_DIR) / f"{raw_realization_name}.js"
+    if extra_js_path.exists():
+        js_parts.append("\n/* ===== EXTRA JS ===== */\n" + extra_js_path.read_text(encoding="utf-8").strip())
+
     if css_parts:
         Path(FILE_OUT_CSS).write_text("\n\n".join(css_parts) + "\n", encoding="utf-8")
         print(f"[OK] generated {FILE_OUT_CSS}")
@@ -236,15 +253,13 @@ def collect_assets(realization_name: str) -> None:
         Path(FILE_OUT_JS).write_text("\n\n".join(js_parts) + "\n", encoding="utf-8")
         print(f"[OK] generated {FILE_OUT_JS}")
 
-def clean(realization_name: str) -> None:
-    removed_any = False
 
+def clean(realization_name: str) -> None:
     # 1. remove temporary framework assets
     for tmp_path in [Path(FILE_OUT_CSS), Path(FILE_OUT_JS)]:
         if tmp_path.exists():
             tmp_path.unlink()
             print(f"[OK] removed {tmp_path}")
-            removed_any = True
 
     # 2. remove realization jsons (except default_* and test_*)
     for block_dir in Path(BLOCKS_DIR).iterdir():
@@ -262,15 +277,3 @@ def clean(realization_name: str) -> None:
 
             json_file.unlink()
             print(f"[OK] removed {json_file}")
-            removed_any = True
-
-#    # 3. remove realization-specific HTML
-#    html_path = Path(SITES_DIR) / f"{realization_name}.html"
-#    if html_path.exists():
-#        html_path.unlink()
-#        print(f"[OK] removed {html_path}")
-#        removed_any = True
-#
-#    if not removed_any:
-#        print(f"[OK] nothing to clean for realization '{realization_name}'")
-#

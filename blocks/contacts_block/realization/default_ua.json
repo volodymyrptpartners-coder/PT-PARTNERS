@@ -5,7 +5,7 @@
       {
         "value": "volodymyrptpartners@gmail.com",
         "copy": "volodymyrptpartners@gmail.com",
-        "icon": "email.svg",
+        "icon": "sources/icons/email.svg",
         "icon-alt": "Mail",
         "action": {
           "href": "mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт,",
@@ -15,7 +15,7 @@
       {
         "value": "+48 884 930 030",
         "copy": "tel:+48884930030",
-        "icon": "phone.svg",
+        "icon": "sources/icons/phone.svg",
         "icon-alt": "Phone",
         "action": {
           "href": "tel:+48884930030",
@@ -25,7 +25,7 @@
       {
         "value": "@VolodymyrPtPartners",
         "copy": "@VolodymyrPtPartners",
-        "icon": "telegram.svg",
+        "icon": "sources/icons/telegram.svg",
         "icon-alt": "Telegram",
         "action": {
           "href": "https://t.me/VolodymyrPtPartners",
@@ -35,7 +35,7 @@
       {
         "value": "+48 884 930 030",
         "copy": "https://wa.me/48884930030",
-        "icon": "whatsapp.svg",
+        "icon": "sources/icons/whatsapp.svg",
         "icon-alt": "WhatsApp",
         "action": {
           "href": "https://wa.me/48884930030",
@@ -45,7 +45,7 @@
       {
         "value": "PT&PARTNERS",
         "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
-        "icon": "office_icon.svg",
+        "icon": "sources/icons/office_icon.svg",
         "icon-alt": "Office",
         "action": {
           "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",

@@ -9,3 +9,12 @@ b_index.html
 **/.mypy_cache/
 **/.coverage
 b_index.html
+
+
+
+# Ignore all realization files
+blocks/**/realization/*.json
+
+# Allow defaults and tests
+!blocks/**/realization/default_*.json
+!blocks/**/realization/test_*.json

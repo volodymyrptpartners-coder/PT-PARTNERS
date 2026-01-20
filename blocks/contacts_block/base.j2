@@ -3,7 +3,7 @@
     {%- for item in content["content"]["items"] %}
         <div class="contacts_block-card" data-copy="{{ item["copy"] }}">
             <div class="contacts_block-icon">
-                <img class="icon" src="sources/{{ item["icon"] }}" alt="{{ item["icon-alt"] }}">
+                <img class="icon" src="{{ item["icon"] }}" alt="{{ item["icon-alt"] }}">
             </div>
             <div class="contacts_block-info">
                 <span class="contacts_block-text">{{ item["value"] }}</span>

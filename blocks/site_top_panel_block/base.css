@@ -169,4 +169,16 @@
 .site_top_panel_block-lmenu li:hover {
   background: var(--site_top_panel_block-lmenu-item-hover-background);
 }
+.site_top_panel_block-lmenu li {
+  padding: 0;
+}
+
+.site_top_panel_block-lmenu li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.4rem 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
 

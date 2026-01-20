@@ -9,6 +9,7 @@
   {%- endif %}
 </head>
 <body>
+  <div class="main_left"></div>
   <div class="main_block">
     {{ inline_block["site_top_panel_block"] | safe | indent }}
     {{ inline_block["hero_block"] | safe | indent }}
@@ -23,6 +24,7 @@
     {{ inline_block["contact_fab_block"] | safe | indent }}
     {{ inline_block["site_footer_block"] | safe | indent }}
   </div>
+  <div class="main_right"></div>
   {%- if "include_js" in inline_block %}
   <script>
     {{ inline_block["include_js"] | safe | indent }}

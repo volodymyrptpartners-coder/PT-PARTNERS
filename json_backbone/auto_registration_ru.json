@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "realization_name": "auto_registration_ru"
+  },
+  "blocks": {
+    "path_way_block": {
+      "realization": {
+        "block_name": "path_way_block",
+        "content": {
+          "title": "Как проходит оформление",
+          "steps": [
+            {
+              "step": 1,
+              "icon": "●",
+              "label": "Обращение и предоставление информации",
+              "time": "10–15 мин"
+            },
+            {
+              "step": 2,
+              "icon": "■",
+              "label": "Оформление автомобиля",
+              "time": "обычно в пределах 1 дня*"
+            },
+            {
+              "step": 3,
+              "icon": "★",
+              "label": "Готов результат",
+              "time": "по завершении"
+            }
+          ],
+          "details": [
+            {
+              "step": 1,
+              "title": "Обращение и предоставление информации",
+              "items": [
+                "Вы обращаетесь удобным для вас способом",
+                "Предоставляете информацию об автомобиле и имеющихся документах",
+                "Получаете понимание, возможно ли оформление в вашем случае и как будет выглядеть дальнейший процесс"
+              ]
+            },
+            {
+              "step": 2,
+              "title": "Оформление автомобиля",
+              "items": [
+                "Вы передаете необходимые документы для оформления",
+                "Процесс регистрации и страхования проходит без необходимости вашего личного участия",
+                "Вы остаетесь на связи и при необходимости получаете уточнение по статусу"
+              ]
+            },
+            {
+              "step": 3,
+              "title": "Готов результат",
+              "items": [
+                "Вы получаете зарегистрированный автомобиль",
+                "Имеете действующее обязательное страхование",
+                "Можете пользоваться автомобилем без дополнительных формальностей"
+              ]
+            }
+          ]
+        }
+      }
+    },
+
+    "site_top_panel_block": {
+      "realization": {
+        "block_name": "site_top_panel_block",
+        "content": {
+          "brand": "PT&PARTNERS",
+          "current": "ru",
+          "languages": [
+            {
+              "code": "ru",
+              "href": "auto_registration_ru.html",
+              "flag": "ru-flag.svg"
+            },
+            {
+              "code": "ua",
+              "href": "auto_registration_ua.html",
+              "flag": "ua-flag.svg"
+            }
+          ]
+        }
+      }
+    },
+
+    "accordion_container": {
+      "realization": {
+        "block_name": "accordion_container",
+        "content": {
+          "items": [
+            {
+              "id": "service",
+              "title": "Об услуге",
+              "block_name_link": "site_txt_block"
+            },
+            {
+              "id": "процесс",
+              "title": "Как проходит оформление",
+              "block_name_link": "path_way_block"
+            },
+            {
+              "id": "team",
+              "title": "Наша команда",
+              "block_name_link": "team_block"
+            },
+            {
+              "id": "office",
+              "title": "Наш офис в Польше",
+              "block_name_link": "office_block"
+            }
+          ]
+        },
+        "inline_block": [
+          { "block_name": "site_txt_block" },
+          { "block_name": "path_way_block" },
+          { "block_name": "team_block" },
+          { "block_name": "office_block" }
+        ]
+      }
+    },
+
+    "core_header_block": {
+      "realization": {
+        "block_name": "core_header_block",
+        "content": {
+          "lang": "uk",
+          "title": "Регистрация авто и страхования в Польше",
+          "viewport": "width=device-width, initial-scale=1",
+          "description": "Регистрация автомобилей и оформление обязательного страхования в Варшаве и окрестностях. Услуга под ключ без лишних формальностей.",
+          "og": {
+            "title": "Регистрация авто и страхование под ключ в Польше",
+            "description": "Полная регистрация автомобиля и оформление страхования в Варшаве и окрестностях. Стандартные случаи - до 24 часов.",
+            "image": "https://pt-partners.org/sources/logo.jpg",
+            "url": "https://pt-partners.org/auto-registration.html",
+            "type": "website",
+            "locale": "ru_UA"
+          },
+          "twitter": {
+            "card": "summary_large_image",
+            "title": "Регистрация авто в Польше",
+            "description": "Регистрация автомобилей и оформление страхования под ключ в Польше.",
+            "image": "https://pt-partners.org/sources/logo.jpg"
+          },
+          "stylesheets": ["styles.css"]
+        }
+      }
+    },
+
+    "site_txt_block": {
+      "realization": {
+        "block_name": "site_txt_block",
+        "content": {
+          "sections": [
+            {
+              "paragraphs": [
+                {
+                  "strong": "Регистрация авто и страхование под ключ",
+                  "text": " — это услуга, при которой мы берем на себя весь процесс оформления автомобиля и обязательного страхования в Польше."
+                }
+              ]
+            },
+            {
+              "title": "Что означает «под ключ»",
+              "list": [
+                "Регистрацию или перерегистрацию автомобиля",
+                "Оформление обязательного страхования (OC)",
+                "Подготовку и подачу необходимых документов",
+                "Взаимодействие с ужендами и другими учреждениями"
+              ]
+            }
+          ]
+        }
+      }
+    },
+
+    "team_block": {
+      "realization": {
+        "block_name": "team_block",
+        "content": {
+          "items": [
+            {
+              "name": "Владимир",
+              "role": "Сопровождает оформление консульского учета",
+              "text": "Ведет процесс от первого обращения к результату.",
+              "photo": "team/volodymyr.jpg",
+              "photo_alt": "Владимир"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+

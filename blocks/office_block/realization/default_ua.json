@@ -11,19 +11,19 @@
     "show_photo_label": "Показати фото",
     "photos": [
       {
-        "src": "office/office_image.jpg",
+        "src": "sources/office/office_image.jpg",
         "alt": "Вхід до офісу PT&PARTNERS у Piaseczno"
       },
       {
-        "src": "office/cup_with_logo.jpg",
+        "src": "sources/office/cup_with_logo.jpg",
         "alt": "Cups PT&PARTNERS"
       },
       {
-        "src": "office/logo_from_google_maps.png",
+        "src": "sources/office/logo_from_google_maps.png",
         "alt": "Logo PT&PARTNERS"
       },
       {
-        "src": "office/car_nomers.jpg",
+        "src": "sources/office/car_nomers.jpg",
         "alt": "PT&PARTNERS"
       }
     ]
