@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 SITES_DIR = Path("sites")
-OUTPUT_FILE = SITES_DIR / "404.html"
+OUTPUT_FILE = Path("404.html")
 
 
 HTML_TEMPLATE = """<!DOCTYPE html>

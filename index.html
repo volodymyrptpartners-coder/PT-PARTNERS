@@ -13,7 +13,7 @@
 (async function () {
   const DEFAULT_SITE = "consular_ua";
   const BASE_PATH = "sites";
-  const FALLBACK_404 = `${BASE_PATH}/404.html`;
+  const FALLBACK_404 = `/404.html`;
 
   const params = new URLSearchParams(window.location.search);
   const site = params.get("site") || DEFAULT_SITE;
