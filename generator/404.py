@@ -90,7 +90,7 @@ def generate_404() -> None:
     )
 
     links_html = "\n".join(
-        f'<li><a href="sites/{page}">{page}</a></li>'
+        f'<li><a href="/sites/{page}">{page}</a></li>'
         for page in pages
     )
 
