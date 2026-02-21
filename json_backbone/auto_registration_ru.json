@@ -128,13 +128,13 @@
       "realization": {
         "block_name": "core_header_block",
         "content": {
-          "lang": "uk",
-          "title": "Регистрация авто и страхования в Польше",
+          "lang": "ru",
+          "title": "Сопровождение в регистрации авто и страхования в Польше",
           "viewport": "width=device-width, initial-scale=1",
-          "description": "Регистрация автомобилей и оформление обязательного страхования в Варшаве и окрестностях. Услуга под ключ без лишних формальностей.",
+          "description": "Сопровождение в регистрации автомобилей и оформление обязательного страхования в Варшаве и окрестностях. Услуга под ключ без лишних формальностей.",
           "og": {
-            "title": "Регистрация авто и страхование под ключ в Польше",
-            "description": "Полная регистрация автомобиля и оформление страхования в Варшаве и окрестностях. Стандартные случаи - до 24 часов.",
+            "title": "Сопровождение в регистрации авто и страхование под ключ в Польше",
+            "description": "Сопровождение в регистрации автомобиля и оформление страхования в Варшаве и окрестностях. Стандартные случаи - до 24 часов.",
             "image": "https://pt-partners.org/sites/sources/logo/logo.jpg",
             "url": "https://pt-partners.org/sites/auto_registration_ru.html",
             "type": "website",
@@ -142,13 +142,84 @@
           },
           "twitter": {
             "card": "summary_large_image",
-            "title": "Регистрация авто в Польше",
-            "description": "Регистрация автомобилей и оформление страхования под ключ в Польше.",
+            "title": "Сопровождение в регистрации авто в Польше",
+            "description": "Сопровождение в регистрации автомобилей и оформление страхования под ключ в Польше.",
             "image": "https://pt-partners.org/sites/sources/logo/logo.jpg"
           },
           "stylesheets": [
             "styles.css"
-          ]
+          ],
+          "icons": {
+            "favicon": [
+              {
+                "type": "image/svg+xml",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_vector.svg"
+              },
+              {
+                "type": "image/png",
+                "sizes": "32x32",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_32x32.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "48x48",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_48x48.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "64x64",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_64x64.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "128x128",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_128x128.png"
+              },
+              {
+                "type": "image/png",
+                "sizes": "256x256",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_256x256.png"
+              }
+            ],
+            "apple_touch": [
+              {
+                "sizes": "57x57",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_57x57.png"
+              },
+              {
+                "sizes": "60x60",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_60x60.png"
+              },
+              {
+                "sizes": "72x72",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_72x72.png"
+              },
+              {
+                "sizes": "76x76",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_76x76.png"
+              },
+              {
+                "sizes": "114x114",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_114x114.png"
+              },
+              {
+                "sizes": "120x120",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_120x120.png"
+              },
+              {
+                "sizes": "144x144",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_144x144.png"
+              },
+              {
+                "sizes": "152x152",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_152x152.png"
+              },
+              {
+                "sizes": "180x180",
+                "href": "https://pt-partners.org/sites/sources/logo/logo_180x180.png"
+              }
+            ]
+          }
         }
       }
     },

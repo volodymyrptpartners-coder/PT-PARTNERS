@@ -167,70 +167,70 @@
             "favicon": [
               {
                 "type": "image/svg+xml",
-                "href": "sources/logo/logo_vector.svg"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_vector.svg"
               },
               {
                 "type": "image/png",
                 "sizes": "32x32",
-                "href": "sources/logo/logo_32x32.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_32x32.png"
               },
               {
                 "type": "image/png",
                 "sizes": "48x48",
-                "href": "sources/logo/logo_48x48.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_48x48.png"
               },
               {
                 "type": "image/png",
                 "sizes": "64x64",
-                "href": "sources/logo/logo_64x64.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_64x64.png"
               },
               {
                 "type": "image/png",
                 "sizes": "128x128",
-                "href": "sources/logo/logo_128x128.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_128x128.png"
               },
               {
                 "type": "image/png",
                 "sizes": "256x256",
-                "href": "sources/logo/logo_256x256.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_256x256.png"
               }
             ],
             "apple_touch": [
               {
                 "sizes": "57x57",
-                "href": "sources/logo/logo_57x57.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_57x57.png"
               },
               {
                 "sizes": "60x60",
-                "href": "sources/logo/logo_60x60.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_60x60.png"
               },
               {
                 "sizes": "72x72",
-                "href": "sources/logo/logo_72x72.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_72x72.png"
               },
               {
                 "sizes": "76x76",
-                "href": "sources/logo/logo_76x76.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_76x76.png"
               },
               {
                 "sizes": "114x114",
-                "href": "sources/logo/logo_114x114.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_114x114.png"
               },
               {
                 "sizes": "120x120",
-                "href": "sources/logo/logo_120x120.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_120x120.png"
               },
               {
                 "sizes": "144x144",
-                "href": "sources/logo/logo_144x144.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_144x144.png"
               },
               {
                 "sizes": "152x152",
-                "href": "sources/logo/logo_152x152.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_152x152.png"
               },
               {
                 "sizes": "180x180",
-                "href": "sources/logo/logo_180x180.png"
+                "href": "https://pt-partners.org/sites/sources/logo/logo_180x180.png"
               }
             ]
           }

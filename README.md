@@ -8,7 +8,10 @@ source python_environment/bin/activate
 python3 -m pip install poetry
 poetry install
 
-
+alias tree='tree -I "python_environment|__pycache__"'
 
 
 ```
+
+### Explanation
+
