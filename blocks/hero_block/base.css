@@ -11,7 +11,7 @@
   --hero_block-main-padding: 2rem 1rem;
 
   /* --- hero_block title --- */
-  --hero_block-lead-font-size: clamp(2rem, 5vw, 2.75rem);
+  --hero_block-lead-font-size: clamp(2rem, 5vw, 2.5rem);
   --hero_block-lead-font-weight: 700;
   --hero_block-lead-line-height: 1.2;
 
