@@ -1,0 +1,68 @@
+.tiktok-video_viewport {
+  display: flex;                 /* 🔥 обов’язково */
+  overflow-x: auto;              /* 🔥 горизонтальний скрол */
+  overflow-y: hidden;
+  gap: 16px;
+  padding: 20px;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tiktok-video_track {
+  display: contents; /* 🔥 щоб не ламав layout */
+}
+
+.tiktok-video_slide {
+  flex: 0 0 85%;                /* 🔥 ширина слайда */
+  scroll-snap-align: center;
+
+  transition: 0.3s;
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+/* активний */
+.tiktok-video_slide.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* щоб embed не ламав ширину */
+.tiktok-video_slide blockquote,
+.tiktok-video_slide iframe {
+  width: 100% !important;
+}
+
+
+/* =========================
+   MOCK STATE (fallback)
+========================= */
+.tiktok-mock {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #65a770;
+  color: #fff;
+
+  text-align: center;
+  padding: 20px;
+}
+
+.tiktok-mock_title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.tiktok-mock_description {
+  font-size: 18px;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+

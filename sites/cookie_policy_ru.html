@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cookie Policy</title>
+
+<style> 
+body { 
+font-family: Arial, sans-serif; 
+margin: 0; 
+background: #f5f6f8; 
+color: #1f1f1f; 
+line-height: 1.6; 
+} 
+
+.container { 
+max-width: 860px; 
+margin: 0 авто; 
+padding: 16px; 
+} 
+
+.card { 
+background: #fff; 
+border-radius: 14px; 
+padding: 18px; 
+margin-bottom: 14px; 
+box-shadow: 0 2px 10px rgba(0,0,0,0.06); 
+} 
+
+h1 { 
+font-size: 24px; 
+margin-bottom: 6px; 
+} 
+
+h2 { 
+font-size: 18px; 
+margin-top: 20px; 
+} 
+
+p { 
+font-size: 14px; 
+} 
+
+table { 
+width: 100%; 
+border-collapse: collapse; 
+margin-top: 10px; 
+font-size: 14px; 
+} 
+
+th, td { 
+border: 1px solid #e6e6e6; 
+padding: 10px; 
+text-align: left; 
+vertical-align: top; 
+} 
+
+th { 
+background: #f0f2f5; 
+} 
+
+.tag { 
+font-family: monospace; 
+background: #eef0f3; 
+padding: 2px 6px; 
+border-radius: 6px; 
+} 
+
+.note { 
+background: #fff7d6; 
+padding: 10px; 
+border-radius: 10px; 
+font-size: 13px; 
+margin-top: 10px; 
+} 
+
+pre { 
+background: #f4f4f4; 
+padding: 12px; 
+border-radius: 10px; 
+overflow-x: авто; 
+font-size: 12px; 
+} 
+
+@media (max-width: 600px) { 
+h1 { font-size: 20px; } 
+table { font-size: 13px; } 
+}
+</style>
+</head>
+
+<body>
+
+<div class="container"> 
+
+<!-- INTRO --> 
+<div class="card"> 
+<h1>Политика использования Cookie</h1> 
+<p> 
+Эта страница объясняет, как работает система согласия пользователя на основе Google Consent Mode v2 
+и как обрабатываются куки на этом сайте. 
+</p> 
+</div> 
+
+<!-- CONSENT MODE --> 
+<div class="card"> 
+<h2>1. Google Consent Mode</h2> 
+
+<p> 
+Google Consent Mode управляет тем, как работают аналитика и реклама в зависимости от согласия пользователя. 
+</p> 
+
+<table> 
+<tr> 
+<th>Режим</th> 
+<th>Описание</th> 
+</tr> 
+
+<tr> 
+<td><b>Basic Consent Mode</b></td> 
+<td>Все рекламные и аналитические cookie блокируются до получения согласия</td> 
+</tr> 
+
+<tr> 
+<td><b>Advanced Consent Mode</b></td> 
+<td>Отправляются анонимные (cookieless) сигналы даже до согласия пользователя</td> 
+</tr> 
+</table> 
+
+<div class="note"> 
+В этой реализации используется подход: <b>default = denied (blocking behavior)</b>. 
+</div> 
+</div> 
+
+<!-- CATEGORIES --> 
+<div class="card"> 
+<h2>2. Категории cookie</h2> 
+
+<table> 
+<tr> 
+<th>Категория</th> 
+<th>Описание</th> 
+<th>Статус</th> 
+</tr> 
+
+<tr> 
+<td>Высшее</td> 
+<td>Базовая работа сайта (без нее сайт не функционирует)</td> 
+<td>Всегда активна</td> 
+</tr> 
+
+<tr> 
+<td>Preferences</td> 
+<td>Сохранение настроек пользователя</td> 
+<td>Опционально</td> 
+</tr> 
+
+<tr> 
+<td>Statistics</td> 
+<td>Аналитика (Google Analytics 4)</td> 
+<td>Опционально</td> 
+</tr> 
+
+<tr> 
+<td>Marketing</td> 
+<td>Реклама и ремаркетинг</td> 
+<td>Опционально</td> 
+</tr> 
+</table> 
+</div> 
+
+<!-- GOOGLE TAG MAPPING --> 
+<div class="card"> 
+<h2>3. Мапинг Google параметров</h2> 
+
+<table> 
+<tr> 
+<th>Google параметр</th> 
+<th>Категория</th> 
+</tr> 
+
+<tr> 
+<td><span class="tag">analytics_storage</span></td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td><span class="tag">ad_storage</span></td> 
+<td>Marketing</td> 
+</tr> 
+
+<tr> 
+<td><span class="tag">ad_user_data</span></td> 
+<td>Marketing</td> 
+</tr> 
+
+<tr> 
+<td><span class="tag">ad_personalization</span></td> 
+<td>Marketing</td> 
+</tr> 
+</table> 
+</div> 
+
+<!-- BEFORE CONSENT --> 
+<div class="card"> 
+<h2>4. Что происходит до согласия</h2> 
+
+<table> 
+<tr> 
+<th>Элемент</th> 
+<th>Поведение</th> 
+</tr> 
+
+<tr> 
+<td>GA4 (аналитика)</td> 
+<td>Не использует cookies, данные минимальны или отсутствуют</td> 
+</tr> 
+
+<tr> 
+<td>Рекламные сервисы</td> 
+<td>Выключены</td> 
+</tr> 
+
+<tr> 
+<td>Consent state</td> 
+<td>Установлено как <b>denied</b></td> 
+</tr> 
+</table> 
+</div> 
+
+<!-- BASIC VS ADVANCED DATA VIEW --> 
+<div class="card"> 
+<h2>5. Что видит Google</h2> 
+
+<h3>Basic Consent Mode</h3> 
+<table> 
+<tr> 
+<th>Обращение</th> 
+<th>Результат</th> 
+</tr> 
+<tr> 
+<td>Cookies заблокированы</td> 
+<td>Нет user-level идентификации</td> 
+</tr> 
+<tr> 
+<td>Аналитика</td> 
+<td>Только минимальные или агрегированные сигналы</td> 
+</tr> 
+</table> 
+
+<h3>Advanced Consent Mode</h3> 
+<table> 
+<tr> 
+<th>Обращение</th> 
+<th>Результат</th> 
+</tr> 
+<tr> 
+<td>Cookieless pings</td> 
+<td>Анонимные сигналы к согласию</td> 
+</tr
+<tr> 
+<td>Моделирование данных</td> 
+<td>Google формирует статистику на основе моделей</td> 
+</tr> 
+</table> 
+
+<div class="note"> 
+Advanced режим возможен только при соответствующей конфигурации Google Tag/GTM. 
+</div> 
+</div> 
+
+<!-- GTM --> 
+<div class="card"> 
+<h2>6. Google Tag Manager (GTM)</h2> 
+
+<p> 
+Сайт использует Google Tag Manager – систему управления аналитикой и рекламными тэгами. 
+</p> 
+
+<table> 
+<tr> 
+<th>Этап</th> 
+<th>Описание</th> 
+</tr> 
+
+<tr> 
+<td>1</td> 
+<td>Загружается контейнер GTM</td> 
+</tr> 
+
+<tr> 
+<td>2</td> 
+<td>Инициализируется dataLayer</td> 
+</tr> 
+
+<tr> 
+<td>3</td> 
+<td>Устанавливается consent = denied</td> 
+</tr> 
+
+<tr> 
+<td>4</td> 
+<td>Применяется выбор пользователя</td> 
+</tr> 
+</table> 
+
+<pre>
+&lt;script&gt;
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+
+gtag('consent','default',{ 
+ad_storage:'denied', 
+analytics_storage:'denied', 
+ad_user_data:'denied', 
+ad_personalization:'denied'
+});
+&lt;/script&gt; 
+</pre> 
+</div> 
+
+<!-- STORAGE --> 
+<div class="card"> 
+<h2>7. Сохранение настроек</h2> 
+
+<p> 
+Выбор пользователя сохраняется локально в обозревателе: 
+</p> 
+
+<pre>
+cookie_consent_settings = { 
+necessary: ​​true, 
+preferences: boolean, 
+статистика: boolean, 
+marketing: boolean
+} 
+</pre> 
+</div>
+<div class="card"> 
+<h2>8. GDPR и ePrivacy (основные принципы)</h2> 
+
+<p> 
+Обработка данных на этом сайте отвечает требованиям GDPR (Regulation (EU) 2016/679) 
+и ePrivacy Directive. 
+</p> 
+
+<h3>Основные принципы GDPR</h3> 
+
+<table> 
+<tr> 
+<th>Принцип</th> 
+<th>Описание</th> 
+</tr> 
+
+<tr> 
+<td>Lawfulness, fairness, transparency</td> 
+<td>Данные обрабатываются законно, прозрачно и с четкой целью</td> 
+</tr> 
+
+<tr> 
+<td>Purpose limitation</td> 
+<td>Данные используются только для определенных целей (аналитика, реклама)</td> 
+</tr> 
+
+<tr> 
+<td>Data minimization</td> 
+<td>Собираются только необходимые данные</td> 
+</tr> 
+
+<tr> 
+<td>Storage limitation</td> 
+<td>Данные не сохраняются дольше, чем требуется</td> 
+</tr> 
+
+<tr> 
+<td>Integrity & confidentiality</td> 
+<td>Данные защищены от несанкционированного доступа</td> 
+</tr> 
+</table> 
+
+<h3>ePrivacy (Cookie Law)</h3> 
+
+<table> 
+<tr> 
+<th>Правило</th> 
+<th>Применение</th> 
+</tr> 
+
+<tr> 
+<td>Необходимое согласие</td> 
+<td>Аналитика и маркетинговые cookie активируются только после согласия</td> 
+</tr> 
+
+<tr> 
+<td>Необходимые cookie</td> 
+<td>Могут использоваться без согласия (работа сайта)</td> 
+</tr> 
+
+<tr> 
+<td>Прозрачность</td> 
+<td>Пользователь должен быть проинформирован обо всех типах cookie</td> 
+</tr> 
+</table>
+</div>
+
+
+<div class="card"> 
+<h2>10. Какие данные могут передаваться?</h2> 
+
+<p>В зависимости от согласия пользователя могут обрабатываться следующие типы данных:</p> 
+
+<table> 
+<tr> 
+<th>Тип данных</th> 
+<th>Пример</th> 
+<th>Категория</th> 
+</tr> 
+
+<tr> 
+<td>Идентификаторы cookie</td> 
+<td>_ga, _gid, ad cookies</td> 
+<td>Statistics/Marketing</td> 
+</tr> 
+
+<tr> 
+<td>События взаимодействия</td> 
+<td>клики, просмотр страниц</td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td>IP адрес (сокращенный)</td> 
+<td>анонимизированная IP (GA4 default)</td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td>Технические данные браузера</td> 
+<td>тип устройства, язык, расширение экрана</td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td>Рекламные идентификаторы</td> 
+<td>Google Ads ID (если разрешено)</td> 
+<td>Marketing</td> 
+</tr> 
+</table> 
+
+<div class="note"> 
+Данные используются исключительно для аналитики, оптимизации продукта и рекламных целей. 
+(при условии согласия пользователя). 
+</div>
+</div><div class="card"> 
+<h2>9. Какие данные могут передаваться?</h2> 
+
+<p>В зависимости от согласия пользователя могут обрабатываться следующие типы данных:</p> 
+
+<table> 
+<tr> 
+<th>Тип данных</th> 
+<th>Пример</th> 
+<th>Категория</th> 
+</tr> 
+
+<tr> 
+<td>Идентификаторы cookie</td> 
+<td>_ga, _gid, ad cookies</td> 
+<td>Statistics/Marketing</td> 
+</tr> 
+
+<tr> 
+<td>События взаимодействия</td> 
+<td>клики, просмотр страниц</td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td>IP адрес (сокращенный)</td> 
+<td>анонимизированная IP (GA4 default)</td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td>Технические данные браузера</td> 
+<td>тип устройства, язык, расширение экрана</td> 
+<td>Statistics</td> 
+</tr> 
+
+<tr> 
+<td>Рекламные идентификаторы</td> 
+<td>Google Ads ID (если разрешено)</td> 
+<td>Marketing</td> 
+</tr> 
+</table> 
+<div class="note"> 
+Данные используются исключительно для аналитики, оптимизации продукта и рекламных целей. 
+(при условии согласия пользователя). 
+</div>
+</div> 
+<!-- GOAL --> 
+<div class="card"> 
+<h2>10. Цель cookie policy</h2> 
+<p> 
+Обеспечить соответствие GDPR и ePrivacy и предоставить пользователю полный контроль над своими данными. 
+</p> 
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="site_txt_block-main">
+ {%- for section in content.sections %}
+  {%- if section.has_attr("title") %}
+    <h3>{{ section.title }}</h3>
+  {%- endif %}
+
+  {%- if section.has_attr("paragraphs") %}
+   {%- for p in section.paragraphs %}
+    <p>
+    {%- if p.has_attr("strong") -%}
+        <strong>{{ p.strong }}</strong>
+    {%- endif -%}
+    {{ p.text }}
+    </p>
+   {%- endfor %}
+  {%- endif %}
+
+  {%- if section.has_attr("list") %}
+    <ul>
+    {%- for item in section.list %}
+        <li>{{ item }}</li>
+    {%- endfor %}
+    </ul>
+  {%- endif %}
+ {%- endfor %}
+</div>
+

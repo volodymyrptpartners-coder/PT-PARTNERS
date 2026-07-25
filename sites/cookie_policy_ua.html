@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cookie Policy</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f6f8;
+    color: #1f1f1f;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  th, td {
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #f0f2f5;
+  }
+
+  .tag {
+    font-family: monospace;
+    background: #eef0f3;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  .note {
+    background: #fff7d6;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  pre {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 12px;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    table { font-size: 13px; }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="card">
+    <h1>Політика використання Cookie</h1>
+    <p>
+      Ця сторінка пояснює як працює система згоди користувача на основі Google Consent Mode v2
+      та як обробляються cookie на цьому сайті.
+    </p>
+  </div>
+
+  <!-- CONSENT MODE -->
+  <div class="card">
+    <h2>1. Google Consent Mode</h2>
+
+    <p>
+      Google Consent Mode керує тим, як працюють аналітика та реклама залежно від згоди користувача.
+    </p>
+
+    <table>
+      <tr>
+        <th>Режим</th>
+        <th>Опис</th>
+      </tr>
+
+      <tr>
+        <td><b>Basic Consent Mode</b></td>
+        <td>Всі рекламні та аналітичні cookie блокуються до отримання згоди</td>
+      </tr>
+
+      <tr>
+        <td><b>Advanced Consent Mode</b></td>
+        <td>Відправляються анонімні (cookieless) сигнали навіть до згоди користувача</td>
+      </tr>
+    </table>
+
+    <div class="note">
+      У цій реалізації використовується підхід: <b>default = denied (blocking behavior)</b>.
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="card">
+    <h2>2. Категорії cookie</h2>
+
+    <table>
+      <tr>
+        <th>Категорія</th>
+        <th>Опис</th>
+        <th>Статус</th>
+      </tr>
+
+      <tr>
+        <td>Necessary</td>
+        <td>Базова робота сайту (без неї сайт не функціонує)</td>
+        <td>Завжди активна</td>
+      </tr>
+
+      <tr>
+        <td>Preferences</td>
+        <td>Збереження налаштувань користувача</td>
+        <td>Опціонально</td>
+      </tr>
+
+      <tr>
+        <td>Statistics</td>
+        <td>Аналітика (Google Analytics 4)</td>
+        <td>Опціонально</td>
+      </tr>
+
+      <tr>
+        <td>Marketing</td>
+        <td>Реклама та ремаркетинг</td>
+        <td>Опціонально</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- GOOGLE TAG MAPPING -->
+  <div class="card">
+    <h2>3. Мапінг Google параметрів</h2>
+
+    <table>
+      <tr>
+        <th>Google параметр</th>
+        <th>Категорія</th>
+      </tr>
+
+      <tr>
+        <td><span class="tag">analytics_storage</span></td>
+        <td>Statistics</td>
+      </tr>
+
+      <tr>
+        <td><span class="tag">ad_storage</span></td>
+        <td>Marketing</td>
+      </tr>
+
+      <tr>
+        <td><span class="tag">ad_user_data</span></td>
+        <td>Marketing</td>
+      </tr>
+
+      <tr>
+        <td><span class="tag">ad_personalization</span></td>
+        <td>Marketing</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- BEFORE CONSENT -->
+  <div class="card">
+    <h2>4. Що відбувається до згоди</h2>
+
+    <table>
+      <tr>
+        <th>Елемент</th>
+        <th>Поведінка</th>
+      </tr>
+
+      <tr>
+        <td>GA4 (аналітика)</td>
+        <td>Не використовує cookies, дані мінімальні або відсутні</td>
+      </tr>
+
+      <tr>
+        <td>Рекламні сервіси</td>
+        <td>Вимкнені</td>
+      </tr>
+
+      <tr>
+        <td>Consent state</td>
+        <td>Встановлено як <b>denied</b></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- BASIC VS ADVANCED DATA VIEW -->
+  <div class="card">
+    <h2>5. Що бачить Google</h2>
+
+    <h3>Basic Consent Mode</h3>
+    <table>
+      <tr>
+        <th>Поводження</th>
+        <th>Результат</th>
+      </tr>
+      <tr>
+        <td>Cookies заблоковані</td>
+        <td>Немає user-level ідентифікації</td>
+      </tr>
+      <tr>
+        <td>Аналітика</td>
+        <td>Лише мінімальні або агреговані сигнали</td>
+      </tr>
+    </table>
+
+    <h3>Advanced Consent Mode</h3>
+    <table>
+      <tr>
+        <th>Поводження</th>
+        <th>Результат</th>
+      </tr>
+      <tr>
+        <td>Cookieless pings</td>
+        <td>Анонімні сигнали до згоди</td>
+      </tr>
+      <tr>
+        <td>Моделювання даних</td>
+        <td>Google формує статистику на основі моделей</td>
+      </tr>
+    </table>
+
+    <div class="note">
+      Advanced режим можливий лише при відповідній конфігурації Google Tag / GTM.
+    </div>
+  </div>
+
+  <!-- GTM -->
+  <div class="card">
+    <h2>6. Google Tag Manager (GTM)</h2>
+
+    <p>
+      Сайт використовує Google Tag Manager — систему керування аналітикою та рекламними тегами.
+    </p>
+
+    <table>
+      <tr>
+        <th>Етап</th>
+        <th>Опис</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Завантажується GTM контейнер</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Ініціалізується dataLayer</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Встановлюється consent = denied</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>Застосовується вибір користувача</td>
+      </tr>
+    </table>
+
+    <pre>
+&lt;script&gt;
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+
+gtag('consent','default',{
+  ad_storage:'denied',
+  analytics_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied'
+});
+&lt;/script&gt;
+    </pre>
+  </div>
+
+  <!-- STORAGE -->
+  <div class="card">
+    <h2>7. Збереження налаштувань</h2>
+
+    <p>
+      Вибір користувача зберігається локально в браузері:
+    </p>
+
+    <pre>
+cookie_consent_settings = {
+  necessary: true,
+  preferences: boolean,
+  statistics: boolean,
+  marketing: boolean
+}
+    </pre>
+  </div>
+<div class="card">
+  <h2>8. GDPR та ePrivacy (основні принципи)</h2>
+
+  <p>
+    Обробка даних на цьому сайті відповідає вимогам GDPR (Regulation (EU) 2016/679)
+    та ePrivacy Directive.
+  </p>
+
+  <h3>Основні принципи GDPR</h3>
+
+  <table>
+    <tr>
+      <th>Принцип</th>
+      <th>Опис</th>
+    </tr>
+
+    <tr>
+      <td>Lawfulness, fairness, transparency</td>
+      <td>Дані обробляються законно, прозоро та з чіткою метою</td>
+    </tr>
+
+    <tr>
+      <td>Purpose limitation</td>
+      <td>Дані використовуються тільки для визначених цілей (аналітика, реклама)</td>
+    </tr>
+
+    <tr>
+      <td>Data minimization</td>
+      <td>Збираються лише необхідні дані</td>
+    </tr>
+
+    <tr>
+      <td>Storage limitation</td>
+      <td>Дані не зберігаються довше ніж потрібно</td>
+    </tr>
+
+    <tr>
+      <td>Integrity & confidentiality</td>
+      <td>Дані захищені від несанкціонованого доступу</td>
+    </tr>
+  </table>
+
+  <h3>ePrivacy (Cookie Law)</h3>
+
+  <table>
+    <tr>
+      <th>Правило</th>
+      <th>Застосування</th>
+    </tr>
+
+    <tr>
+      <td>Необхідна згода</td>
+      <td>Аналітика та маркетингові cookie активуються лише після згоди</td>
+    </tr>
+
+    <tr>
+      <td>Необхідні cookie</td>
+      <td>Можуть використовуватись без згоди (робота сайту)</td>
+    </tr>
+
+    <tr>
+      <td>Прозорість</td>
+      <td>Користувач має бути поінформований про всі типи cookie</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="card">
+  <h2>10. Які дані можуть передаватися</h2>
+
+  <p>Залежно від згоди користувача, можуть оброблятися наступні типи даних:</p>
+
+  <table>
+    <tr>
+      <th>Тип даних</th>
+      <th>Приклад</th>
+      <th>Категорія</th>
+    </tr>
+
+    <tr>
+      <td>Ідентифікатори cookie</td>
+      <td>_ga, _gid, ad cookies</td>
+      <td>Statistics / Marketing</td>
+    </tr>
+
+    <tr>
+      <td>Події взаємодії</td>
+      <td>кліки, перегляд сторінок</td>
+      <td>Statistics</td>
+    </tr>
+
+    <tr>
+      <td>IP адреса (скорочена)</td>
+      <td>анонімізована IP (GA4 default)</td>
+      <td>Statistics</td>
+    </tr>
+
+    <tr>
+      <td>Технічні дані браузера</td>
+      <td>тип пристрою, мова, розширення екрану</td>
+      <td>Statistics</td>
+    </tr>
+
+    <tr>
+      <td>Рекламні ідентифікатори</td>
+      <td>Google Ads ID (якщо дозволено)</td>
+      <td>Marketing</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    Дані використовуються виключно для аналітики, оптимізації продукту та рекламних цілей
+    (за умови згоди користувача).
+  </div>
+</div><div class="card">
+  <h2>9. Які дані можуть передаватися</h2>
+
+  <p>Залежно від згоди користувача, можуть оброблятися наступні типи даних:</p>
+
+  <table>
+    <tr>
+      <th>Тип даних</th>
+      <th>Приклад</th>
+      <th>Категорія</th>
+    </tr>
+
+    <tr>
+      <td>Ідентифікатори cookie</td>
+      <td>_ga, _gid, ad cookies</td>
+      <td>Statistics / Marketing</td>
+    </tr>
+
+    <tr>
+      <td>Події взаємодії</td>
+      <td>кліки, перегляд сторінок</td>
+      <td>Statistics</td>
+    </tr>
+
+    <tr>
+      <td>IP адреса (скорочена)</td>
+      <td>анонімізована IP (GA4 default)</td>
+      <td>Statistics</td>
+    </tr>
+
+    <tr>
+      <td>Технічні дані браузера</td>
+      <td>тип пристрою, мова, розширення екрану</td>
+      <td>Statistics</td>
+    </tr>
+
+    <tr>
+      <td>Рекламні ідентифікатори</td>
+      <td>Google Ads ID (якщо дозволено)</td>
+      <td>Marketing</td>
+    </tr>
+  </table>
+
+  <div class="note">
+    Дані використовуються виключно для аналітики, оптимізації продукту та рекламних цілей
+    (за умови згоди користувача).
+  </div>
+</div>
+  <!-- GOAL -->
+  <div class="card">
+    <h2>10. Мета cookie policy</h2>
+    <p>
+      Забезпечити відповідність GDPR та ePrivacy та дати користувачу повний контроль над своїми даними.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

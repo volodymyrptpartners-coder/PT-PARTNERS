@@ -1,0 +1,24 @@
+<hr>
+<div id="tiktok-video_id" class="tiktok-video_viewport">
+   <div class="tiktok-video_track">
+      {% for video in content.videos %}
+         <div class="tiktok-video_slide"> 
+            <blockquote class="tiktok-embed" 
+                        cite="https://www.tiktok.com/{{ content.account_name }}/video/{{ video }}"
+                        data-video-id="{{ video }}" 
+                        data-embed-from="embed_page" 
+                        style="max-width:605px; min-width:325px;"> 
+                        <section> 
+                            
+                        </section> 
+            </blockquote>
+         </div>
+      {% endfor %}
+   </div>
+</div>
+
+<div id="tiktok-mock" class="tiktok-mock">
+    <h3 class="tiktok-mock_title">{{ content.mock_title }}</h3>
+    <h4 class="tiktok-mock_description">{{ content.mock_description }}</h4>
+</div>
+

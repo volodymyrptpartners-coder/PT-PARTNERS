@@ -1,0 +1,3 @@
+{%- for icon in content.items %}
+<link rel="{{ icon.rel }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}" href="{{ content.base }}{{ icon.file }}">
+{%- endfor %}

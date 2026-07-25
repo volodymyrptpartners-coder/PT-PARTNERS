@@ -1,0 +1,31 @@
+<div class="site_top_panel_block-main">
+    <div class="site_top_panel_block-header">
+        <div class="site_top_panel_block-container">
+            <img src="sources/logo/logo_vector.svg" alt="{{ content.brand }}" class="site_top_panel_block-logo">
+            <span class="site_top_panel_block-ltext">{{ content.brand  }}</span>
+        </div>
+        <div class="site_top_pannel_block-right_block">
+            {{ inline_blocks.get("cookie_consent_v2_part1","") | safe | indent }} 
+            <div class="site_top_panel_block-switch">
+              <button class="site_top_panel_block-lbtn" type="button">
+                <span class="site_top_panel_block-ficon"><img src="{{ content.current }}" alt="{{ content.current | upper }}" width="24" height="16"></span>
+                <span class="site_top_panel_block-chevron">&#9662;</span>
+              </button>
+            
+              <ul class="site_top_panel_block-lmenu">
+                {%- for lang in content.languages %}
+                  <li>
+                    <a href="{{ "{site_name}_{lang}.html".format(lang=lang.code,site_name=site_name) }}">
+                      <span class="site_top_panel_block-ficon"><img src="{{ lang.flag }}" 
+                             alt="{{ lang.code | upper }}"
+                             width="24"
+                             height="16">
+                      </span>
+                    </a>
+                  </li>
+                {%- endfor %}
+              </ul>
+            </div>
+        </div>
+    </div>
+</div>

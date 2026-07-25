@@ -1,0 +1,54 @@
+/* ===== main ===== */
+
+.team_block-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== item ===== */
+
+.team_block-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* ===== image ===== */
+
+.team_block-img {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ===== info ===== */
+
+.team_block-info {
+  flex: 1;
+}
+
+/* ===== name ===== */
+
+.team_block-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* ===== role ===== */
+
+.team_block-role {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* ===== text ===== */
+
+.team_block-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+

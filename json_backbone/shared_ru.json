@@ -1,0 +1,209 @@
+[
+  {
+    "block_name": "site_top_panel_block",
+    "content_type": "shared",
+    "content_lang": "ru",
+    "content": {
+      "brand": "PT&PARTNERS",
+      "current": "sources/flags/ru-flag.svg",
+      "languages": [
+        {
+          "code": "ua",
+          "flag": "sources/flags/ua-flag.svg"
+        },
+        {
+          "code": "ru",
+          "flag": "sources/flags/ru-flag.svg"
+        }
+      ]
+    },
+    "inline_blocks": [
+      "cookie_consent_v2"
+    ]
+  },
+  {
+    "block_name": "cookie_consent_v2",
+    "content_lang": "ru",
+    "content_type": "shared",
+    "content": {
+      "cookie_icon": "&#127850;",
+      "cookie_subtitle": "Мы используем файлы cookie для персонализации контента и рекламы, интеграции функций социальных сетей и анализа нашего трафика. Мы также делимся информацией о том, как вы используете наш сайт, с нашими партнерами по социальным сетям, рекламы и аналитики. услуг.",
+      "cookie_preferences": "Эта веб-страница использует файлы cookie.",
+      "initial": {
+        "reject_all": "Отклонить все",
+        "accept_all": "Принять все",
+        "customize": "Настроить",
+        "cookie_policy_link": "cookie_policy_ru.html"
+      },
+      "customize_keys": {
+        "category": "Категория",
+        "description": "Описание",
+        "status": "Состояние",
+        "button": "Применить"
+      },
+      "customize_values": [
+        {
+          "name": "Необходимые",
+          "description": "Важно для функционирования сайта. Всегда активен.",
+          "key": "necessary",
+          "enabled": true,
+          "readonly": true
+        },
+        {
+          "name": "Настройки",
+          "description": "Сохраняет выбор пользователя (язык, валюта и т.д.).",
+          "key": "preferences",
+          "enabled": false,
+          "readonly": false
+        },
+        {
+          "name": "Статистика",
+          "description": "Аналитика и измерения (сопоставляется с analytics_storage).",
+          "key": "statistics",
+          "enabled": false,
+          "readonly": false
+        },
+        {
+          "name": "Маркетинг",
+          "description": "Реклама и отслеживание (соответствует ad_storage, ad_user_data, ad_personalization).",
+          "key": "marketing",
+          "enabled": false,
+          "readonly": false
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "office_block",
+    "content_lang": "ru",
+    "content_type": "shared",
+    "content": {
+      "title": "PT&PARTNERS",
+      "address": "ul. Żeromskiego 9 / lok. 1, 05-500 Piaseczno, Польша",
+      "address_label": "Адрес:",
+      "reception_note": "Прием осуществляется по предварительной записи.",
+      "extra_note": "",
+      "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+      "maps_label": "Проверить локацию в Google Maps",
+      "show_photo_label": "Показать фото",
+      "photos": [
+        {
+          "src": "sources/office/office_image.jpg",
+          "alt": "Вход в офис PT&PARTNERS в Piaseczno"
+        },
+        {
+          "src": "sources/office/cup_with_logo.jpg",
+          "alt": "Cups PT&PARTNERS"
+        },
+        {
+          "src": "sources/office/logo_from_google_maps.png",
+          "alt": "Logo PT&PARTNERS"
+        },
+        {
+          "src": "sources/office/car_nomers.jpg",
+          "alt": "PT&PARTNERS"
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "contacts_block",
+    "content_lang": "ru",
+    "content_type": "shared",
+    "content": {
+      "items": [
+        {
+          "value": "volodymyrptpartners@gmail.com",
+          "copy": "volodymyrptpartners@gmail.com",
+          "icon": "sources/icons/email.svg",
+          "icon_alt": "Mail",
+          "action": {
+            "href": "mailto:volodymyrptpartners@gmail.com?subject=Консульский%20учет&body=Привет,",
+            "label": "Написать письмо"
+          }
+        },
+        {
+          "value": "+48 884 930 030",
+          "copy": "tel:+48884930030",
+          "icon": "sources/icons/phone.svg",
+          "icon_alt": "Phone",
+          "action": {
+            "href": "tel:+48884930030",
+            "label": "Позвонить"
+          }
+        },
+        {
+          "value": "@VolodymyrPtPartners",
+          "copy": "@VolodymyrPtPartners",
+          "icon": "sources/icons/telegram.svg",
+          "icon_alt": "Telegram",
+          "action": {
+            "href": "https://t.me/VolodymyrPtPartners",
+            "label": "Открыть в Telegram"
+          }
+        },
+        {
+          "value": "+48 884 930 030",
+          "copy": "https://wa.me/48884930030",
+          "icon": "sources/icons/whatsapp.svg",
+          "icon_alt": "WhatsApp",
+          "action": {
+            "href": "https://wa.me/48884930030",
+            "label": "Написать в WhatsApp"
+          }
+        },
+        {
+          "value": "PT&PARTNERS",
+          "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+          "icon": "sources/icons/office_icon.svg",
+          "icon_alt": "Office",
+          "action": {
+            "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+            "label": "Открыть в Google Maps"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "site_footer_block",
+    "content_lang": "ru",
+    "content_type": "shared",
+    "content": {
+      "text": "PT&PARTNERS. Все права защищены."
+    }
+  },
+  {
+    "block_name": "hero_txt1_block",
+    "content_type": "shared",
+    "content_lang": "ru",
+    "content": {
+      "title": "Заказать",
+      "text": "Свяжитесь с нами через Telegram или позвоните для быстрой консультации."
+    }
+  },
+  {
+    "block_name": "aa_entrypoint",
+    "content_lang": "ru",
+    "content_type": "shared",
+    "content": {
+      "lang": "ru"
+    },
+    "inline_blocks": [
+      "header_block",
+      "header_icons",
+      "cookie_consent_v2",
+      "site_top_panel_block",
+      "hero_block",
+      "hero2_block",
+      "accordion_container",
+      "contacts_block",
+      "contact_fab_block",
+      "site_footer_block",
+      "hero_txt1_block",
+      "team_block",
+      "tiktok_block",
+      "google_staff"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "base": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "sizes": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rel",
+          "type",
+          "sizes",
+          "file"
+        ]
+      }
+    }
+  },
+  "required": [
+    "base",
+    "items"
+  ]
+}

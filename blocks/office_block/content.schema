@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "address_label": {
+      "type": "string"
+    },
+    "reception_note": {
+      "type": "string"
+    },
+    "extra_note": {
+      "type": "string"
+    },
+    "maps_url": {
+      "type": "string"
+    },
+    "maps_label": {
+      "type": "string"
+    },
+    "show_photo_label": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "src": {
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "src",
+          "alt"
+        ]
+      }
+    }
+  },
+  "required": [
+    "title",
+    "address",
+    "address_label",
+    "reception_note",
+    "extra_note",
+    "maps_url",
+    "maps_label",
+    "show_photo_label",
+    "photos"
+  ]
+}

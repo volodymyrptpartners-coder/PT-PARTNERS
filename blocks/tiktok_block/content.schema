@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "account_name": {
+      "type": "string"
+    },
+    "videos": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "string"
+      }
+    },
+    "mock_title": {
+      "type": "string"
+    },
+    "mock_description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "account_name",
+    "videos",
+    "mock_title",
+    "mock_description"
+  ]
+}

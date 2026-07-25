@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "block_name_link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "block_name_link"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

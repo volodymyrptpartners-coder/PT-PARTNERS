@@ -1,0 +1,88 @@
+/* ===== main ===== */
+
+.hero_block-main {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 2rem 1rem;
+}
+
+/* ===== title ===== */
+
+.hero_block-lead {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ===== explanation ===== */
+
+.hero_block-explanation {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  color: #555555;
+  padding: 0 0.5rem;
+}
+
+/* ===== features ===== */
+
+.hero_block-features {
+  margin-left: 1rem;
+}
+
+.hero_block-container {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+/* ===== item ===== */
+
+.hero_block-item {
+  display: flex;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* ===== check ===== */
+
+.hero_block-check {
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* ===== button ===== */
+
+.hero_block-btn {
+  display: block;
+  margin: 24px auto 0;
+  padding: 14px 32px;
+  background: #2a9d8f;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+/* hover / active */
+
+.hero_block-btn:hover {
+  background: #24867b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero_block-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+

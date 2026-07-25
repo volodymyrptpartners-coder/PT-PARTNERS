@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "brand": {
+      "type": "string"
+    },
+    "current": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "flag": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "flag"
+        ]
+      }
+    }
+  },
+  "required": [
+    "brand",
+    "current",
+    "languages"
+  ]
+}

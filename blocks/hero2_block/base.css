@@ -1,0 +1,43 @@
+/* ===== main ===== */
+.hero2_block-main {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 2rem 1rem;
+}
+
+/* ===== title ===== */
+.hero2_block-lead {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ===== features ===== */
+.hero2_block-features {
+  margin-left: 1rem;
+}
+
+.hero2_block-container {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+/* ===== item ===== */
+.hero2_block-item {
+  display: flex;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* ===== check ===== */
+.hero2_block-check {
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+

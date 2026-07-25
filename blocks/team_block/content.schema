@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "photo_alt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "role",
+          "text",
+          "photo",
+          "photo_alt"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

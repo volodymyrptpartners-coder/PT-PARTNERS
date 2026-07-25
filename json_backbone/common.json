@@ -1,0 +1,87 @@
+[
+  {
+    "block_name": "header_icons",
+    "content_type": "common",
+    "content_lang": "common",
+    "content": {
+      "base": "https://pt-partners-legal.com/sites/sources/logo/",
+      "items": [
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "sizes": "any",
+          "file": "logo_vector.svg"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "32x32",
+          "file": "logo_32x32.png"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "48x48",
+          "file": "logo_48x48.png"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "64x64",
+          "file": "logo_64x64.png"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "128x128",
+          "file": "logo_128x128.png"
+        },
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "sizes": "256x256",
+          "file": "logo_256x256.png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "type": "image/png",
+          "sizes": "57x57",
+          "file": "logo_57x57.png"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "type": "image/png",
+          "sizes": "60x60",
+          "file": "logo_60x60.png"
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "contact_fab_block",
+    "content_lang": "common",
+    "content_type": "common",
+    "content": {
+      "items": [
+        {
+          "href": "https://t.me/VolodymyrPtPartners",
+          "label": "Telegram",
+          "icon": "sources/icons/telegram.svg"
+        },
+        {
+          "href": "tel:+48884930030",
+          "label": "Phone",
+          "icon": "sources/icons/phone.svg"
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "google_staff",
+    "content_lang": "common",
+    "content_type": "common",
+    "content": {
+      "tag": "GTM-52ZTKSGM"
+    }
+  }
+]

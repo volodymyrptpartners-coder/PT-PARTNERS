@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<title>{{ content.title }}</title>
+<meta name="viewport" content="{{ content.viewport }}">
+<meta name="description" content="{{ content.description }}">
+
+{%- for key, value in content.og.items() %}
+<meta property="og:{{ key }}" content="{{ value }}">
+{%- endfor %}
+
+{%- for key, value in content.twitter.items() %}
+<meta name="twitter:{{ key }}" content="{{ value }}">
+{%- endfor %}

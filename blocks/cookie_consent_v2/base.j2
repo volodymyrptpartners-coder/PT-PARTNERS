@@ -1,0 +1,80 @@
+<!-- PART1 START -->
+<button id="cookie_consent_v2-entry" class="cookie_consent_v2-button">
+  {{ content.cookie_icon }}
+</button>
+<!-- PART1 END -->
+
+<!-- SPLIT -->
+
+<!-- PART2 START -->
+<div id="cookie_consent_v2-ask_table" class="cookie_consent_v2">
+  <!-- HEADER -->
+  <div class="cookie_consent_v2-header">
+    <h2 class="cookie_consent_v2-title">{{ content.cookie_preferences }}</h2>
+    <p class="cookie_consent_v2-subtitle">{{ content.cookie_subtitle }}</p>
+  </div>
+  <div class="cookie_consent_v2-bar">
+    <div class="cookie_consent_v2-bar-right">
+    <button id="cookie_consent_v2-reject_all" class="cookie_consent_v2-btn cookie_consent_v2-btn--reject">
+        {{ content.initial.reject_all }}
+    </button>
+    <button id="cookie_consent_v2-accept_all" class="cookie_consent_v2-btn cookie_consent_v2-btn--accept">
+      {{ content.initial.accept_all }}
+    </button>
+    </div>
+    <div class="cookie_consent_v2-bar-left">
+    <button id="cookie_consent_v2-customize" class="cookie_consent_v2-btn cookie_consent_v2-btn--customize">
+      {{ content.initial.customize }}
+    </button>
+    </div>
+  </div>
+</div>
+<!-- PART2 END -->
+
+<!-- SPLIT -->
+
+<!-- PART3 START -->
+<div id="cookie_consent_v2-customize_table" class="cookie_consent_v2">
+<div class="cookie_consent_v2-table">
+  <table class="cookie_consent_v2-table-inner">
+    <thead>
+      <tr>
+        <th>{{ content.customize_keys.category }}</th>
+        <th>{{ content.customize_keys.description }}</th>
+        <th>{{ content.customize_keys.status }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for cookie in content.customize_values %}
+      <tr>
+        <td class="cookie_consent_v2-name">
+          {{ cookie.name }}
+        </td>
+        <td class="cookie_consent_v2-desc">
+          {{ cookie.description }}
+        </td>
+        <td>
+          <label class="cookie_consent_v2-switch">
+            <input class="cookie_consent_v2-input"
+                   type="checkbox"
+                   name="{{ cookie.key }}"
+                   id="cookie_consent_v2-input_{{ cookie.key  }}"
+                   {% if cookie.enabled %}checked{% endif %}
+                   {% if cookie.readonly %}disabled{% endif %}>
+            <span class="cookie_consent_v2-slider"></span>
+          </label>
+        </td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  <!-- SAVE -->
+  <div class="cookie_consent_v2-footer">
+    <a class="cookie_consent_v2-btn cookie_consent_v2-link" href="{{ content.initial.cookie_policy_link }}">Cookie Policy</a>
+    <button id="cookie_consent_v2-apply" class="cookie_consent_v2-btn cookie_consent_v2-btn--save">
+      {{ content.customize_keys.button }}
+    </button>
+  </div>
+</div>
+</div>
+<!-- PART3 END -->

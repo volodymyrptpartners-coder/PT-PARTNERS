@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "cookie_icon": {
+      "type": "string"
+    },
+    "cookie_subtitle": {
+      "type": "string"
+    },
+    "cookie_preferences": {
+      "type": "string"
+    },
+    "initial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reject_all": {
+          "type": "string"
+        },
+        "accept_all": {
+          "type": "string"
+        },
+        "customize": {
+          "type": "string"
+        },
+        "cookie_policy_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "reject_all",
+        "accept_all",
+        "customize",
+        "cookie_policy_link"
+      ]
+    },
+    "customize_keys": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "button": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "description",
+        "status",
+        "button"
+      ]
+    },
+    "customize_values": {
+      "type": "array",
+      "additionalProperties": false,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "readonly": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "key",
+          "enabled",
+          "readonly"
+        ]
+      }
+    }
+  },
+  "required": [
+    "cookie_icon",
+    "cookie_subtitle",
+    "cookie_preferences",
+    "initial",
+    "customize_keys",
+    "customize_values"
+  ]
+}

@@ -1,0 +1,44 @@
+<!-- Should be placed into header before any another JS script = BASIC consent mode  -->
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){ dataLayer.push(arguments); }
+
+// 🔴 DEFAULT = DENIED
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  analytics_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied'
+});
+</script>
+
+
+
+<!-- Should be placed into header before any another JS script = Advanced consent mode v2 -->
+
+
+<!-- Google Analytics  -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VRW93NYFHK"></script>
+
+
+<!-- Google tag (gtag.js) => not same as Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  // 🔴 DEFAULT CONSENT (Advanced mode base)
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  });
+
+
+  gtag('js', new Date());
+
+  gtag('config', 'GT-VRW93NYFHK', {
+      send_page_view: false
+  });
+</script>
+

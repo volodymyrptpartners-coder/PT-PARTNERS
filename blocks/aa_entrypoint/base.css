@@ -1,0 +1,38 @@
+/* ===== main_block ===== */
+/* IMPORTANT:
+   - class name is reserved for JS
+   - do not rename
+   - do not change selector */
+
+.main_block {
+  max-width: 560px;
+  padding: 0 16px;
+  background: #ffffff;
+  margin: 50px auto 0;
+}
+
+@media (min-width: 1024px) {
+  .main_left {
+    left: 0;
+    background-image: url("sources/warsaw_light_theme.jpg");
+  }
+}
+@media (min-width: 1024px) {
+  .main_right {
+    right: 0;
+    background-image: url("sources/documents.jpg");
+  }
+}
+@media (min-width: 1024px) {
+  .main_left, .main_right {
+    position: fixed;
+    top: 0;
+    width: 22vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "lang": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "viewport": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "og": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "image",
+        "url",
+        "type",
+        "locale"
+      ]
+    },
+    "twitter": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "card": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "card",
+        "title",
+        "description",
+        "image"
+      ]
+    }
+  },
+  "required": [
+    "lang",
+    "title",
+    "viewport",
+    "description",
+    "og",
+    "twitter"
+  ]
+}

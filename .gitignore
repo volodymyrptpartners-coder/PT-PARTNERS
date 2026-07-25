@@ -1,0 +1,22 @@
+python_environment/
+secret.sh
+site.js
+site.css
+b_index.html
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/.coverage
+b_index.html
+
+
+dist
+tmp_dir/**
+
+# Ignore all realization files
+blocks/**/realization/*.json
+
+# Allow defaults and tests
+!blocks/**/realization/default_*.json
+!blocks/**/realization/test_*.json

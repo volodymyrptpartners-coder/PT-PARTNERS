@@ -1,0 +1,209 @@
+[
+  {
+    "block_name": "site_top_panel_block",
+    "content_type": "shared",
+    "content_lang": "ua",
+    "content": {
+      "brand": "PT&PARTNERS",
+      "current": "sources/flags/ua-flag.svg",
+      "languages": [
+        {
+          "code": "ua",
+          "flag": "sources/flags/ua-flag.svg"
+        },
+        {
+          "code": "ru",
+          "flag": "sources/flags/ru-flag.svg"
+        }
+      ]
+    },
+    "inline_blocks": [
+      "cookie_consent_v2"
+    ]
+  },
+  {
+    "block_name": "cookie_consent_v2",
+    "content_lang": "ua",
+    "content_type": "shared",
+    "content": {
+      "cookie_icon": "&#127850;",
+      "cookie_subtitle": "Ми використовуємо файли cookie для персоналізації контенту та реклами, інтеграції функцій соціальних мереж та аналізу нашого трафіку. Ми також ділимося інформацією про те, як ви використовуєте наш сайт, з нашими партнерами з соціальних мереж, реклами та аналітики. Вони можуть поєднувати її з іншою інформацією, яку ви їм надали або яку вони зібрали під час використання вами їхніх послуг.",
+      "cookie_preferences": "Ця веб-сторінка використовує файли cookie.",
+      "initial": {
+        "reject_all": "Відхилити все",
+        "accept_all": "Прийняти все",
+        "customize": "Налаштувати",
+        "cookie_policy_link": "cookie_policy_ua.html"
+      },
+      "customize_keys": {
+        "category": "Категорія",
+        "description": "Опис",
+        "status": "Стан",
+        "button": "Застосувати"
+      },
+      "customize_values": [
+        {
+          "name": "Необхідні",
+          "description": "Важливо для функціонування сайту. Завжди активний.",
+          "key": "necessary",
+          "enabled": true,
+          "readonly": true
+        },
+        {
+          "name": "Налаштування",
+          "description": "Зберігає вибір користувача (мова, валюта тощо).",
+          "key": "preferences",
+          "enabled": false,
+          "readonly": false
+        },
+        {
+          "name": "Статистика",
+          "description": "Аналітика та вимірювання (зіставляється з analytics_storage).",
+          "key": "statistics",
+          "enabled": false,
+          "readonly": false
+        },
+        {
+          "name": "Маркетинг",
+          "description": "Реклама та відстеження (відповідає ad_storage, ad_user_data, ad_personalization).",
+          "key": "marketing",
+          "enabled": false,
+          "readonly": false
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "office_block",
+    "content_lang": "ua",
+    "content_type": "shared",
+    "content": {
+      "title": "PT&PARTNERS",
+      "address": "ul. Żeromskiego 9 / lok. 1, 05-500 Piaseczno, Польща",
+      "address_label": "Адреса:",
+      "reception_note": "Прийом здійснюється за попереднім записом.",
+      "extra_note": "",
+      "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+      "maps_label": "Перевірити локацію в Google Maps",
+      "show_photo_label": "Показати фото",
+      "photos": [
+        {
+          "src": "sources/office/office_image.jpg",
+          "alt": "Вхід до офісу PT&PARTNERS у Piaseczno"
+        },
+        {
+          "src": "sources/office/cup_with_logo.jpg",
+          "alt": "Cups PT&PARTNERS"
+        },
+        {
+          "src": "sources/office/logo_from_google_maps.png",
+          "alt": "Logo PT&PARTNERS"
+        },
+        {
+          "src": "sources/office/car_nomers.jpg",
+          "alt": "PT&PARTNERS"
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "contacts_block",
+    "content_lang": "ua",
+    "content_type": "shared",
+    "content": {
+      "items": [
+        {
+          "value": "volodymyrptpartners@gmail.com",
+          "copy": "volodymyrptpartners@gmail.com",
+          "icon": "sources/icons/email.svg",
+          "icon_alt": "Mail",
+          "action": {
+            "href": "mailto:volodymyrptpartners@gmail.com?subject=Консульський%20облік&body=Привіт,",
+            "label": "Написати листа"
+          }
+        },
+        {
+          "value": "+48 884 930 030",
+          "copy": "tel:+48884930030",
+          "icon": "sources/icons/phone.svg",
+          "icon_alt": "Phone",
+          "action": {
+            "href": "tel:+48884930030",
+            "label": "Зателефонувати"
+          }
+        },
+        {
+          "value": "@VolodymyrPtPartners",
+          "copy": "@VolodymyrPtPartners",
+          "icon": "sources/icons/telegram.svg",
+          "icon_alt": "Telegram",
+          "action": {
+            "href": "https://t.me/VolodymyrPtPartners",
+            "label": "Відкрити в Telegram"
+          }
+        },
+        {
+          "value": "+48 884 930 030",
+          "copy": "https://wa.me/48884930030",
+          "icon": "sources/icons/whatsapp.svg",
+          "icon_alt": "WhatsApp",
+          "action": {
+            "href": "https://wa.me/48884930030",
+            "label": "Написати в WhatsApp"
+          }
+        },
+        {
+          "value": "PT&PARTNERS",
+          "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+          "icon": "sources/icons/office_icon.svg",
+          "icon_alt": "Office",
+          "action": {
+            "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+            "label": "Відкрити в Google Maps"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "block_name": "site_footer_block",
+    "content_lang": "ua",
+    "content_type": "shared",
+    "content": {
+      "text": "PT&PARTNERS. Усі права захищено."
+    }
+  },
+  {
+    "block_name": "hero_txt1_block",
+    "content_type": "shared",
+    "content_lang": "ua",
+    "content": {
+      "title": "Замовити",
+      "text": "Зв’яжіться з нами через Telegram або зателефонуйте для швидкої консультації."
+    }
+  },
+  {
+    "block_name": "aa_entrypoint",
+    "content_lang": "ua",
+    "content_type": "shared",
+    "content": {
+      "lang": "uk"
+    },
+    "inline_blocks": [
+      "header_block",
+      "header_icons",
+      "cookie_consent_v2",
+      "site_top_panel_block",
+      "hero_block",
+      "hero2_block",
+      "accordion_container",
+      "contacts_block",
+      "contact_fab_block",
+      "site_footer_block",
+      "hero_txt1_block",
+      "team_block",
+      "tiktok_block",
+      "google_staff"
+    ]
+  }
+]

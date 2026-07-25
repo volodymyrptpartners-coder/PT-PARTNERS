@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ content.lang }}">
+<head>
+  {{ inline_blocks.get("header_block","") | safe | indent }}
+  {{ inline_blocks.get("header_icons","") | safe | indent }}
+
+
+  {{ inline_blocks.get("google_staff_part1","") | safe | indent }}
+  <style>
+    {{ text_css }}
+  </style>
+</head>
+<body>
+  {{ inline_blocks.get("google_staff_part2","") | safe | indent }}
+
+  <div class="main_left"></div>
+  <div class="main_block">
+    {{ inline_blocks.get("site_top_panel_block","") | safe | indent }}
+
+    {{ inline_blocks.get("cookie_consent_v2_part2","") | safe | indent }}
+    {{ inline_blocks.get("cookie_consent_v2_part3","") | safe | indent }}
+
+    {{ inline_blocks.get("hero_block","") | safe | indent }}
+    <hr>
+    {{ inline_blocks.get("hero2_block","") | safe | indent }}
+    {{ inline_blocks.get("accordion_container","") | safe | indent }}
+
+    {{ inline_blocks.get("tiktok_block","") | safe | indent }}
+    <hr>
+    <!-- hero_block has ref to contacts -->
+    <div id="contacts"></div>
+    {{ inline_blocks.get("hero_txt1_block","") | safe | indent }}
+    {{ inline_blocks.get("contacts_block","") | safe | indent }}
+    {{ inline_blocks.get("contact_fab_block","") | safe | indent }}
+    {{ inline_blocks.get("site_footer_block","") | safe | indent }}
+  </div>
+  <div class="main_right"></div>
+
+  <script>
+    {{ text_js }}
+  </script>
+</body>
+</html>
+
