@@ -10,7 +10,7 @@ LANGS = ["ua", "ru"]
 Lang = Literal["ua", "ru"]
 
 
-SITES = ["consular", "auto_registration", "karta_pobutu_CUKR"]
+SITES = Path("generator/sites.txt").read_text(encoding="utf-8").splitlines()
 ContentType = Literal[
     "consular",
     "common",
