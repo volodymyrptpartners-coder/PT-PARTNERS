@@ -6,11 +6,7 @@ import json
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, Template
 from generator.core.validate_json import SchemaValidator
 
-LANGS = ["ua", "ru"]
 Lang = Literal["ua", "ru"]
-
-
-SITES = Path("generator/sites.txt").read_text(encoding="utf-8").splitlines()
 ContentType = Literal[
     "consular",
     "common",
@@ -222,27 +218,16 @@ class Jinja2Parser:
         return self.blocks_dict[self.site.root_name]
 
 
-ROOT_LIST = [
-    "header_block",
-    "header_icons",
-    "cookie_consent_v2",
-    "site_top_panel_block",
-    "hero_block",
-    "hero2_block",
-    "site_txt_block",
-    "path_way_block",
-    "team_block",
-    "office_block",
-    "accordion_container",
-    "contacts_block",
-    "contact_fab_block",
-    "site_footer_block",
-    "hero_txt1_block",
-    "tiktok_block",
-    "google_staff",
-    "aa_entrypoint",
-]
-ROOT_NAME = ROOT_LIST[-1]
+def get_sites(site_path: str = "generator/sites.txt") -> List[Dict[str, str]]:
+    sites: List[Dict[str, str]] = []
+    path = Path(site_path)
+    for item in path.read_text(encoding="utf-8").splitlines():
+        site_name, lang = item.split(":")
+        sites.append({"site_name": site_name, "lang": lang})
+    return sites
+
+
+ROOT_NAME = "aa_entrypoint"
 
 
 def main(
@@ -252,12 +237,10 @@ def main(
     site_name: str,
     lang: str,
 ) -> None:
-    if lang not in LANGS:
-        msg = f"Language {lang} is not supported!"
-        raise ValueError(msg)
+    sites = get_sites()
 
-    if site_name not in SITES:
-        msg = f"Site {site_name} is not supported!"
+    if {"site_name": site_name, "lang": lang} not in sites:
+        msg = f"Site {site_name!r} with lang {lang!r} is not supported!"
         raise ValueError(msg)
 
     backcone = Backbone(json_directory, block_directory)
@@ -273,19 +256,18 @@ def main(
     site_file.write_text(file_content)
 
 
-#
-# if __name__ == "__main__":  # pragma: no cover
-#    base = Path("./")
-#    json_directory = base / "new_backbone"
-#    block_directory = base / "blocks"
-#    sites_directory = base / "sites"
-#
-#    import sys
-#
-#    print(sys.argv)
-#    if len(sys.argv) == 3:
-#        name = sys.argv[1]
-#        lang = sys.argv[2]
-#        main(json_directory, block_directory, sites_directory, name, lang)
-#    else:
-#        print("Example: python3 generator/core/cli_core3.py consular ua")
+if __name__ == "__main__":  # pragma: no cover
+    base = Path("./")
+    json_directory = base / "json_backbone"
+    block_directory = base / "blocks"
+    sites_directory = base / "sites"
+
+    import sys
+
+    print(sys.argv)
+    if len(sys.argv) == 3:
+        name = sys.argv[1]
+        lang = sys.argv[2]
+        main(json_directory, block_directory, sites_directory, name, lang)
+    else:
+        print("Example: python3 generator/core/cli_core3.py consular ua")

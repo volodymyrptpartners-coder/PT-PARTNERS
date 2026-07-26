@@ -1,8 +1,8 @@
 from __future__ import annotations
 from pathlib import Path
 import typer
-from typing import List
-from generator.core.cli_core3 import main, SITES, LANGS
+from typing import List, Dict
+from generator.core.cli_core3 import main, get_sites
 from generator.m404 import generate_404
 
 app = typer.Typer(
@@ -23,18 +23,29 @@ SITES_DIRECTORY = BASE / "sites"
 
 
 def complete_site(incomplete: str) -> List[str]:
-    return [site for site in SITES if site.startswith(incomplete)]
+    sites = [k["site_name"] for k in get_sites()]
+    return [site for site in sites if site.startswith(incomplete)]
 
 
-def complete_lang(incomplete: str) -> List[str]:
-    return [lang for lang in LANGS if lang.startswith(incomplete)]
+def complete_lang(ctx: typer.Context, incomplete: str) -> List[str]:
+    site = ctx.params.get("site")
+
+    langs = [k["lang"] for k in get_sites() if k["site_name"] == site]
+    if not langs:
+        return langs
+    return [lang for lang in langs if lang.startswith(incomplete)]
 
 
 @app.command(help="List available sites")
-def sites():
-    for site_name in SITES:
-        for lang in LANGS:
-            print(f"{str(site_name).ljust(30)} ({lang})")
+def sites() -> None:
+    result: Dict[str, List[str]] = {}
+    for item in get_sites():
+        if item["site_name"] not in result:
+            result[item["site_name"]] = []
+        result[item["site_name"]].append(item["lang"])
+
+    for site_name, langs in result.items():
+        print(f"{str(site_name).ljust(30)} {langs}")
 
 
 @app.command(help="Validate all blocks and build final static HTML site")
@@ -53,10 +64,11 @@ def build(
 def regenerate() -> None:
     print("Regenerating...")
     msg = ""
-    for site_name in SITES:
-        for lang in LANGS:
-            main(JSON_DIRECTORY, BLOCK_DIRECTORY, SITES_DIRECTORY, site_name, lang)
-            msg += f"Site: {str(site_name).ljust(30)} {lang} regenerated.\n"
+    for item in get_sites():
+        site_name = item["site_name"]
+        lang = item["lang"]
+        main(JSON_DIRECTORY, BLOCK_DIRECTORY, SITES_DIRECTORY, site_name, lang)
+        msg += f"Site: {str(site_name).ljust(30)} {lang} regenerated.\n"
     print(msg)
     generate_404()
 

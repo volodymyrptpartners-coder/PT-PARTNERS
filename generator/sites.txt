@@ -1,3 +1,6 @@
-consular
-auto_registration
-karta_pobutu_CUKR
+consular:ua
+consular:ru
+karta_pobutu_CUKR:ua
+karta_pobutu_CUKR:ru
+auto_registration:ua
+auto_registration:ru
