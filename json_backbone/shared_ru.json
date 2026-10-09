@@ -79,11 +79,11 @@
     "content_type": "shared",
     "content": {
       "title": "PT&PARTNERS",
-      "address": "ul. Żeromskiego 9 / lok. 1, 05-500 Piaseczno, Польша",
+      "address": "ul.Raszynska 7 , 05-500 Piaseczno , Польша",
       "address_label": "Адрес:",
       "reception_note": "Прием осуществляется по предварительной записи.",
       "extra_note": "",
-      "maps_url": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+      "maps_url": "https://maps.app.goo.gl/4B88NZxJzUm39vNg7",
       "maps_label": "Проверить локацию в Google Maps",
       "show_photo_label": "Показать фото",
       "photos": [
@@ -123,12 +123,12 @@
           }
         },
         {
-          "value": "+48 884 930 030",
-          "copy": "tel:+48884930030",
+          "value": "+48 512 354 436",
+          "copy": "tel:+48512354436",
           "icon": "sources/icons/phone.svg",
           "icon_alt": "Phone",
           "action": {
-            "href": "tel:+48884930030",
+            "href": "tel:+48512354436",
             "label": "Позвонить"
           }
         },
@@ -143,22 +143,22 @@
           }
         },
         {
-          "value": "+48 884 930 030",
-          "copy": "https://wa.me/48884930030",
+          "value": "+48 512 354 436",
+          "copy": "https://wa.me/48512354436",
           "icon": "sources/icons/whatsapp.svg",
           "icon_alt": "WhatsApp",
           "action": {
-            "href": "https://wa.me/48884930030",
+            "href": "https://wa.me/48512354436",
             "label": "Написать в WhatsApp"
           }
         },
         {
           "value": "PT&PARTNERS",
-          "copy": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+          "copy": "https://maps.app.goo.gl/4B88NZxJzUm39vNg7",
           "icon": "sources/icons/office_icon.svg",
           "icon_alt": "Office",
           "action": {
-            "href": "https://google.com/maps?q=PT%26PARTNERS,+Żeromskiego+9/lok.+1,+05-500+Piaseczno",
+            "href": "https://maps.app.goo.gl/4B88NZxJzUm39vNg7",
             "label": "Открыть в Google Maps"
           }
         }
